@@ -61,7 +61,12 @@
     </script>
 
     <style>
-        /* Base Styles & Typography Switching */
+        /* Base Styles & Smooth Scrolling */
+        html {
+            scroll-behavior: smooth;
+            -webkit-overflow-scrolling: touch;
+        }
+
         body {
             background-color: #333; /* Dark background for desktop wrapper */
             color: #333333;
@@ -123,7 +128,7 @@
         @keyframes shimmer { to { background-position: 100% 0; } }
                 @keyframes rise { from { opacity: 0; transform: translateY(26px); } to { opacity: 1; transform: none; } }
         body.opened #home .rise-in > * { animation: rise 1s both; }
-        .reveal { will-change: opacity, transform; opacity: 0; transform: translateY(26px); transition: opacity .9s ease, transform .9s ease; }
+        .reveal { will-change: opacity, transform; opacity: 0; transform: translateY(30px); transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1), transform 1.2s cubic-bezier(0.16, 1, 0.3, 1); }
         .reveal.in { opacity: 1; transform: none; will-change: auto; }
         #petals { position: fixed; top: 0; bottom: 0; left: 50%; width: min(100%, 480px); transform: translateX(-50%); z-index: 30; pointer-events: none; overflow: hidden; contain: layout paint; }
         .petal { will-change: transform; position: absolute; top: -30px; background: linear-gradient(135deg, #f4b9c3, #c9475c); border-radius: 150% 0 150% 0; animation: fall linear infinite; }
@@ -643,7 +648,39 @@
             document.getElementById('open-btn').addEventListener('click', open);
             document.getElementById('cal-btn2').addEventListener('click', function () { document.getElementById('cal-btn').click(); });
 
-                        // ---- Auto page-to-page scrolling ----
+            // ---- Smooth Easing Scroll Utility ----
+            var scrollAnimId = null;
+            function cancelSmoothScroll() {
+                if (scrollAnimId) { cancelAnimationFrame(scrollAnimId); scrollAnimId = null; }
+            }
+            function smoothScrollTo(targetY, duration) {
+                cancelSmoothScroll();
+                duration = duration || 1200;
+                var startY = window.scrollY;
+                var diff = targetY - startY;
+                if (Math.abs(diff) < 2) return;
+                var startTime = null;
+
+                function easeInOutCubic(t) {
+                    return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+                }
+
+                function step(currentTime) {
+                    if (!startTime) startTime = currentTime;
+                    var elapsed = currentTime - startTime;
+                    var progress = Math.min(elapsed / duration, 1);
+                    var eased = easeInOutCubic(progress);
+                    window.scrollTo(0, startY + diff * eased);
+                    if (progress < 1) {
+                        scrollAnimId = requestAnimationFrame(step);
+                    } else {
+                        scrollAnimId = null;
+                    }
+                }
+                scrollAnimId = requestAnimationFrame(step);
+            }
+
+            // ---- Auto page-to-page scrolling ----
             var pages = [].slice.call(document.querySelectorAll('section')), abtn = document.getElementById('auto-toggle'), auto = false, atimer = null;
             function pTop(el) { return el.getBoundingClientRect().top + window.scrollY; }
             function curPage() { var y = window.scrollY + window.innerHeight * 0.3, k = 0; pages.forEach(function (p, i) { if (pTop(p) <= y) k = i; }); return k; }
@@ -654,28 +691,54 @@
                 var i = curPage(); if (i >= pages.length - 1) { stopAuto(); return; }
                 atimer = setTimeout(function () {
                     if (!auto) return;
-                    pages[i + 1].scrollIntoView({ behavior: 'smooth', block: 'start' });
-                    atimer = setTimeout(function () { schedule(); }, 1500);
+                    smoothScrollTo(pTop(pages[i + 1]), 1400);
+                    atimer = setTimeout(function () { schedule(); }, 1800);
                 }, delay || dwell(i));
             }
             function startAuto(delay) { auto = true; abtn.classList.add('auto-on'); schedule(delay); }
             abtn.addEventListener('click', function () {
                 if (auto) { stopAuto(); return; }
-                if (curPage() >= pages.length - 1) { window.scrollTo({ top: 0, behavior: 'smooth' }); auto = true; abtn.classList.add('auto-on'); atimer = setTimeout(function () { schedule(3000); }, 1500); }
-                else startAuto(1500);
+                if (curPage() >= pages.length - 1) {
+                    smoothScrollTo(0, 1000);
+                    auto = true; abtn.classList.add('auto-on');
+                    atimer = setTimeout(function () { schedule(3000); }, 1500);
+                } else {
+                    startAuto(1500);
+                }
             });
             ['touchstart', 'wheel', 'keydown', 'pointerdown'].forEach(function (ev) {
-                window.addEventListener(ev, function (e) { if (abtn.contains(e.target)) return; if (auto) stopAuto(); }, { passive: true });
+                window.addEventListener(ev, function (e) {
+                    if (abtn.contains(e.target)) return;
+                    cancelSmoothScroll();
+                    if (auto) stopAuto();
+                }, { passive: true });
             });
 
             var dockLinks = [].slice.call(document.querySelectorAll('.dock-i')), toTop = document.getElementById('to-top'), ticking = false;
+            dockLinks.forEach(function (a) {
+                a.addEventListener('click', function (e) {
+                    var href = a.getAttribute('href');
+                    if (href && href.startsWith('#')) {
+                        var target = document.querySelector(href);
+                        if (target) {
+                            e.preventDefault();
+                            stopAuto();
+                            smoothScrollTo(pTop(target), 1100);
+                        }
+                    }
+                });
+            });
             function updateDock() {
                 var id = pages[curPage()].id;
                 dockLinks.forEach(function (a) { a.classList.toggle('act', (' ' + a.dataset.s + ' ').indexOf(' ' + id + ' ') > -1); });
                 toTop.style.display = window.scrollY > 500 ? 'flex' : 'none';
             }
             window.addEventListener('scroll', function () { if (!ticking) { ticking = true; requestAnimationFrame(function () { ticking = false; updateDock(); }); } }, { passive: true });
-            toTop.addEventListener('click', function () { stopAuto(); window.scrollTo({ top: 0, behavior: 'smooth' }); });
+            toTop.addEventListener('click', function (e) {
+                e.preventDefault();
+                stopAuto();
+                smoothScrollTo(0, 950);
+            });
             updateDock();
 
             if ('IntersectionObserver' in window) {
