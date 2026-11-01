@@ -154,6 +154,50 @@
         p:empty { display: none; }
         #yt-player, #yt-player iframe { width: 100%; height: 100%; display: block; }
 
+        /* Background Waterfall Text Streams */
+        .waterfall-stream {
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            width: 26px;
+            pointer-events: none;
+            user-select: none;
+            z-index: 2;
+            overflow: hidden;
+            opacity: 0.15;
+            transition: opacity .5s;
+        }
+        .waterfall-left {
+            left: 4px;
+        }
+        .waterfall-right {
+            right: 4px;
+        }
+        @media (min-width: 768px) {
+            .waterfall-left { left: calc(50% - 238px); }
+            .waterfall-right { right: calc(50% - 238px); }
+        }
+        .waterfall-track {
+            display: flex;
+            flex-direction: column;
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+            font-family: 'Cinzel', 'Battambang', serif;
+            font-size: 10px;
+            letter-spacing: 0.28em;
+            text-transform: uppercase;
+            color: #A12B45;
+            white-space: nowrap;
+            animation: waterfall-flow 38s linear infinite;
+        }
+        .waterfall-track-slow {
+            animation: waterfall-flow 48s linear infinite;
+        }
+        @keyframes waterfall-flow {
+            0% { transform: translateY(-50%); }
+            100% { transform: translateY(0); }
+        }
+
         /* Language switch, floating dock, timeline, gift tabs */
         #lang-toggle { display: flex; align-items: center; padding: 3px; border-radius: 999px; background: rgba(255,255,255,.95); border: 1.5px solid #D4808F; box-shadow: 0 4px 12px rgba(161,43,69,.2); cursor: pointer; }
         #lang-toggle span { padding: 4px 11px; border-radius: 999px; font-size: 12px; font-weight: 700; color: #A12B45; transition: background .25s, color .25s; }
@@ -296,6 +340,19 @@
     <div id="yt-holder" aria-hidden="true" style="position:fixed;left:-320px;bottom:0;width:200px;height:200px;opacity:0;pointer-events:none;overflow:hidden"><div id="yt-player"></div></div>
 
     <div class="mobile-container pb-20">
+        <!-- Background Transparent Waterfall Text Streams -->
+        <div class="waterfall-stream waterfall-left" aria-hidden="true">
+            <div class="waterfall-track">
+                <span>• សិរីមង្គលអាពាហ៍ពិពាហ៍ • WEDDING CELEBRATION • គ្រី ស៊ីណាន &amp; ចយ ច័ន្ទរតនា • TOGETHER FOREVER • ក្តីស្រឡាញ់ និង សុភមង្គល • MARCH 26, 2026 • </span>
+                <span>• សិរីមង្គលអាពាហ៍ពិពាហ៍ • WEDDING CELEBRATION • គ្រី ស៊ីណាន &amp; ចយ ច័ន្ទរតនា • TOGETHER FOREVER • ក្តីស្រឡាញ់ និង សុភមង្គល • MARCH 26, 2026 • </span>
+            </div>
+        </div>
+        <div class="waterfall-stream waterfall-right" aria-hidden="true">
+            <div class="waterfall-track waterfall-track-slow">
+                <span>• KRY SYNAN &amp; CHOY CHANRATHANA • ថ្ងៃសិរីមង្គល • LOVE &amp; BLESSINGS • ជ័យមង្គលសួស្តី • SAVE THE DATE • ភូមិរលួស ស្រុកកណ្តាលស្ទឹង • </span>
+                <span>• KRY SYNAN &amp; CHOY CHANRATHANA • ថ្ងៃសិរីមង្គល • LOVE &amp; BLESSINGS • ជ័យមង្គលសួស្តី • SAVE THE DATE • ភូមិរលួស ស្រុកកណ្តាលស្ទឹង • </span>
+            </div>
+        </div>
         
         <!-- Floating Controls -->
         <div class="fixed top-4 right-4 z-50 flex flex-col gap-3 md:right-[calc(50%-220px)]">
