@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow"><title>Customize invitation</title>
+<style>
+*{box-sizing:border-box}body{font-family:system-ui,sans-serif;background:#F9F4EB;color:#6E1A2C;margin:0;padding:16px}
+.wrap{max-width:860px;margin:0 auto}h1{font-size:22px}h2{font-size:16px;margin:0 0 12px;color:#A12B45}
+.card{background:#fff;border:1px solid #f0d9d9;border-radius:14px;padding:16px;margin:14px 0}
+label{display:block;font-size:12px;font-weight:600;margin:10px 0 4px}
+input,textarea{width:100%;padding:10px;border:1px solid #e3c4c4;border-radius:8px;font-size:15px;font-family:inherit;color:#333}
+textarea{min-height:70px}.two{display:grid;grid-template-columns:1fr 1fr;gap:10px}.sub{font-size:12px;color:#a77;margin:0 0 2px}
+button{background:#A12B45;color:#fff;border:0;border-radius:10px;padding:10px 16px;font-size:14px;cursor:pointer}
+.bar{position:sticky;top:0;background:#F9F4EBee;padding:10px 0;display:flex;gap:8px;flex-wrap:wrap;z-index:5}
+.note{background:#fff7e6;border:1px solid #f1d9a3;border-radius:10px;padding:10px;font-size:13px;color:#6b4a00}
+@media(max-width:560px){.two{grid-template-columns:1fr}}
+</style></head><body><div class="wrap">
+<h1>Customize your invitation</h1>
+<p class="note">Edit the fields, then download the 3 files and replace the ones in your <b>public</b> folder (content.js, event.js, config.js). Then refresh the invitation, or upload the folder again if it is online. Nothing is saved on a server. Best done on a computer.</p>
+<div class="bar"><button data-f="content.js">Download content.js</button><button data-f="event.js">Download event.js</button><button data-f="config.js">Download config.js</button></div>
+<div id="form"></div>
+<script type="module">
+import * as EV from "./event.js";
+const EVENT = EV.EVENT, MUSIC = EV.MUSIC || { youtubeId: "AlljlearTIs", startSeconds: 23 };
+import { CONTENT, BANK, GALLERY } from "./content.js";
+import * as CN from "./content.js";
+import { RSVP } from "./config.js";
+const $ = id => document.getElementById(id);
+const esc = t => String(t ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const TEXT = [
+ ["Names", [["name1", "Groom name"], ["name2", "Bride name"], ["couple", "Name on the gift card"]]],
+ ["Parents", [["gFather", "Groom's father"], ["gMother", "Groom's mother"], ["bFather", "Bride's father"], ["bMother", "Bride's mother"]]],
+ ["Invitation page", [["inviteText", "Invitation message", 1], ["lunarLine", "Lunar date line (Khmer)", 1], ["venueLine", "Venue line", 1], ["venueName", "Venue name (venue page)"], ["venueAddr", "Venue address (venue page)"]]],
+ ["Gift message", [["giftDesc", "Gift message", 1]]],
+];
+let h = `<div class="card"><h2>Date, time and place</h2><div class="two"><div><label>Wedding date</label><input id="ev-date" type="date" value="${esc(EVENT.start.slice(0, 10))}"></div>
+ <div><label>Start time (Cambodia time)</label><input id="ev-time" type="time" value="${esc(EVENT.start.slice(11, 16))}"></div></div>
+ <label>Venue (used in the calendar)</label><input id="ev-venue" value="${esc(EVENT.venue)}">
+ <label>Google Maps link</label><input id="ev-map" value="${esc(EVENT.mapUrl)}">
+ <label>Background song: YouTube link (leave empty to use assets/music.mp3)</label><input id="mu-yt" value="${esc(MUSIC.youtubeId)}">
+ <label>Song starts at (minutes:seconds, e.g. 1:00)</label><input id="mu-st" value="${esc((() => { const t = Number(MUSIC.startSeconds ?? 23); return Math.floor(t / 60) + ":" + String(t % 60).padStart(2, "0"); })())}"></div>`;
+for (const [title, items] of TEXT) {
+  h += `<div class="card"><h2>${title}</h2>`;
+  for (const [k, label, area] of items) {
+    const f = lg => area ? `<textarea id="${lg}-${k}">${esc(CONTENT[lg][k])}</textarea>` : `<input id="${lg}-${k}" value="${esc(CONTENT[lg][k])}">`;
+    h += `<label>${label}</label><div class="two"><div><p class="sub">English</p>${f("en")}</div><div><p class="sub">ខ្មែរ</p>${f("km")}</div></div>`;
+  }
+  h += `</div>`;
+}
+h += `<div class="card"><h2>Gift card</h2><div class="two"><div><label>Bank name</label><input id="bk-name" value="${esc(BANK.bankName)}"></div>
+ <div><label>Account number</label><input id="bk-num" value="${esc(BANK.accountNumber)}"></div></div>
+ <label>QR code image (file in assets/, e.g. assets/qr.png, or a link)</label><input id="bk-qr" value="${esc(BANK.qr)}"></div>
+ <div class="card"><h2>Gallery photos</h2><p class="sub">One per line: a file in assets/ (e.g. assets/photo1.jpg) or a web link.</p><textarea id="gal" style="min-height:140px">${esc(GALLERY.join("\n"))}</textarea></div>
+ <div class="card"><h2>RSVP</h2><label>Google Apps Script web app URL</label><input id="rs-url" value="${esc(RSVP.endpoint)}">
+ <label>WhatsApp number (optional, digits with country code)</label><input id="rs-wa" value="${esc(RSVP.whatsapp)}"></div>`;
+h += `<div class="card"><h2>Program timeline</h2><p class="sub">Add as many items as you need; they appear in this order.</p><div id="prog-list"></div><button id="prog-add" type="button">+ Add item</button></div>
+ <div class="card"><h2>Second account (riel), optional</h2><p class="sub">Fill in the account number to show USD / KHR tabs on the gift card.</p><div class="two"><div><label>Bank name</label><input id="kh-name" value="${esc(KHR.bankName)}"></div><div><label>Account number</label><input id="kh-num" value="${esc(KHR.accountNumber)}"></div></div><label>QR image (file in assets/ or link)</label><input id="kh-qr" value="${esc(KHR.qr)}"></div>`;
+$("form").innerHTML = h;
+renderProg();
+$("prog-add").onclick = () => { prog.push({ icon: "heart", time: { en: "", km: "" }, text: { en: "", km: "" } }); renderProg(); };
+const ICON_NAMES = ["monk", "arch", "gift", "lips", "ring", "scissors", "baysei", "pray", "dinner", "toast", "heart"];
+let prog = (CN.PROGRAM && CN.PROGRAM.length ? CN.PROGRAM : [["scissors","t1","prog1"],["monk","t2","prog2"],["ring","t3","prog3"],["toast","t4","prog4"]].map(([icon, t, p]) => ({ icon, time: { en: CONTENT.en[t], km: CONTENT.km[t] }, text: { en: CONTENT.en[p], km: CONTENT.km[p] } }))).map(x => JSON.parse(JSON.stringify(x)));
+const KHR = CN.BANK_KHR || { bankName: BANK.bankName, accountNumber: "", qr: "" };
+function renderProg() {
+  $("prog-list").innerHTML = prog.map((it, i) => `<div class="card" style="margin:8px 0;padding:10px"><div class="two"><div><p class="sub">Icon</p><select data-i="${i}" data-f="icon" style="width:100%;padding:10px;border:1px solid #e3c4c4;border-radius:8px">${ICON_NAMES.map(n => `<option ${n === it.icon ? "selected" : ""}>${n}</option>`).join("")}</select></div><div></div>
+   <div><p class="sub">Time (English)</p><input data-i="${i}" data-f="te" value="${esc(it.time.en)}"></div><div><p class="sub">ម៉ោង (ខ្មែរ)</p><input data-i="${i}" data-f="tk" value="${esc(it.time.km)}"></div>
+   <div><p class="sub">Activity (English)</p><input data-i="${i}" data-f="xe" value="${esc(it.text.en)}"></div><div><p class="sub">កម្មវិធី (ខ្មែរ)</p><input data-i="${i}" data-f="xk" value="${esc(it.text.km)}"></div></div>
+   <button data-pi="${i}" data-a="up" type="button">↑</button> <button data-pi="${i}" data-a="dn" type="button">↓</button> <button data-pi="${i}" data-a="rm" type="button" style="background:#fff;color:#A12B45;border:1px solid #A12B45">Remove</button></div>`).join("");
+}
+document.addEventListener("input", e => { const t = e.target, i = t.dataset && t.dataset.i; if (i === undefined) return; const f = t.dataset.f, it = prog[+i];
+  if (f === "icon") it.icon = t.value; else if (f === "te") it.time.en = t.value; else if (f === "tk") it.time.km = t.value; else if (f === "xe") it.text.en = t.value; else if (f === "xk") it.text.km = t.value; });
+document.addEventListener("click", e => { const b = e.target.closest("[data-pi]"); if (!b) return; const i = +b.dataset.pi, a = b.dataset.a;
+  if (a === "rm") prog.splice(i, 1); else { const j = a === "up" ? i - 1 : i + 1; if (j >= 0 && j < prog.length) [prog[i], prog[j]] = [prog[j], prog[i]]; } renderProg(); });
+const js = v => JSON.stringify(v, null, 2);
+function build(f) {
+  if (f === "content.js") {
+    const o = { en: {}, km: {} };
+    for (const [, items] of TEXT) for (const [k] of items) { o.en[k] = $("en-" + k).value.trim(); o.km[k] = $("km-" + k).value.trim(); }
+    const bank = { bankName: $("bk-name").value.trim(), accountNumber: $("bk-num").value.trim(), qr: $("bk-qr").value.trim() };
+    const gal = $("gal").value.split("\n").map(x => x.trim()).filter(Boolean);
+    return `// ====== INVITATION CONTENT (generated by customize.html; you can also edit by hand) ======\nexport const CONTENT = ${js(o)};\n\nexport const BANK = ${js(bank)};\n\nexport const GALLERY = ${js(gal)};\n\n// Program timeline (icons: monk, arch, gift, ring, scissors, dinner, toast, heart)\nexport const PROGRAM = ${js(prog)};\n` + ($("kh-num").value.trim() ? `\n// Second account (riel): shows USD / KHR tabs\nexport const BANK_KHR = ${js({ bankName: $("kh-name").value.trim(), accountNumber: $("kh-num").value.trim(), qr: $("kh-qr").value.trim() })};\n` : "");
+  }
+  if (f === "event.js") {
+    const d = $("ev-date").value, t = $("ev-time").value || "17:00";
+    const ev = { title: `Wedding of ${$("en-name1").value.trim()} & ${$("en-name2").value.trim()}`, start: `${d}T${t}:00+07:00`, venue: $("ev-venue").value.trim(), mapUrl: $("ev-map").value.trim() };
+    return `// ====== WEDDING DETAILS ======\nexport const EVENT = ${js(ev)};\n\n// Background song: YouTube link or video id (empty = use assets/music.mp3)\nexport const MUSIC = ${js({ youtubeId: $("mu-yt").value.trim(), startSeconds: (v => v.includes(":") ? (parseInt(v.split(":")[0]) || 0) * 60 + (parseInt(v.split(":")[1]) || 0) : (parseInt(v) || 0))($("mu-st").value.trim()) })};\n`;
+  }
+  return `// ====== RSVP SETTINGS ======\nexport const RSVP = ${js({ endpoint: $("rs-url").value.trim(), whatsapp: $("rs-wa").value.trim() })};\n`;
+}
+document.querySelectorAll("[data-f]").forEach(b => b.onclick = () => {
+  if (b.dataset.f === "event.js" && !$("ev-date").value) return alert("Please choose the wedding date.");
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(new Blob([build(b.dataset.f)], { type: "text/javascript" }));
+  a.download = b.dataset.f; a.click();
+});
+</script></div></body></html>
