@@ -646,7 +646,7 @@
             var isAuto = false;
             var autoRaf = null;
             var resumeTimer = null;
-            var speed = 0.95; // gentle, perfectly readable 60fps/120fps continuous glide
+            var speed = 2.2; // faster, brisk, yet buttery smooth glide speed
 
             function glideStep() {
                 if (!isAuto) return;
@@ -692,7 +692,7 @@
                     if (abtn) abtn.style.display = 'flex';
                     window.scrollTo(0, 0);
                     if (!(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches)) {
-                        setTimeout(startAutoGlide, 2200);
+                        setTimeout(startAutoGlide, 1500);
                     }
                 }, 1300);
                 petals();
@@ -708,7 +708,7 @@
                         var maxScroll = (document.documentElement.scrollHeight || document.body.scrollHeight) - window.innerHeight;
                         if (window.scrollY >= maxScroll - 10) {
                             window.scrollTo({ top: 0, behavior: 'smooth' });
-                            setTimeout(startAutoGlide, 1000);
+                            setTimeout(startAutoGlide, 800);
                         } else {
                             startAutoGlide();
                         }
@@ -716,7 +716,7 @@
                 });
             }
 
-            // Pause while user is touching/scrolling manually, resume automatically after 3.5s idle
+            // Pause while user is touching/scrolling manually, resume automatically after 2.5s idle
             ['touchstart', 'wheel', 'pointerdown'].forEach(function (ev) {
                 window.addEventListener(ev, function (e) {
                     if (abtn && abtn.contains(e.target)) return;
@@ -725,7 +725,7 @@
                         pauseAutoGlide();
                         resumeTimer = setTimeout(function () {
                             if (isAuto) startAutoGlide();
-                        }, 3500);
+                        }, 2500);
                     }
                 }, { passive: true });
             });
