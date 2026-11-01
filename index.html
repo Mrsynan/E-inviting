@@ -134,6 +134,15 @@
         @keyframes fall { 0% { transform: translate3d(0,-5vh,0) rotate(0); } 50% { transform: translate3d(45px,55vh,0) rotate(200deg); } 100% { transform: translate3d(-25px,110vh,0) rotate(380deg); } }
         @media (prefers-reduced-motion: reduce) { .petal { display: none; } .reveal { opacity: 1; transform: none; transition: none; } .hero-gold, .open-btn, body.opened #home .rise-in > * { animation: none; } }
 
+        @keyframes spin-seal {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        .animate-spin-seal {
+            animation: spin-seal 22s linear infinite;
+            transform-origin: 50% 50%;
+        }
+
         /* gold heritage details */
         .oval { position: relative; width: 150px; height: 197px; }
         /* TODO: add assets/couple.jpg to use the oval portrait; currently shows gradient placeholder */
@@ -353,6 +362,30 @@
                         <p class="en-sub text-[10px] text-gray-500 mb-1">Their daughter</p>
                         <p class="font-title text-lg mt-1 font-bold">ចយ ច័ន្ទរតនា</p>
                         <p class="en-sub text-xs font-semibold text-theme-primary">CHOY Chanrathana</p>
+                    </div>
+                </div>
+
+                <!-- Transparent Rotating Circular Monogram Seal -->
+                <div class="relative w-32 h-32 mx-auto my-5 flex items-center justify-center opacity-85 select-none pointer-events-none">
+                    <!-- Spinning Circular Text & Rings -->
+                    <svg viewBox="0 0 140 140" class="w-full h-full animate-spin-seal">
+                        <defs>
+                            <path id="sealPath" d="M 70, 70 m -50, 0 a 50,50 0 1,1 100,0 a 50,50 0 1,1 -100,0" />
+                        </defs>
+                        <circle cx="70" cy="70" r="50" fill="none" stroke="#D4808F" stroke-width="0.8" stroke-dasharray="2,3" opacity="0.6" />
+                        <circle cx="70" cy="70" r="62" fill="none" stroke="#A12B45" stroke-width="0.5" opacity="0.35" />
+                        <text class="text-[7.5px] uppercase font-bold tracking-[0.22em]" fill="#A12B45">
+                            <textPath href="#sealPath" startOffset="0%">
+                                • KRY SYNAN &amp; CHOY CHANRATHANA • WEDDING DAY •
+                            </textPath>
+                        </text>
+                    </svg>
+                    <!-- Stationary Center Monogram Badge -->
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <div class="w-14 h-14 rounded-full border border-theme-gold/60 bg-white/75 shadow-sm flex flex-col items-center justify-center">
+                            <span class="font-title text-xs text-theme-primary font-bold tracking-wider">S &amp; R</span>
+                            <span class="text-[8px] opacity-70 hero-brown -mt-0.5 font-bold">2026</span>
+                        </div>
                     </div>
                 </div>
 
