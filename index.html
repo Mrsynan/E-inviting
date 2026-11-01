@@ -983,7 +983,7 @@
 
         // --- 3. Personalised guest, countdown, date & calendar ---
         const $ = (id) => document.getElementById(id);
-        const escapeHtml = (t) => (t || "").toString().replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");
+        const escapeHtml = (t) => (t || "").toString().replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;").replace(/'/g,"&#039;");
         const hasEndpoint = RSVP.endpoint && !RSVP.endpoint.startsWith('PASTE');
 
         // Personalised link: https://your-domain/?to=1 or ?id=1 or ?code=guest01 or ?to=Sok%20Dara
