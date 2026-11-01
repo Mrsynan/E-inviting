@@ -61,9 +61,8 @@
     </script>
 
     <style>
-        /* Base Styles & Smooth Scrolling */
+        /* Base Styles & Typography */
         html {
-            scroll-behavior: smooth;
             -webkit-overflow-scrolling: touch;
         }
 
@@ -128,8 +127,8 @@
         @keyframes shimmer { to { background-position: 100% 0; } }
                 @keyframes rise { from { opacity: 0; transform: translateY(26px); } to { opacity: 1; transform: none; } }
         body.opened #home .rise-in > * { animation: rise 1s both; }
-        .reveal { will-change: opacity, transform; opacity: 0; transform: translateY(30px); transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1), transform 1.2s cubic-bezier(0.16, 1, 0.3, 1); }
-        .reveal.in { opacity: 1; transform: none; will-change: auto; }
+        .reveal { opacity: 0; transform: translateY(22px); transition: opacity 0.85s ease-out, transform 0.85s ease-out; }
+        .reveal.in { opacity: 1; transform: none; }
         #petals { position: fixed; top: 0; bottom: 0; left: 50%; width: min(100%, 480px); transform: translateX(-50%); z-index: 30; pointer-events: none; overflow: hidden; contain: layout paint; }
         .petal { will-change: transform; position: absolute; top: -30px; background: linear-gradient(135deg, #f4b9c3, #c9475c); border-radius: 150% 0 150% 0; animation: fall linear infinite; }
         @keyframes fall { 0% { transform: translate3d(0,-5vh,0) rotate(0); } 50% { transform: translate3d(45px,55vh,0) rotate(200deg); } 100% { transform: translate3d(-25px,110vh,0) rotate(380deg); } }
@@ -641,6 +640,47 @@
                     box.appendChild(p);
                 }
             }
+            // ---- Continuous Cinematic Auto-Scroll ----
+            var pages = [].slice.call(document.querySelectorAll('section'));
+            var abtn = document.getElementById('auto-toggle');
+            var isAuto = false;
+            var autoRaf = null;
+            var resumeTimer = null;
+            var speed = 0.95; // gentle, perfectly readable 60fps/120fps continuous glide
+
+            function glideStep() {
+                if (!isAuto) return;
+                var maxScroll = (document.documentElement.scrollHeight || document.body.scrollHeight) - window.innerHeight;
+                if (window.scrollY >= maxScroll - 4) {
+                    stopAutoGlide();
+                    return;
+                }
+                window.scrollBy(0, speed);
+                autoRaf = requestAnimationFrame(glideStep);
+            }
+
+            function startAutoGlide() {
+                if (isAuto && autoRaf) return;
+                isAuto = true;
+                if (abtn) abtn.classList.add('auto-on');
+                if (autoRaf) cancelAnimationFrame(autoRaf);
+                autoRaf = requestAnimationFrame(glideStep);
+            }
+
+            function pauseAutoGlide() {
+                if (autoRaf) {
+                    cancelAnimationFrame(autoRaf);
+                    autoRaf = null;
+                }
+            }
+
+            function stopAutoGlide() {
+                isAuto = false;
+                pauseAutoGlide();
+                clearTimeout(resumeTimer);
+                if (abtn) abtn.classList.remove('auto-on');
+            }
+
             function open() {
                 if (done) return; done = true;
                 cover.classList.add('open');
@@ -649,84 +689,43 @@
                 setTimeout(function () {
                     cover.style.display = 'none';
                     document.body.classList.remove('locked'); document.body.classList.add('opened');
-                    abtn.style.display = 'flex';
-                    if (!(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches)) startAuto(1800);
+                    if (abtn) abtn.style.display = 'flex';
                     window.scrollTo(0, 0);
+                    if (!(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches)) {
+                        setTimeout(startAutoGlide, 2200);
+                    }
                 }, 1300);
                 petals();
             }
             document.getElementById('open-btn').addEventListener('click', open);
             document.getElementById('cal-btn2').addEventListener('click', function () { document.getElementById('cal-btn').click(); });
 
-            // ---- Smooth Easing Scroll Utility ----
-            var scrollAnimId = null;
-            function cancelSmoothScroll() {
-                if (scrollAnimId) { cancelAnimationFrame(scrollAnimId); scrollAnimId = null; }
-            }
-            function smoothScrollTo(targetY, duration) {
-                cancelSmoothScroll();
-                duration = duration || 1200;
-                var startY = window.scrollY;
-                var diff = targetY - startY;
-                if (Math.abs(diff) < 2) return;
-                var startTime = null;
-
-                function easeInOutCubic(t) {
-                    return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
-                }
-
-                function step(currentTime) {
-                    if (!startTime) startTime = currentTime;
-                    var elapsed = currentTime - startTime;
-                    var progress = Math.min(elapsed / duration, 1);
-                    var eased = easeInOutCubic(progress);
-                    window.scrollTo(0, startY + diff * eased);
-                    if (progress < 1) {
-                        scrollAnimId = requestAnimationFrame(step);
+            if (abtn) {
+                abtn.addEventListener('click', function () {
+                    if (isAuto) {
+                        stopAutoGlide();
                     } else {
-                        scrollAnimId = null;
+                        var maxScroll = (document.documentElement.scrollHeight || document.body.scrollHeight) - window.innerHeight;
+                        if (window.scrollY >= maxScroll - 10) {
+                            window.scrollTo({ top: 0, behavior: 'smooth' });
+                            setTimeout(startAutoGlide, 1000);
+                        } else {
+                            startAutoGlide();
+                        }
                     }
-                }
-                scrollAnimId = requestAnimationFrame(step);
+                });
             }
 
-            // ---- Auto page-to-page scrolling ----
-            var pages = [].slice.call(document.querySelectorAll('section')), abtn = document.getElementById('auto-toggle'), auto = false, atimer = null;
-            function pTop(el) { return el.getBoundingClientRect().top + window.scrollY; }
-            function curPage() { var y = window.scrollY + window.innerHeight * 0.3, k = 0; pages.forEach(function (p, i) { if (pTop(p) <= y) k = i; }); return k; }
-            function stopAuto() { auto = false; clearTimeout(atimer); abtn.classList.remove('auto-on'); }
-            function dwell(i) { return Math.max(3200, Math.min(5500, 2800 + (pages[i].innerText || '').length * 4)); }
-            function schedule(delay) {
-                clearTimeout(atimer); if (!auto) return;
-                var i = curPage(); if (i >= pages.length - 1) { stopAuto(); return; }
-                atimer = setTimeout(function () {
-                    if (!auto) return;
-                    smoothScrollTo(pTop(pages[i + 1]), 1400);
-                    atimer = setTimeout(function () { schedule(); }, 1800);
-                }, delay || dwell(i));
-            }
-            function startAuto(delay) { auto = true; abtn.classList.add('auto-on'); schedule(delay); }
-            abtn.addEventListener('click', function () {
-                if (auto) { stopAuto(); return; }
-                if (curPage() >= pages.length - 1) {
-                    smoothScrollTo(0, 1000);
-                    auto = true; abtn.classList.add('auto-on');
-                    atimer = setTimeout(function () { schedule(2500); }, 1500);
-                } else {
-                    startAuto(1000);
-                }
-            });
-            var idleTimer = null;
-            ['touchstart', 'wheel', 'keydown', 'pointerdown'].forEach(function (ev) {
+            // Pause while user is touching/scrolling manually, resume automatically after 3.5s idle
+            ['touchstart', 'wheel', 'pointerdown'].forEach(function (ev) {
                 window.addEventListener(ev, function (e) {
-                    if (abtn.contains(e.target)) return;
-                    cancelSmoothScroll();
-                    clearTimeout(atimer);
-                    clearTimeout(idleTimer);
-                    if (auto) {
-                        idleTimer = setTimeout(function () {
-                            if (auto) schedule(1000);
-                        }, 4000);
+                    if (abtn && abtn.contains(e.target)) return;
+                    clearTimeout(resumeTimer);
+                    if (isAuto) {
+                        pauseAutoGlide();
+                        resumeTimer = setTimeout(function () {
+                            if (isAuto) startAutoGlide();
+                        }, 3500);
                     }
                 }, { passive: true });
             });
@@ -734,8 +733,7 @@
             var scrollHint = document.getElementById('scroll-hint');
             if (scrollHint) {
                 scrollHint.addEventListener('click', function () {
-                    smoothScrollTo(pTop(pages[1]), 1200);
-                    startAuto(2500);
+                    startAutoGlide();
                 });
             }
 
@@ -747,23 +745,52 @@
                         var target = document.querySelector(href);
                         if (target) {
                             e.preventDefault();
-                            stopAuto();
-                            smoothScrollTo(pTop(target), 1100);
+                            pauseAutoGlide();
+                            target.scrollIntoView({ behavior: 'smooth' });
+                            if (isAuto) {
+                                clearTimeout(resumeTimer);
+                                resumeTimer = setTimeout(startAutoGlide, 4000);
+                            }
                         }
                     }
                 });
             });
-            function updateDock() {
-                var id = pages[curPage()].id;
-                dockLinks.forEach(function (a) { a.classList.toggle('act', (' ' + a.dataset.s + ' ').indexOf(' ' + id + ' ') > -1); });
-                toTop.style.display = window.scrollY > 500 ? 'flex' : 'none';
+
+            function curPage() {
+                var y = window.scrollY + window.innerHeight * 0.35, k = 0;
+                for (var i = 0; i < pages.length; i++) {
+                    if (pages[i].offsetTop <= y) k = i;
+                }
+                return k;
             }
-            window.addEventListener('scroll', function () { if (!ticking) { ticking = true; requestAnimationFrame(function () { ticking = false; updateDock(); }); } }, { passive: true });
-            toTop.addEventListener('click', function (e) {
-                e.preventDefault();
-                stopAuto();
-                smoothScrollTo(0, 950);
-            });
+
+            function updateDock() {
+                var p = pages[curPage()];
+                var id = p ? p.id : '';
+                dockLinks.forEach(function (a) { a.classList.toggle('act', (' ' + a.dataset.s + ' ').indexOf(' ' + id + ' ') > -1); });
+                if (toTop) toTop.style.display = window.scrollY > 450 ? 'flex' : 'none';
+            }
+            window.addEventListener('scroll', function () {
+                if (!ticking) {
+                    ticking = true;
+                    requestAnimationFrame(function () {
+                        ticking = false;
+                        updateDock();
+                    });
+                }
+            }, { passive: true });
+
+            if (toTop) {
+                toTop.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    pauseAutoGlide();
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                    if (isAuto) {
+                        clearTimeout(resumeTimer);
+                        resumeTimer = setTimeout(startAutoGlide, 2000);
+                    }
+                });
+            }
             updateDock();
 
             if ('IntersectionObserver' in window) {
