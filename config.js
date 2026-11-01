@@ -5,6 +5,6 @@
 //   (digits only with country code, e.g. "85512345678").
 // If both are empty, the form works in preview mode only (nothing is saved).
 export const RSVP = {
-  endpoint: "https://script.google.com/macros/s/AKfycbwTpej9OM_Ykq2OBZ-0OiEHsPuJdBNnvIpV6HBpTeydRXuwouve7BDHkVK5vJj-6cZH/exec",
+  endpoint: "https://script.google.com/macros/s/AKfycbz6fRHsh4evVxO8E4iLUM8hOkGVdxhLin0KXhqxHoZBxa9vOFBx1YP_2ng3hu7M9rCx/exec",
   whatsapp: "",
 };
