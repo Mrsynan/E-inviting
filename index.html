@@ -391,6 +391,16 @@
                     <span>កត់ទុកក្នុងប្រតិទិន 🗓️</span>
                     <span class="block text-[11px] font-normal opacity-90 uppercase tracking-wider">Save to Calendar</span>
                 </button>
+
+                <div id="scroll-hint" class="mt-8 mb-2 flex flex-col items-center justify-center cursor-pointer opacity-85 hover:opacity-100 transition animate-bounce">
+                    <span class="font-body text-xs text-theme-primary font-bold">សូមអូសចុះក្រោម</span>
+                    <span class="en-sub text-[10px] text-gray-500 mb-1">Scroll Down</span>
+                    <div class="w-8 h-8 rounded-full bg-white/85 border border-theme-gold/60 shadow flex items-center justify-center text-theme-primary">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                        </svg>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -640,7 +650,7 @@
                     cover.style.display = 'none';
                     document.body.classList.remove('locked'); document.body.classList.add('opened');
                     abtn.style.display = 'flex';
-                    if (!(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches)) startAuto(6000);
+                    if (!(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches)) startAuto(1800);
                     window.scrollTo(0, 0);
                 }, 1300);
                 petals();
@@ -685,7 +695,7 @@
             function pTop(el) { return el.getBoundingClientRect().top + window.scrollY; }
             function curPage() { var y = window.scrollY + window.innerHeight * 0.3, k = 0; pages.forEach(function (p, i) { if (pTop(p) <= y) k = i; }); return k; }
             function stopAuto() { auto = false; clearTimeout(atimer); abtn.classList.remove('auto-on'); }
-            function dwell(i) { return Math.max(6000, Math.min(12000, 4500 + (pages[i].innerText || '').length * 12)); }
+            function dwell(i) { return Math.max(3200, Math.min(5500, 2800 + (pages[i].innerText || '').length * 4)); }
             function schedule(delay) {
                 clearTimeout(atimer); if (!auto) return;
                 var i = curPage(); if (i >= pages.length - 1) { stopAuto(); return; }
@@ -701,18 +711,33 @@
                 if (curPage() >= pages.length - 1) {
                     smoothScrollTo(0, 1000);
                     auto = true; abtn.classList.add('auto-on');
-                    atimer = setTimeout(function () { schedule(3000); }, 1500);
+                    atimer = setTimeout(function () { schedule(2500); }, 1500);
                 } else {
-                    startAuto(1500);
+                    startAuto(1000);
                 }
             });
+            var idleTimer = null;
             ['touchstart', 'wheel', 'keydown', 'pointerdown'].forEach(function (ev) {
                 window.addEventListener(ev, function (e) {
                     if (abtn.contains(e.target)) return;
                     cancelSmoothScroll();
-                    if (auto) stopAuto();
+                    clearTimeout(atimer);
+                    clearTimeout(idleTimer);
+                    if (auto) {
+                        idleTimer = setTimeout(function () {
+                            if (auto) schedule(1000);
+                        }, 4000);
+                    }
                 }, { passive: true });
             });
+
+            var scrollHint = document.getElementById('scroll-hint');
+            if (scrollHint) {
+                scrollHint.addEventListener('click', function () {
+                    smoothScrollTo(pTop(pages[1]), 1200);
+                    startAuto(2500);
+                });
+            }
 
             var dockLinks = [].slice.call(document.querySelectorAll('.dock-i')), toTop = document.getElementById('to-top'), ticking = false;
             dockLinks.forEach(function (a) {
