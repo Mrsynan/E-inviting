@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 30" fill="none">
+  <defs>
+    <linearGradient id="gold-kb" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#BA7E21" stop-opacity="0"/>
+      <stop offset="20%" stop-color="#E5AD42"/>
+      <stop offset="50%" stop-color="#FFF9D6"/>
+      <stop offset="80%" stop-color="#E5AD42"/>
+      <stop offset="100%" stop-color="#BA7E21" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <!-- Center Diamond & Kbach Leaves -->
+  <polygon points="120,5 127,15 120,25 113,15" fill="url(#gold-kb)"/>
+  <circle cx="120" cy="15" r="2.5" fill="#FFF9D6"/>
+  <circle cx="106" cy="15" r="2" fill="url(#gold-kb)"/>
+  <circle cx="134" cy="15" r="2" fill="url(#gold-kb)"/>
+  
+  <!-- Left Scroll Flourish -->
+  <path d="M110 15 C95 10 80 18 65 15 C50 12 30 15 10 15" stroke="url(#gold-kb)" stroke-width="1.6" stroke-linecap="round"/>
+  <path d="M85 14 C82 9 72 10 75 16 C78 20 86 18 84 14" fill="url(#gold-kb)"/>
+
+  <!-- Right Scroll Flourish -->
+  <path d="M130 15 C145 10 160 18 175 15 C190 12 210 15 230 15" stroke="url(#gold-kb)" stroke-width="1.6" stroke-linecap="round"/>
+  <path d="M155 14 C158 9 168 10 165 16 C162 20 154 18 156 14" fill="url(#gold-kb)"/>
+</svg>
