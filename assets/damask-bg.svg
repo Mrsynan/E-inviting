@@ -1,40 +1,62 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120">
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="160" viewBox="0 0 160 160">
   <defs>
-    <radialGradient id="damask-base" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#4E0C17"/>
-      <stop offset="100%" stop-color="#34060E"/>
-    </radialGradient>
+    <!-- Velvet Damask Gradient Highlights -->
+    <linearGradient id="damask-gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#9E2235" stop-opacity="0.9"/>
+      <stop offset="50%" stop-color="#721422" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#440912" stop-opacity="0.6"/>
+    </linearGradient>
+    <linearGradient id="damask-highlight" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#B83248" stop-opacity="0.75"/>
+      <stop offset="100%" stop-color="#550D18" stop-opacity="0.3"/>
+    </linearGradient>
   </defs>
-  <!-- Background Tile Base -->
-  <rect width="120" height="120" fill="url(#damask-base)"/>
 
-  <!-- Ornate Damask Pattern (Acanthus & Floral Arabesque) -->
-  <g fill="#5A0E1C" fill-opacity="0.38">
-    <!-- Center Floral Blossom -->
-    <path d="M60 25 C62 35 72 42 80 40 C75 48 68 50 60 55 C52 50 45 48 40 40 C48 42 58 35 60 25 Z"/>
-    <path d="M60 55 C65 62 76 68 85 64 C78 72 68 74 60 82 C52 74 42 72 35 64 C44 68 55 62 60 55 Z"/>
+  <!-- Ornate Baroque Damask Ornament (Center Blossom & Acanthus Flourishes) -->
+  <g fill="url(#damask-gold)">
+    <!-- Central Pomegranate / Palmette Core -->
+    <path d="M80 32 C84 45 96 56 106 54 C98 65 89 68 80 76 C71 68 62 65 54 54 C64 56 76 45 80 32 Z"/>
+    <path d="M80 76 C87 85 101 92 112 88 C103 98 90 100 80 110 C70 100 57 98 48 88 C59 92 73 85 80 76 Z"/>
     
-    <!-- Outer Curved Leaves (Center) -->
-    <path d="M60 15 C66 22 78 28 88 24 C82 32 72 34 66 42 C74 44 86 42 94 34 C88 45 76 52 68 58 C78 62 92 60 102 50 C94 64 78 72 68 78 C74 85 86 90 98 86 C88 96 72 98 62 92 L60 98 L58 92 C48 98 32 96 22 86 C34 90 46 85 52 78 C42 72 26 64 18 50 C28 60 42 62 52 58 C44 52 32 45 26 34 C34 42 46 44 54 42 C48 34 38 32 32 24 C42 28 54 22 60 15 Z"/>
+    <!-- Inner Fine Acanthus Petals -->
+    <path d="M80 44 C82 50 88 56 94 54 C89 60 84 62 80 66 C76 62 71 60 66 54 C72 56 78 50 80 44 Z" fill="url(#damask-highlight)"/>
+    <path d="M80 84 C83 90 90 95 96 93 C91 99 85 101 80 105 C75 101 69 99 64 93 C70 95 77 90 80 84 Z" fill="url(#damask-highlight)"/>
 
-    <!-- Corner Motifs (seamless 4 corners) -->
+    <!-- Large Sweeping Acanthus Scrolls (Center Motif) -->
+    <path d="M80 18 C88 28 104 36 118 30 C110 42 96 46 88 56 C98 60 114 56 125 46 C117 60 101 70 90 78 C104 84 122 80 135 68 C125 86 104 96 90 104 C98 114 114 120 130 115 C116 128 95 130 82 122 L80 130 L78 122 C65 130 44 128 30 115 C46 120 62 114 70 104 C56 96 35 86 25 68 C38 80 56 84 70 78 C59 70 43 60 35 46 C46 56 62 60 72 56 C64 46 50 42 42 30 C56 36 72 28 80 18 Z"/>
+
+    <!-- Corner Motifs (Seamless 4-corner tiling) -->
+    <!-- Top-Left Corner -->
     <g transform="translate(0, 0)">
-      <path d="M0 0 C8 8 18 12 28 10 C22 16 14 18 8 25 C14 26 22 24 28 18 C22 25 14 30 8 38 C14 42 24 40 32 34 C26 44 14 48 4 52 L0 60 Z"/>
+      <path d="M0 0 C12 12 24 16 38 14 C30 22 20 25 12 34 C20 36 30 33 38 25 C30 34 20 42 12 52 C20 58 34 54 44 46 C36 60 20 66 6 70 L0 80 Z"/>
+      <path d="M0 0 L15 0 C12 12 0 15 0 0 Z" fill="url(#damask-highlight)"/>
     </g>
-    <g transform="translate(120, 0) scale(-1, 1)">
-      <path d="M0 0 C8 8 18 12 28 10 C22 16 14 18 8 25 C14 26 22 24 28 18 C22 25 14 30 8 38 C14 42 24 40 32 34 C26 44 14 48 4 52 L0 60 Z"/>
+    <!-- Top-Right Corner -->
+    <g transform="translate(160, 0) scale(-1, 1)">
+      <path d="M0 0 C12 12 24 16 38 14 C30 22 20 25 12 34 C20 36 30 33 38 25 C30 34 20 42 12 52 C20 58 34 54 44 46 C36 60 20 66 6 70 L0 80 Z"/>
+      <path d="M0 0 L15 0 C12 12 0 15 0 0 Z" fill="url(#damask-highlight)"/>
     </g>
-    <g transform="translate(0, 120) scale(1, -1)">
-      <path d="M0 0 C8 8 18 12 28 10 C22 16 14 18 8 25 C14 26 22 24 28 18 C22 25 14 30 8 38 C14 42 24 40 32 34 C26 44 14 48 4 52 L0 60 Z"/>
+    <!-- Bottom-Left Corner -->
+    <g transform="translate(0, 160) scale(1, -1)">
+      <path d="M0 0 C12 12 24 16 38 14 C30 22 20 25 12 34 C20 36 30 33 38 25 C30 34 20 42 12 52 C20 58 34 54 44 46 C36 60 20 66 6 70 L0 80 Z"/>
+      <path d="M0 0 L15 0 C12 12 0 15 0 0 Z" fill="url(#damask-highlight)"/>
     </g>
-    <g transform="translate(120, 120) scale(-1, -1)">
-      <path d="M0 0 C8 8 18 12 28 10 C22 16 14 18 8 25 C14 26 22 24 28 18 C22 25 14 30 8 38 C14 42 24 40 32 34 C26 44 14 48 4 52 L0 60 Z"/>
+    <!-- Bottom-Right Corner -->
+    <g transform="translate(160, 160) scale(-1, -1)">
+      <path d="M0 0 C12 12 24 16 38 14 C30 22 20 25 12 34 C20 36 30 33 38 25 C30 34 20 42 12 52 C20 58 34 54 44 46 C36 60 20 66 6 70 L0 80 Z"/>
+      <path d="M0 0 L15 0 C12 12 0 15 0 0 Z" fill="url(#damask-highlight)"/>
     </g>
 
-    <!-- Delicate dots & diamond accents -->
-    <circle cx="60" cy="5" r="2.5"/>
-    <circle cx="60" cy="115" r="2.5"/>
-    <circle cx="5" cy="60" r="2.5"/>
-    <circle cx="115" cy="60" r="2.5"/>
+    <!-- Side Connecting Arabesques -->
+    <!-- Left Border Arabesque -->
+    <path d="M0 80 C8 72 16 70 24 74 C18 80 18 88 12 94 C18 92 24 88 28 82 C24 92 16 100 0 106 Z"/>
+    <!-- Right Border Arabesque -->
+    <path d="M160 80 C152 72 144 70 136 74 C142 80 142 88 148 94 C142 92 136 88 132 82 C136 92 144 100 160 106 Z"/>
+
+    <!-- Delicate Velvet Grain Diamonds & Crown Finials -->
+    <circle cx="80" cy="8" r="3.5" fill="url(#damask-highlight)"/>
+    <circle cx="80" cy="152" r="3.5" fill="url(#damask-highlight)"/>
+    <circle cx="8" cy="80" r="3" fill="url(#damask-highlight)"/>
+    <circle cx="152" cy="80" r="3" fill="url(#damask-highlight)"/>
   </g>
 </svg>

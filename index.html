@@ -15,9 +15,9 @@
     <meta property="og:url" content="https://YOUR-DOMAIN/">
     <meta name="twitter:card" content="summary_large_image">
     
-    <link rel="preload" as="image" href="assets/royal-curtain.svg">
-    <link rel="preload" as="image" href="assets/royal-monogram.svg">
-    <link rel="preload" as="image" href="assets/damask-bg.svg">
+    <link rel="preload" as="image" href="assets/royal-curtain.svg?v=3">
+    <link rel="preload" as="image" href="assets/royal-monogram.svg?v=3">
+    <link rel="preload" as="image" href="assets/damask-bg.svg?v=3">
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
@@ -85,8 +85,10 @@
             max-width: 480px;
             margin: 0 auto;
             min-height: 100vh;
-            background: #36060F url('assets/damask-bg.svg') repeat;
-            background-size: 130px 130px;
+            background-color: #380710;
+            background-image: url('assets/damask-bg.svg?v=3'), radial-gradient(circle at 50% 30%, #580E1C 0%, #380710 60%, #1A0205 100%);
+            background-repeat: repeat, no-repeat;
+            background-size: 160px 160px, cover;
             color: #F5E6D3;
             position: relative;
             box-shadow: 0 0 60px rgba(0,0,0,0.85);
@@ -171,8 +173,10 @@
             width: min(100%, 480px);
             transform: translateX(-50%);
             overflow: hidden;
-            background: url('assets/damask-bg.svg') repeat, radial-gradient(circle at 50% 35%, #580E1C 0%, #36060F 60%, #1A0205 100%);
-            background-size: 130px 130px, auto;
+            background-color: #380710;
+            background-image: url('assets/damask-bg.svg?v=3'), radial-gradient(circle at 50% 38%, #661022 0%, #380710 55%, #180205 100%);
+            background-repeat: repeat, no-repeat;
+            background-size: 160px 160px, cover;
             box-shadow: 0 0 60px rgba(0,0,0,0.85);
         }
         #cover-content {
@@ -214,17 +218,20 @@
             top: 0;
             left: 0;
             right: 0;
-            height: 300px;
-            background: url('assets/royal-curtain.svg') top center / 100% 100% no-repeat;
+            height: 320px;
+            background: url('assets/royal-curtain.svg?v=3') top center / 100% 100% no-repeat;
             z-index: 5;
             pointer-events: none;
         }
 
-        /* Section Pages */
+        /* Section Pages with Visible Luxury Velvet Damask Background */
         section.page {
             position: relative;
             overflow: hidden;
-            background: radial-gradient(circle at 50% 25%, #4E0C17 0%, #34060E 65%, #1C0206 100%) !important;
+            background-color: #380710 !important;
+            background-image: url('assets/damask-bg.svg?v=3'), radial-gradient(circle at 50% 25%, #580E1C 0%, #380710 65%, #180205 100%) !important;
+            background-repeat: repeat, no-repeat !important;
+            background-size: 160px 160px, cover !important;
             color: #F5E6D3 !important;
             padding-top: 135px !important;
             padding-bottom: 110px !important;
@@ -232,7 +239,10 @@
         #home {
             padding-top: 150px !important;
             padding-bottom: 80px !important;
-            background: radial-gradient(circle at 50% 20%, #540D1B 0%, #380710 55%, #1C0206 100%) !important;
+            background-color: #380710 !important;
+            background-image: url('assets/damask-bg.svg?v=3'), radial-gradient(circle at 50% 20%, #661022 0%, #380710 55%, #180205 100%) !important;
+            background-repeat: repeat, no-repeat !important;
+            background-size: 160px 160px, cover !important;
         }
 
         .hero-brown { color: #FCE194; }
@@ -372,7 +382,7 @@
         /* Khmer kbach ornaments */
         section h2.font-title::after {
             content: ''; display: block; width: 210px; height: 26px; margin: 8px auto 0;
-            background: url('assets/kbach-divider-gold.svg') center / contain no-repeat;
+            background: url('assets/kbach-divider-gold.svg?v=3') center / contain no-repeat;
         }
 
         /* Scrollbar */
@@ -398,7 +408,7 @@
 
                 <!-- Royal 3D Gold Monogram Crest Emblem -->
                 <div class="my-2">
-                    <img src="assets/royal-monogram.svg" alt="Royal Monogram" class="w-32 h-36 mx-auto drop-shadow-[0_10px_20px_rgba(0,0,0,0.7)]">
+                    <img src="assets/royal-monogram.svg?v=3" alt="Royal Monogram" class="w-32 h-36 mx-auto drop-shadow-[0_10px_20px_rgba(0,0,0,0.7)]">
                 </div>
 
                 <!-- Greeting & Guest Name with Luminescent Glow -->
@@ -473,7 +483,7 @@
 
             <div class="relative z-10 rise-in pt-6">
                 <!-- Royal Monogram Crest Emblem -->
-                <img src="assets/royal-monogram.svg" alt="Royal Monogram Crest" class="w-20 h-24 mx-auto mb-2 drop-shadow-[0_8px_16px_rgba(0,0,0,0.7)]">
+                <img src="assets/royal-monogram.svg?v=3" alt="Royal Monogram Crest" class="w-20 h-24 mx-auto mb-2 drop-shadow-[0_8px_16px_rgba(0,0,0,0.7)]">
 
                 <h2 class="font-title text-xl hero-gold-3d leading-relaxed">សិរីមង្គលអាពាហ៍ពិពាហ៍</h2>
                 <p class="en-sub-title text-[10px] tracking-widest text-[#FCE194] mb-3 opacity-90">Wedding Celebration</p>
