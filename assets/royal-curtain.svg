@@ -1,106 +1,117 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 340" preserveAspectRatio="none">
   <defs>
-    <!-- Velvet Gradients -->
-    <linearGradient id="velvet-drape" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#280309"/>
-      <stop offset="12%" stop-color="#580E1C"/>
-      <stop offset="25%" stop-color="#781728"/>
-      <stop offset="38%" stop-color="#460B16"/>
-      <stop offset="50%" stop-color="#6E1524"/>
-      <stop offset="62%" stop-color="#380710"/>
-      <stop offset="75%" stop-color="#781728"/>
-      <stop offset="88%" stop-color="#580E1C"/>
-      <stop offset="100%" stop-color="#240308"/>
+    <!-- Rich Theater Velvet Gradients -->
+    <linearGradient id="velvet-fold-main" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#240207"/>
+      <stop offset="15%" stop-color="#5A0A16"/>
+      <stop offset="35%" stop-color="#841324"/>
+      <stop offset="50%" stop-color="#9C1A2E"/>
+      <stop offset="65%" stop-color="#6E0E1D"/>
+      <stop offset="85%" stop-color="#42060F"/>
+      <stop offset="100%" stop-color="#1E0206"/>
     </linearGradient>
 
-    <linearGradient id="valance-fold" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#80192A"/>
-      <stop offset="45%" stop-color="#540C19"/>
-      <stop offset="85%" stop-color="#36060F"/>
-      <stop offset="100%" stop-color="#1E0308"/>
+    <linearGradient id="valance-swag" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#9E1B2E"/>
+      <stop offset="40%" stop-color="#6E0E1D"/>
+      <stop offset="75%" stop-color="#42060F"/>
+      <stop offset="100%" stop-color="#200206"/>
     </linearGradient>
 
-    <linearGradient id="gold-trim" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#BA7E21"/>
+    <!-- Metallic Gold Trim & Tassels -->
+    <linearGradient id="gold-shimmer" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#A56E14"/>
       <stop offset="25%" stop-color="#FCE194"/>
-      <stop offset="50%" stop-color="#E5AD42"/>
-      <stop offset="75%" stop-color="#FFF9D6"/>
-      <stop offset="100%" stop-color="#BA7E21"/>
+      <stop offset="50%" stop-color="#FFF9DE"/>
+      <stop offset="75%" stop-color="#E5AA3A"/>
+      <stop offset="100%" stop-color="#99600D"/>
     </linearGradient>
 
-    <filter id="curtain-shadow" x="-5%" y="0%" width="110%" height="130%">
-      <feDropShadow dx="0" dy="6" stdDeviation="6" flood-color="#000000" flood-opacity="0.8"/>
+    <filter id="drape-shadow" x="-10%" y="0%" width="120%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="8" flood-color="#000000" flood-opacity="0.85"/>
     </filter>
   </defs>
 
-  <!-- Left Hanging Side Curtain -->
+  <!-- Left Side Cascading Velvet Drapery -->
   <g>
     <!-- Fold 1 (Outer edge) -->
-    <path d="M0 0 L55 0 C50 80 48 180 42 340 L0 340 Z" fill="#280309"/>
-    <path d="M10 0 L50 0 C45 80 42 180 38 340 L12 340 Z" fill="#4A0B16"/>
+    <path d="M0 0 L58 0 C54 90 50 200 44 340 L0 340 Z" fill="#240207"/>
+    <path d="M12 0 L52 0 C48 90 44 200 40 340 L16 340 Z" fill="#480712"/>
     <!-- Fold 2 -->
-    <path d="M22 0 L68 0 C64 90 60 200 52 340 L28 340 Z" fill="#6A1221"/>
-    <!-- Highlight Fold 3 -->
-    <path d="M35 0 L75 0 C70 95 64 210 56 340 L42 340 Z" fill="#84192B"/>
-    <!-- Inner Shadow Edge -->
-    <path d="M50 0 L85 0 C78 100 70 220 60 340 L52 340 Z" fill="#380710"/>
-    <path d="M65 0 L90 0 C82 105 74 225 64 340 L58 340 Z" fill="#580E1C"/>
-    <!-- Soft inner taper curve -->
-    <path d="M72 0 C95 40 92 120 78 220 C72 265 68 310 65 340 L60 340 C65 290 70 240 76 180 C84 100 80 30 65 0 Z" fill="#1C0206" opacity="0.85"/>
+    <path d="M25 0 L72 0 C66 100 62 210 54 340 L30 340 Z" fill="#6E0E1D"/>
+    <!-- Fold 3 (Vibrant Highlight) -->
+    <path d="M38 0 L80 0 C74 105 68 220 58 340 L45 340 Z" fill="#94172B"/>
+    <!-- Fold 4 -->
+    <path d="M52 0 L90 0 C82 110 74 230 64 340 L55 340 Z" fill="#4A0712"/>
+    <path d="M68 0 L96 0 C88 115 80 235 70 340 L62 340 Z" fill="#781020"/>
+    <!-- Soft inner taper curve shadow -->
+    <path d="M78 0 C105 45 100 130 84 235 C76 280 72 320 68 340 L62 340 C68 290 74 240 82 180 C90 100 86 35 70 0 Z" fill="#180104" opacity="0.9"/>
+
+    <!-- Left Hanging Gold Cord & Tassel -->
+    <path d="M65 0 C75 60 78 120 75 180" stroke="url(#gold-shimmer)" stroke-width="2" fill="none"/>
+    <circle cx="75" cy="180" r="4.5" fill="url(#gold-shimmer)"/>
+    <path d="M72 184 L70 206 L80 206 L78 184 Z" fill="url(#gold-shimmer)"/>
+    <circle cx="75" cy="206" r="2.5" fill="#FFEFA8"/>
   </g>
 
-  <!-- Right Hanging Side Curtain -->
+  <!-- Right Side Cascading Velvet Drapery (Mirrored) -->
   <g transform="translate(480, 0) scale(-1, 1)">
     <!-- Fold 1 (Outer edge) -->
-    <path d="M0 0 L55 0 C50 80 48 180 42 340 L0 340 Z" fill="#280309"/>
-    <path d="M10 0 L50 0 C45 80 42 180 38 340 L12 340 Z" fill="#4A0B16"/>
+    <path d="M0 0 L58 0 C50 90 46 200 44 340 L0 340 Z" fill="#240207"/>
+    <path d="M12 0 L52 0 C48 90 44 200 40 340 L16 340 Z" fill="#480712"/>
     <!-- Fold 2 -->
-    <path d="M22 0 L68 0 C64 90 60 200 52 340 L28 340 Z" fill="#6A1221"/>
-    <!-- Highlight Fold 3 -->
-    <path d="M35 0 L75 0 C70 95 64 210 56 340 L42 340 Z" fill="#84192B"/>
-    <!-- Inner Shadow Edge -->
-    <path d="M50 0 L85 0 C78 100 70 220 60 340 L52 340 Z" fill="#380710"/>
-    <path d="M65 0 L90 0 C82 105 74 225 64 340 L58 340 Z" fill="#580E1C"/>
-    <!-- Soft inner taper curve -->
-    <path d="M72 0 C95 40 92 120 78 220 C72 265 68 310 65 340 L60 340 C65 290 70 240 76 180 C84 100 80 30 65 0 Z" fill="#1C0206" opacity="0.85"/>
+    <path d="M25 0 L72 0 C66 100 62 210 54 340 L30 340 Z" fill="#6E0E1D"/>
+    <!-- Fold 3 (Vibrant Highlight) -->
+    <path d="M38 0 L80 0 C74 105 68 220 58 340 L45 340 Z" fill="#94172B"/>
+    <!-- Fold 4 -->
+    <path d="M52 0 L90 0 C82 110 74 230 64 340 L55 340 Z" fill="#4A0712"/>
+    <path d="M68 0 L96 0 C88 115 80 235 70 340 L62 340 Z" fill="#781020"/>
+    <!-- Soft inner taper curve shadow -->
+    <path d="M78 0 C105 45 100 130 84 235 C76 280 72 320 68 340 L62 340 C68 290 74 240 82 180 C90 100 86 35 70 0 Z" fill="#180104" opacity="0.9"/>
+
+    <!-- Right Hanging Gold Cord & Tassel -->
+    <path d="M65 0 C75 60 78 120 75 180" stroke="url(#gold-shimmer)" stroke-width="2" fill="none"/>
+    <circle cx="75" cy="180" r="4.5" fill="url(#gold-shimmer)"/>
+    <path d="M72 184 L70 206 L80 206 L78 184 Z" fill="url(#gold-shimmer)"/>
+    <circle cx="75" cy="206" r="2.5" fill="#FFEFA8"/>
   </g>
 
-  <!-- Top Scalloped Valance / Swags (Theater Drapery) -->
-  <g filter="url(#curtain-shadow)">
-    <!-- Background Swag Fill -->
-    <path d="M0 0 L480 0 L480 28 C410 32 370 75 320 78 C280 80 260 50 240 50 C220 50 200 80 160 78 C110 75 70 32 0 28 Z" fill="#36060F"/>
+  <!-- Top Theater Swags & Scalloped Valances -->
+  <g filter="url(#drape-shadow)">
+    <!-- Header Velvet Valance Bar -->
+    <path d="M0 0 L480 0 L480 22 C380 26 340 40 240 40 C140 40 100 26 0 22 Z" fill="#3A050D"/>
+    <path d="M0 20 C100 24 140 38 240 38 C340 38 380 24 480 20" stroke="url(#gold-shimmer)" stroke-width="1.8" fill="none"/>
 
-    <!-- Left Outer Swag -->
-    <path d="M0 0 L150 0 C135 48 95 82 0 98 Z" fill="url(#valance-fold)"/>
-    <path d="M0 0 L140 0 C125 42 90 72 0 85 Z" fill="#6B1322" opacity="0.5"/>
-    <path d="M0 0 L120 0 C105 35 75 58 0 68 Z" fill="#841A2C" opacity="0.6"/>
-    <!-- Left Swag Gold Trim -->
-    <path d="M0 98 C95 82 135 48 150 0" stroke="url(#gold-trim)" stroke-width="2.5" fill="none"/>
+    <!-- Left Outer Dramatic Swag -->
+    <path d="M0 0 L160 0 C145 52 100 90 0 105 Z" fill="url(#valance-swag)"/>
+    <path d="M0 0 L145 0 C130 45 92 78 0 90 Z" fill="#781020" opacity="0.6"/>
+    <path d="M0 0 L125 0 C110 38 80 62 0 72 Z" fill="#9C1A2E" opacity="0.75"/>
+    <path d="M0 105 C100 90 145 52 160 0" stroke="url(#gold-shimmer)" stroke-width="2.6" fill="none"/>
 
-    <!-- Right Outer Swag -->
-    <path d="M480 0 L330 0 C345 48 385 82 480 98 Z" fill="url(#valance-fold)"/>
-    <path d="M480 0 L340 0 C355 42 390 72 480 85 Z" fill="#6B1322" opacity="0.5"/>
-    <path d="M480 0 L360 0 C375 35 405 58 480 68 Z" fill="#841A2C" opacity="0.6"/>
-    <!-- Right Swag Gold Trim -->
-    <path d="M480 98 C385 82 345 48 330 0" stroke="url(#gold-trim)" stroke-width="2.5" fill="none"/>
+    <!-- Right Outer Dramatic Swag -->
+    <path d="M480 0 L320 0 C335 52 380 90 480 105 Z" fill="url(#valance-swag)"/>
+    <path d="M480 0 L335 0 C350 45 388 78 480 90 Z" fill="#781020" opacity="0.6"/>
+    <path d="M480 0 L355 0 C370 38 400 62 480 72 Z" fill="#9C1A2E" opacity="0.75"/>
+    <path d="M480 105 C380 90 335 52 320 0" stroke="url(#gold-shimmer)" stroke-width="2.6" fill="none"/>
 
     <!-- Center Left Swag -->
-    <path d="M90 0 C110 35 150 65 200 68 C220 70 235 60 240 52 C230 40 210 20 200 0 Z" fill="url(#valance-fold)"/>
-    <path d="M105 0 C125 30 160 55 200 58 C215 59 230 52 236 45 L190 0 Z" fill="#751525" opacity="0.55"/>
-    <path d="M90 0 C110 35 150 65 200 68 C220 70 235 60 240 52" stroke="url(#gold-trim)" stroke-width="2" fill="none"/>
+    <path d="M90 0 C112 40 155 72 205 74 C225 76 240 64 245 55 C232 42 210 20 198 0 Z" fill="url(#valance-swag)"/>
+    <path d="M105 0 C128 34 165 60 205 62 C220 63 234 54 240 46 L190 0 Z" fill="#9C1A2E" opacity="0.65"/>
+    <path d="M90 0 C112 40 155 72 205 74 C225 76 240 64 245 55" stroke="url(#gold-shimmer)" stroke-width="2.2" fill="none"/>
 
     <!-- Center Right Swag -->
-    <path d="M390 0 C370 35 330 65 280 68 C260 70 245 60 240 52 C250 40 270 20 280 0 Z" fill="url(#valance-fold)"/>
-    <path d="M375 0 C355 30 320 55 280 58 C265 59 250 52 244 45 L290 0 Z" fill="#751525" opacity="0.55"/>
-    <path d="M390 0 C370 35 330 65 280 68 C260 70 245 60 240 52" stroke="url(#gold-trim)" stroke-width="2" fill="none"/>
+    <path d="M390 0 C368 40 325 72 275 74 C255 76 240 64 235 55 C248 42 270 20 282 0 Z" fill="url(#valance-swag)"/>
+    <path d="M375 0 C352 34 315 60 275 62 C260 63 246 54 240 46 L290 0 Z" fill="#9C1A2E" opacity="0.65"/>
+    <path d="M390 0 C368 40 325 72 275 74 C255 76 240 64 235 55" stroke="url(#gold-shimmer)" stroke-width="2.2" fill="none"/>
 
-    <!-- Main Center Crown Swag / Pelmet -->
-    <path d="M170 0 C185 30 210 46 240 46 C270 46 295 30 310 0 Z" fill="url(#valance-fold)"/>
-    <path d="M185 0 C198 24 218 36 240 36 C262 36 282 24 295 0 Z" fill="#8A1C2E" opacity="0.7"/>
-    <path d="M170 0 C185 30 210 46 240 46 C270 46 295 30 310 0" stroke="url(#gold-trim)" stroke-width="2.5" fill="none"/>
+    <!-- Center Main Swag Pelmet -->
+    <path d="M165 0 C182 32 208 48 240 48 C272 48 298 32 315 0 Z" fill="url(#valance-swag)"/>
+    <path d="M180 0 C195 26 216 38 240 38 C264 38 285 26 300 0 Z" fill="#AC2034" opacity="0.85"/>
+    <path d="M165 0 C182 32 208 48 240 48 C272 48 298 32 315 0" stroke="url(#gold-shimmer)" stroke-width="2.6" fill="none"/>
 
-    <!-- Center Golden Tassel Accent -->
-    <circle cx="240" cy="48" r="4.5" fill="url(#gold-trim)"/>
-    <path d="M238 52 L236 68 L244 68 L242 52 Z" fill="url(#gold-trim)"/>
+    <!-- Center Hanging Golden Tassel -->
+    <circle cx="240" cy="50" r="5" fill="url(#gold-shimmer)"/>
+    <path d="M237 54 L235 72 L245 72 L243 54 Z" fill="url(#gold-shimmer)"/>
+    <circle cx="240" cy="72" r="2.8" fill="#FFF8D6"/>
   </g>
 </svg>
