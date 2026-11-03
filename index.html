@@ -18,9 +18,10 @@
     <meta property="og:url" content="https://YOUR-DOMAIN/">
     <meta name="twitter:card" content="summary_large_image">
     
-    <link rel="preload" as="image" href="assets/damask-bg.svg?v=8">
-    <link rel="preload" as="image" href="assets/royal-curtain.svg?v=8">
-    <link rel="preload" as="image" href="assets/royal-monogram.svg?v=8">
+    <link rel="preload" as="image" href="assets/damask-bg.svg?v=9">
+    <link rel="preload" as="image" href="assets/curtain-valance.svg?v=9">
+    <link rel="preload" as="image" href="assets/curtain-side.svg?v=9">
+    <link rel="preload" as="image" href="assets/royal-monogram.svg?v=9">
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
@@ -89,7 +90,7 @@
             margin: 0 auto;
             min-height: 100vh;
             background-color: #380710;
-            background-image: url('assets/damask-bg.svg?v=8'), radial-gradient(circle at 50% 30%, #580E1C 0%, #380710 60%, #1A0205 100%);
+            background-image: url('assets/damask-bg.svg?v=9'), radial-gradient(circle at 50% 30%, #580E1C 0%, #380710 60%, #1A0205 100%);
             background-repeat: repeat, no-repeat;
             background-size: 160px 160px, cover;
             color: #F5E6D3;
@@ -177,7 +178,7 @@
             transform: translateX(-50%);
             overflow: hidden;
             background-color: #380710;
-            background-image: url('assets/damask-bg.svg?v=8'), radial-gradient(circle at 50% 38%, #661022 0%, #380710 55%, #180205 100%);
+            background-image: url('assets/damask-bg.svg?v=9'), radial-gradient(circle at 50% 38%, #661022 0%, #380710 55%, #180205 100%);
             background-repeat: repeat, no-repeat;
             background-size: 160px 160px, cover;
             box-shadow: 0 0 60px rgba(0,0,0,0.85);
@@ -215,16 +216,38 @@
         .sp { position: absolute; width: 6px; height: 6px; border-radius: 50%; background: radial-gradient(circle, #fff 0, rgba(252,225,148,.9) 40%, transparent 70%); animation: twinkle 2.6s ease-in-out infinite; opacity: 0; }
         @keyframes twinkle { 0%,100% { opacity: 0; transform: scale(.4); } 50% { opacity: 1; transform: scale(1.5); } }
 
-        /* Royal Red Velvet Drapery Curtain Top Overlay */
+        /* Royal Red Velvet Theater Curtain Frame - Continuous Top & Full-Height Sides */
         .curtain-frame {
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            z-index: 5;
+            overflow: hidden;
+        }
+        .curtain-top {
             position: absolute;
             top: 0;
             left: 0;
             right: 0;
-            height: 320px;
-            background: url('assets/royal-curtain.svg?v=8') top center / 100% 100% no-repeat;
-            z-index: 5;
-            pointer-events: none;
+            height: 140px;
+            background: url('assets/curtain-valance.svg?v=9') top center / 100% 100% no-repeat;
+            z-index: 2;
+        }
+        .curtain-side {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 58px;
+            z-index: 1;
+        }
+        .curtain-left {
+            left: 0;
+            background: url('assets/curtain-side.svg?v=9') top left / 100% 100% no-repeat;
+        }
+        .curtain-right {
+            right: 0;
+            transform: scaleX(-1);
+            background: url('assets/curtain-side.svg?v=9') top left / 100% 100% no-repeat;
         }
 
         /* Section Pages with Visible Luxury Velvet Damask Background */
@@ -232,7 +255,7 @@
             position: relative;
             overflow: hidden;
             background-color: #380710 !important;
-            background-image: url('assets/damask-bg.svg?v=8'), radial-gradient(circle at 50% 25%, #580E1C 0%, #380710 65%, #180205 100%) !important;
+            background-image: url('assets/damask-bg.svg?v=9'), radial-gradient(circle at 50% 25%, #580E1C 0%, #380710 65%, #180205 100%) !important;
             background-repeat: repeat, no-repeat !important;
             background-size: 160px 160px, cover !important;
             color: #F5E6D3 !important;
@@ -243,7 +266,7 @@
             padding-top: 115px !important;
             padding-bottom: 80px !important;
             background-color: #380710 !important;
-            background-image: url('assets/damask-bg.svg?v=8'), radial-gradient(circle at 50% 20%, #661022 0%, #380710 55%, #180205 100%) !important;
+            background-image: url('assets/damask-bg.svg?v=9'), radial-gradient(circle at 50% 20%, #661022 0%, #380710 55%, #180205 100%) !important;
             background-repeat: repeat, no-repeat !important;
             background-size: 160px 160px, cover !important;
         }
@@ -385,7 +408,7 @@
         /* Khmer kbach ornaments */
         section h2.font-title::after {
             content: ''; display: block; width: 210px; height: 26px; margin: 8px auto 0;
-            background: url('assets/kbach-divider-gold.svg?v=8') center / contain no-repeat;
+            background: url('assets/kbach-divider-gold.svg?v=9') center / contain no-repeat;
         }
 
         /* Scrollbar */
@@ -411,7 +434,7 @@
 
                 <!-- Royal 3D Gold Monogram Crest Emblem -->
                 <div class="my-1.5">
-                    <img src="assets/royal-monogram.svg?v=8" alt="Royal Monogram" class="w-28 h-32 mx-auto drop-shadow-[0_10px_20px_rgba(0,0,0,0.7)]">
+                    <img src="assets/royal-monogram.svg?v=9" alt="Royal Monogram" class="w-28 h-32 mx-auto drop-shadow-[0_10px_20px_rgba(0,0,0,0.7)]">
                 </div>
 
                 <!-- Greeting & Guest Name with Luminescent Glow -->
@@ -481,8 +504,12 @@
 
         <!-- 1. INVITATION PAGE matching Reference Screenshot -->
         <section id="home" class="page text-center px-6">
-            <!-- Royal Velvet Drapery Curtain Top Overlay -->
-            <div class="curtain-frame"></div>
+            <!-- Royal Velvet Theater Curtain Frame (Continuous Top & Full-Height Sides) -->
+            <div class="curtain-frame" aria-hidden="true">
+                <div class="curtain-top"></div>
+                <div class="curtain-side curtain-left"></div>
+                <div class="curtain-side curtain-right"></div>
+            </div>
 
             <div class="relative z-10 rise-in pt-4">
                 <h2 class="font-title text-xl hero-gold-3d leading-relaxed">សិរីមង្គលអាពាហ៍ពិពាហ៍</h2>
