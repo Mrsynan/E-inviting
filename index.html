@@ -18,9 +18,9 @@
     <meta property="og:url" content="https://YOUR-DOMAIN/">
     <meta name="twitter:card" content="summary_large_image">
     
-    <link rel="preload" as="image" href="assets/khmer-wedding-bg.jpg?v=6">
-    <link rel="preload" as="image" href="assets/royal-curtain.svg?v=6">
-    <link rel="preload" as="image" href="assets/royal-monogram.svg?v=6">
+    <link rel="preload" as="image" href="assets/khmer-wedding-bg.jpg?v=7">
+    <link rel="preload" as="image" href="assets/royal-curtain.svg?v=7">
+    <link rel="preload" as="image" href="assets/royal-monogram.svg?v=7">
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
@@ -88,7 +88,7 @@
             max-width: 480px;
             margin: 0 auto;
             min-height: 100vh;
-            background: #380710 url('assets/khmer-wedding-bg.jpg?v=6') center / cover no-repeat fixed;
+            background: #380710 url('assets/khmer-wedding-bg.jpg?v=7') center top / cover no-repeat fixed;
             color: #F5E6D3;
             position: relative;
             box-shadow: 0 0 60px rgba(0,0,0,0.85);
@@ -173,7 +173,7 @@
             width: min(100%, 480px);
             transform: translateX(-50%);
             overflow: hidden;
-            background: #380710 url('assets/khmer-wedding-bg.jpg?v=6') center / cover no-repeat;
+            background: #380710 url('assets/khmer-wedding-bg.jpg?v=7') center top / cover no-repeat;
             box-shadow: 0 0 60px rgba(0,0,0,0.85);
         }
         #cover-content {
@@ -216,7 +216,7 @@
             left: 0;
             right: 0;
             height: 320px;
-            background: url('assets/royal-curtain.svg?v=6') top center / 100% 100% no-repeat;
+            background: url('assets/royal-curtain.svg?v=7') top center / 100% 100% no-repeat;
             z-index: 5;
             pointer-events: none;
         }
@@ -234,7 +234,7 @@
         #home {
             padding-top: 115px !important;
             padding-bottom: 80px !important;
-            background: #380710 url('assets/khmer-wedding-bg.jpg?v=6') center top / cover no-repeat !important;
+            background: #380710 url('assets/khmer-wedding-bg.jpg?v=7') center top / cover no-repeat !important;
         }
 
         .hero-brown { color: #FCE194; }
@@ -374,7 +374,7 @@
         /* Khmer kbach ornaments */
         section h2.font-title::after {
             content: ''; display: block; width: 210px; height: 26px; margin: 8px auto 0;
-            background: url('assets/kbach-divider-gold.svg?v=6') center / contain no-repeat;
+            background: url('assets/kbach-divider-gold.svg?v=7') center / contain no-repeat;
         }
 
         /* Scrollbar */
@@ -392,20 +392,22 @@
     <!-- Opening cover matching Reference Screenshot -->
     <div id="cover">
         <div class="cv-stage">
+            <!-- Royal Velvet Drapery Curtain Top Overlay matching Second Page -->
+            <div class="curtain-frame"></div>
             <div id="cv-sparkles"></div>
-            <div id="cover-content" class="relative z-10 flex flex-col items-center justify-center text-center px-6">
+            <div id="cover-content" class="relative z-10 flex flex-col items-center justify-center text-center px-6 pt-10">
                 <!-- 3D Gold Embossed Header -->
-                <p class="font-title text-xl hero-gold-3d leading-relaxed mb-1">សិរីមង្គលអាពាហ៍ពិពាហ៍</p>
-                <p class="en-sub-title text-[10px] tracking-widest text-[#FCE194] mb-3 opacity-90">Wedding Celebration</p>
+                <p class="font-title text-xl hero-gold-3d leading-relaxed mb-0.5">សិរីមង្គលអាពាហ៍ពិពាហ៍</p>
+                <p class="en-sub-title text-[10px] tracking-widest text-[#FCE194] mb-2 opacity-90">Wedding Celebration</p>
 
                 <!-- Royal 3D Gold Monogram Crest Emblem -->
-                <div class="my-2">
-                    <img src="assets/royal-monogram.svg?v=6" alt="Royal Monogram" class="w-32 h-36 mx-auto drop-shadow-[0_10px_20px_rgba(0,0,0,0.7)]">
+                <div class="my-1.5">
+                    <img src="assets/royal-monogram.svg?v=7" alt="Royal Monogram" class="w-28 h-32 mx-auto drop-shadow-[0_10px_20px_rgba(0,0,0,0.7)]">
                 </div>
 
                 <!-- Greeting & Guest Name with Luminescent Glow -->
-                <div class="my-3 w-full">
-                    <p class="font-title text-sm text-[#FCE194] tracking-wide mb-1.5">សូមគោរពអញ្ជើញ</p>
+                <div class="my-2.5 w-full">
+                    <p class="font-title text-sm text-[#FCE194] tracking-wide mb-1">សូមគោរពអញ្ជើញ</p>
                     <div id="cover-greeting-box" class="hidden min-h-[38px] flex flex-col items-center justify-center">
                         <p id="cover-greeting" class="font-title text-xl text-white font-bold guest-name-glow"></p>
                     </div>
@@ -415,10 +417,10 @@
                 </div>
 
                 <!-- Warm Champagne-Gold Pill Open Button -->
-                <button id="open-btn" type="button" class="gold-pill-btn mt-3">
+                <button id="open-btn" type="button" class="gold-pill-btn mt-2.5">
                     <span>បើកធៀប</span>
                 </button>
-                <p class="font-body text-xs text-[#F5E6D3] mt-4 opacity-90">សូមមេត្តាចុចដើម្បីបើកធៀបអេឡិចត្រូនិច</p>
+                <p class="font-body text-xs text-[#F5E6D3] mt-3.5 opacity-90">សូមមេត្តាចុចដើម្បីបើកធៀបអេឡិចត្រូនិច</p>
                 <p class="en-sub text-[10px] text-[#D8B289]">Tap to open your e-invitation</p>
             </div>
         </div>
