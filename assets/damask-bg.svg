@@ -1,18 +1,18 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="160" height="160" viewBox="0 0 160 160">
   <defs>
-    <!-- Velvet Damask Gradient Highlights -->
+    <!-- Royal Sapphire Blue Velvet Damask Gradients -->
     <linearGradient id="damask-gold" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#9E2235" stop-opacity="0.9"/>
-      <stop offset="50%" stop-color="#721422" stop-opacity="0.8"/>
-      <stop offset="100%" stop-color="#440912" stop-opacity="0.6"/>
+      <stop offset="0%" stop-color="#2D7DF6" stop-opacity="0.85"/>
+      <stop offset="50%" stop-color="#1657B8" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#083375" stop-opacity="0.45"/>
     </linearGradient>
     <linearGradient id="damask-highlight" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#B83248" stop-opacity="0.75"/>
-      <stop offset="100%" stop-color="#550D18" stop-opacity="0.3"/>
+      <stop offset="0%" stop-color="#5CA2FF" stop-opacity="0.75"/>
+      <stop offset="100%" stop-color="#1450A8" stop-opacity="0.25"/>
     </linearGradient>
   </defs>
 
-  <!-- Ornate Baroque Damask Ornament (Center Blossom & Acanthus Flourishes) -->
+  <!-- Ornate Royal Khmer Damask Ornament (Center Blossom & Acanthus Flourishes) -->
   <g fill="url(#damask-gold)">
     <!-- Central Pomegranate / Palmette Core -->
     <path d="M80 32 C84 45 96 56 106 54 C98 65 89 68 80 76 C71 68 62 65 54 54 C64 56 76 45 80 32 Z"/>
