@@ -18,9 +18,9 @@
     <meta property="og:url" content="https://YOUR-DOMAIN/">
     <meta name="twitter:card" content="summary_large_image">
     
-    <link rel="preload" as="image" href="assets/damask-bg.svg?v=11">
-    <link rel="preload" as="image" href="assets/royal-curtain.svg?v=11">
-    <link rel="preload" as="image" href="assets/royal-crest-blue.png?v=11">
+    <link rel="preload" as="image" href="assets/khmer_navy_gold_bg.jpg?v=12">
+    <link rel="preload" as="image" href="assets/royal-curtain.svg?v=12">
+    <link rel="preload" as="image" href="assets/royal-crest-blue.png?v=12">
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
@@ -83,15 +83,16 @@
         .en-sub { font-family: 'Montserrat', sans-serif; font-size: 0.72rem; line-height: 1.4; letter-spacing: 0.04em; color: #D8B289; opacity: 0.9; display: block; }
         .en-sub-title { font-family: 'Cinzel', 'Playfair Display', serif; font-size: 0.75rem; letter-spacing: 0.18em; text-transform: uppercase; color: #FCE194; opacity: 0.9; display: block; }
 
-        /* Mobile Container with Luxury Royal Sapphire Blue Damask Background */
+        /* Mobile Container with Luxury Royal Khmer Navy & Gold Background */
         .mobile-container {
             max-width: 480px;
             margin: 0 auto;
             min-height: 100vh;
-            background-color: #062B68;
-            background-image: url('assets/damask-bg.svg?v=11'), radial-gradient(circle at 50% 30%, #1762B1 0%, #073479 60%, #02173F 100%);
-            background-repeat: repeat, no-repeat;
-            background-size: 160px 160px, cover;
+            background-color: #020D22;
+            background-image: url('assets/khmer_navy_gold_bg.jpg?v=12');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center top;
             color: #F5E6D3;
             position: relative;
             box-shadow: 0 0 60px rgba(0,0,0,0.85);
@@ -100,7 +101,7 @@
 
         /* 3D Metallic Gold Embossed Text Effect */
         .text-gold-gradient, .hero-gold-3d {
-            background: linear-gradient(180deg, #FFFDEB 0%, #FCE194 30%, #E5AD42 65%, #9B6311 100%);
+            background: linear-gradient(180deg, #FFF0B8 0%, #F6CE78 45%, #E5AA3A 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -108,7 +109,7 @@
         }
 
         .hero-gold {
-            background: linear-gradient(180deg, #FFFDEB 0%, #FCE194 30%, #E5AD42 65%, #9B6311 100%);
+            background: linear-gradient(180deg, #FFF0B8 0%, #F6CE78 45%, #E5AA3A 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -122,7 +123,7 @@
 
         /* Gold Pill Button matching Reference Screenshots */
         .gold-pill-btn {
-            background: linear-gradient(180deg, #FAD77B 0%, #E5A844 50%, #C4821E 100%);
+            background: linear-gradient(180deg, #FFF0B8 0%, #F6CE78 45%, #E5AA3A 100%);
             color: #052052 !important;
             font-family: 'Moul', cursive;
             font-size: 1rem;
@@ -176,10 +177,11 @@
             width: min(100%, 480px);
             transform: translateX(-50%);
             overflow: hidden;
-            background-color: #062B68;
-            background-image: url('assets/damask-bg.svg?v=11'), radial-gradient(circle at 50% 38%, #1A69CE 0%, #083782 55%, #021842 100%);
-            background-repeat: repeat, no-repeat;
-            background-size: 160px 160px, cover;
+            background-color: #020D22;
+            background-image: url('assets/khmer_navy_gold_bg.jpg?v=12');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center top;
             box-shadow: 0 0 60px rgba(0,0,0,0.85);
         }
         #cover-content {
@@ -215,23 +217,24 @@
         .sp { position: absolute; width: 6px; height: 6px; border-radius: 50%; background: radial-gradient(circle, #fff 0, rgba(252,225,148,.9) 40%, transparent 70%); animation: twinkle 2.6s ease-in-out infinite; opacity: 0; }
         @keyframes twinkle { 0%,100% { opacity: 0; transform: scale(.4); } 50% { opacity: 1; transform: scale(1.5); } }
 
-        /* Royal Red Velvet Theater Curtain Frame - Continuous Full-Height Framing */
+        /* Royal Theater Curtain Frame */
         .curtain-frame {
             position: absolute;
             inset: 0;
-            background: url('assets/royal-curtain.svg?v=11') top center / 100% 100% no-repeat;
+            background: url('assets/royal-curtain.svg?v=12') top center / 100% 100% no-repeat;
             z-index: 5;
             pointer-events: none;
         }
 
-        /* Section Pages with Visible Luxury Velvet Damask Background */
+        /* Section Pages with Luxury Traditional Khmer Royal Background */
         section.page {
             position: relative;
             overflow: hidden;
-            background-color: #062B68 !important;
-            background-image: url('assets/damask-bg.svg?v=11'), radial-gradient(circle at 50% 25%, #1762B1 0%, #073479 65%, #02173F 100%) !important;
-            background-repeat: repeat, no-repeat !important;
-            background-size: 160px 160px, cover !important;
+            background-color: #020D22 !important;
+            background-image: url('assets/khmer_navy_gold_bg.jpg?v=12') !important;
+            background-repeat: no-repeat !important;
+            background-size: cover !important;
+            background-position: center top !important;
             color: #F5E6D3 !important;
             padding-top: 135px !important;
             padding-bottom: 110px !important;
@@ -241,10 +244,11 @@
             z-index: 10;
             padding-top: 115px !important;
             padding-bottom: 80px !important;
-            background-color: #062B68 !important;
-            background-image: url('assets/damask-bg.svg?v=11'), radial-gradient(circle at 50% 20%, #1A69CE 0%, #073479 55%, #02173F 100%) !important;
-            background-repeat: repeat, no-repeat !important;
-            background-size: 160px 160px, cover !important;
+            background-color: #020D22 !important;
+            background-image: url('assets/khmer_navy_gold_bg.jpg?v=12') !important;
+            background-repeat: no-repeat !important;
+            background-size: cover !important;
+            background-position: center top !important;
         }
 
         .hero-brown { color: #FCE194; }
@@ -384,7 +388,7 @@
         /* Khmer kbach ornaments */
         section h2.font-title::after {
             content: ''; display: block; width: 210px; height: 26px; margin: 8px auto 0;
-            background: url('assets/kbach-divider-gold.svg?v=11') center / contain no-repeat;
+            background: url('assets/kbach-divider-gold.svg?v=12') center / contain no-repeat;
         }
 
         /* Scrollbar */
@@ -410,7 +414,7 @@
 
                 <!-- Royal 3D Gold Monogram Crest Emblem matching Reference Screenshot -->
                 <div class="my-2">
-                    <img src="assets/royal-crest-blue.png?v=11" alt="Royal Monogram" class="w-44 h-44 mx-auto drop-shadow-[0_12px_28px_rgba(0,0,0,0.85)]">
+                    <img src="assets/royal-crest-blue.png?v=12" alt="Royal Monogram" class="w-44 h-44 mx-auto drop-shadow-[0_12px_28px_rgba(0,0,0,0.85)]">
                 </div>
 
                 <!-- Greeting & Guest Name with Luminescent Glow -->
