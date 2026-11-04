@@ -17,9 +17,22 @@
     <meta property="og:url" content="https://mrsynan.github.io/E-inviting/">
     <meta name="twitter:card" content="summary_large_image">
     
-    <link rel="preload" as="image" href="assets/royal-blue-gold-frame.jpg?v=13">
-    <link rel="preload" as="image" href="assets/royal-curtain.svg?v=13">
-    <link rel="preload" as="image" href="assets/royal-crest-blue.png?v=13">
+    <!-- Auto-apply latest version across all URLs without manual ?v= -->
+    <script>
+        (function() {
+            var v = '14';
+            try {
+                var url = new URL(window.location.href);
+                if (url.searchParams.get('v') !== v && url.hostname.indexOf('github.io') !== -1) {
+                    url.searchParams.set('v', v);
+                    window.location.replace(url.toString());
+                }
+            } catch(e) {}
+        })();
+    </script>
+
+    <link rel="preload" as="image" href="assets/royal-blue-gold-frame.jpg?v=14">
+    <link rel="preload" as="image" href="assets/royal-crest-blue.png?v=14">
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
@@ -72,7 +85,7 @@
 
         body {
             background-color: #020D22;
-            background-image: url('assets/royal-blue-gold-frame.jpg?v=13');
+            background-image: url('assets/royal-blue-gold-frame.jpg?v=14');
             background-position: center center;
             background-size: cover;
             background-attachment: fixed;
@@ -92,14 +105,24 @@
             margin: 0 auto;
             min-height: 100vh;
             background-color: #020D22;
-            background-image: url('assets/royal-blue-gold-frame.jpg?v=13');
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center top;
             color: #F5E6D3;
             position: relative;
             box-shadow: 0 0 60px rgba(0,0,0,0.85);
             overflow-x: clip;
+        }
+
+        /* Fixed Royal Gold Frame for all following pages */
+        .mobile-container::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            width: min(100%, 480px);
+            transform: translateX(-50%);
+            background: #020D22 url('assets/royal-blue-gold-frame.jpg?v=14') center center / 100% 100% no-repeat;
+            pointer-events: none;
+            z-index: 1;
         }
 
         /* 3D Metallic Gold Embossed Text Effect */
@@ -181,7 +204,7 @@
             transform: translateX(-50%);
             overflow: hidden;
             background-color: #020D22;
-            background-image: url('assets/royal-blue-gold-frame.jpg?v=13');
+            background-image: url('assets/royal-blue-gold-frame.jpg?v=14');
             background-repeat: no-repeat;
             background-size: 100% 100%;
             background-position: center center;
@@ -220,38 +243,27 @@
         .sp { position: absolute; width: 6px; height: 6px; border-radius: 50%; background: radial-gradient(circle, #fff 0, rgba(252,225,148,.9) 40%, transparent 70%); animation: twinkle 2.6s ease-in-out infinite; opacity: 0; }
         @keyframes twinkle { 0%,100% { opacity: 0; transform: scale(.4); } 50% { opacity: 1; transform: scale(1.5); } }
 
-        /* Royal Theater Curtain Frame */
+        /* Curtain Frame Disabled to match Cover Frame seamlessly */
         .curtain-frame {
-            position: absolute;
-            inset: 0;
-            background: url('assets/royal-curtain.svg?v=13') top center / 100% 100% no-repeat;
-            z-index: 5;
-            pointer-events: none;
+            display: none !important;
         }
 
         /* Section Pages with Luxury Royal Blue & Gold Frame Background */
         section.page {
             position: relative;
+            z-index: 10;
             overflow: hidden;
-            background-color: #020D22 !important;
-            background-image: url('assets/royal-blue-gold-frame.jpg?v=13') !important;
-            background-repeat: no-repeat !important;
-            background-size: 100% 100% !important;
-            background-position: center center !important;
+            background: transparent !important;
             color: #F5E6D3 !important;
-            padding-top: 135px !important;
-            padding-bottom: 110px !important;
+            padding-top: 80px !important;
+            padding-bottom: 70px !important;
         }
         #home {
             position: relative;
             z-index: 10;
-            padding-top: 115px !important;
-            padding-bottom: 80px !important;
-            background-color: #020D22 !important;
-            background-image: url('assets/royal-blue-gold-frame.jpg?v=13') !important;
-            background-repeat: no-repeat !important;
-            background-size: 100% 100% !important;
-            background-position: center center !important;
+            background: transparent !important;
+            padding-top: 55px !important;
+            padding-bottom: 50px !important;
         }
 
         .hero-brown { color: #FCE194; }
@@ -391,7 +403,7 @@
         /* Khmer kbach ornaments */
         section h2.font-title::after {
             content: ''; display: block; width: 210px; height: 26px; margin: 8px auto 0;
-            background: url('assets/kbach-divider-gold.svg?v=13') center / contain no-repeat;
+            background: url('assets/kbach-divider-gold.svg?v=14') center / contain no-repeat;
         }
 
         /* Scrollbar */
@@ -417,7 +429,7 @@
 
                 <!-- Royal 3D Gold Monogram Crest Emblem matching Reference Screenshot -->
                 <div class="my-2">
-                    <img src="assets/royal-crest-blue.png?v=13" alt="Royal Monogram" class="w-44 h-44 mx-auto drop-shadow-[0_12px_28px_rgba(0,0,0,0.85)]">
+                    <img src="assets/royal-crest-blue.png?v=14" alt="Royal Monogram" class="w-44 h-44 mx-auto drop-shadow-[0_12px_28px_rgba(0,0,0,0.85)]">
                 </div>
 
                 <!-- Greeting & Guest Name with Luminescent Glow -->
@@ -487,9 +499,6 @@
 
         <!-- 1. INVITATION PAGE matching Reference Screenshot -->
         <section id="home" class="page text-center px-6">
-            <!-- Royal Velvet Theater Curtain Frame - Full Screen Continuous -->
-            <div class="curtain-frame"></div>
-
             <div class="relative z-10 rise-in pt-4">
                 <h2 class="font-title text-xl hero-gold-3d leading-relaxed">សិរីមង្គលអាពាហ៍ពិពាហ៍</h2>
                 <p class="en-sub-title text-[10px] tracking-widest text-[#FCE194] mb-3 opacity-90">Wedding Celebration</p>
