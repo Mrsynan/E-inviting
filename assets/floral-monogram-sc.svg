@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
+  <defs>
+    <!-- Soft luxury metallic gold gradient matching #C9A96A palette -->
+    <linearGradient id="softGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E5CA92"/>
+      <stop offset="30%" stop-color="#C9A96A"/>
+      <stop offset="70%" stop-color="#DFC487"/>
+      <stop offset="100%" stop-color="#9E7D42"/>
+    </linearGradient>
+    <linearGradient id="innerGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF8F4"/>
+      <stop offset="100%" stop-color="#FCECE5"/>
+    </linearGradient>
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#7A1F2B" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <g filter="url(#softShadow)">
+    <!-- Inner soft cameo oval background -->
+    <ellipse cx="100" cy="100" rx="60" ry="72" fill="url(#innerGlow)" stroke="url(#softGold)" stroke-width="1.2"/>
+    <ellipse cx="100" cy="100" rx="55" ry="67" fill="none" stroke="url(#softGold)" stroke-width="0.8" stroke-dasharray="2,3"/>
+
+    <!-- Filigree Floral Wreath & Scrollwork around the frame -->
+    <g stroke="url(#softGold)" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" fill="none">
+      <!-- Top Crown / Crest -->
+      <path d="M100,20 C105,24 112,23 118,27 C112,29 106,31 100,34 C94,31 88,29 82,27 C88,23 95,24 100,20 Z" fill="url(#softGold)" fill-opacity="0.25"/>
+      <circle cx="100" cy="17" r="2.5" fill="url(#softGold)"/>
+      <circle cx="92" cy="22" r="1.8" fill="url(#softGold)"/>
+      <circle cx="108" cy="22" r="1.8" fill="url(#softGold)"/>
+
+      <!-- Top Scrolls -->
+      <path d="M100,28 C80,24 60,35 48,55 C42,65 40,78 40,90"/>
+      <path d="M100,28 C120,24 140,35 152,55 C158,65 160,78 160,90"/>
+
+      <!-- Side Leaf Sprigs (Left) -->
+      <path d="M42,65 C34,60 30,68 36,74 C39,71 41,68 42,65 Z" fill="url(#softGold)" fill-opacity="0.3"/>
+      <path d="M38,95 C28,95 28,106 37,107 C38,102 38,98 38,95 Z" fill="url(#softGold)" fill-opacity="0.3"/>
+      <path d="M42,125 C32,130 36,140 44,136 C43,131 43,128 42,125 Z" fill="url(#softGold)" fill-opacity="0.3"/>
+
+      <!-- Side Leaf Sprigs (Right) -->
+      <path d="M158,65 C166,60 170,68 164,74 C161,71 159,68 158,65 Z" fill="url(#softGold)" fill-opacity="0.3"/>
+      <path d="M162,95 C172,95 172,106 163,107 C162,102 162,98 162,95 Z" fill="url(#softGold)" fill-opacity="0.3"/>
+      <path d="M158,125 C168,130 164,140 156,136 C157,131 157,128 158,125 Z" fill="url(#softGold)" fill-opacity="0.3"/>
+
+      <!-- Bottom Swags & Scroll -->
+      <path d="M40,110 C40,130 50,155 70,168 C80,175 90,178 100,180"/>
+      <path d="M160,110 C160,130 150,155 130,168 C120,175 110,178 100,180"/>
+      
+      <!-- Bottom Floral Finial -->
+      <path d="M100,180 C95,185 88,187 84,192 C92,192 97,188 100,185 C103,188 108,192 116,192 C112,187 105,185 100,180 Z" fill="url(#softGold)" fill-opacity="0.3"/>
+      <circle cx="100" cy="188" r="2.2" fill="url(#softGold)"/>
+    </g>
+
+    <!-- Intertwined Calligraphic Initials: S & C (Synan & Chanrathana) -->
+    <g transform="translate(100, 102)" fill="url(#softGold)">
+      <!-- Initial 'S' (Groom) & 'C' (Bride) in delicate romantic cursive -->
+      <path d="M-28,-24 C-25,-32 -12,-35 -4,-30 C4,-26 6,-18 2,-11 C-2,-4 -12,2 -18,7 C-26,14 -28,24 -20,30 C-12,36 3,34 10,26 L7,24 C1,30 -10,32 -16,28 C-22,23 -20,15 -14,10 C-8,5 2,-1 7,-7 C12,-15 9,-25 3,-30 C-4,-35 -18,-33 -26,-26 Z"/>
+      
+      <!-- Connecting Amperstand or Heart Swirl -->
+      <path d="M-4,-2 C-1,-6 6,-6 8,-2 C10,3 4,8 -2,12 C-4,13 -4,16 -1,15 C5,13 14,7 12,-1 C10,-8 1,-9 -4,-4 Z" fill-opacity="0.75"/>
+      
+      <!-- Initial 'C' -->
+      <path d="M30,-22 C24,-30 12,-32 2,-28 L3,-25 C11,-29 21,-27 26,-20 C32,-12 30,4 24,14 C18,24 8,28 -2,25 L-3,28 C8,32 21,27 27,17 C34,5 37,-12 30,-22 Z"/>
+
+      <!-- Small decorative flourish beneath initials -->
+      <path d="M-22,34 C-10,38 10,38 22,34 C12,35 -12,35 -22,34 Z" stroke="url(#softGold)" stroke-width="1"/>
+    </g>
+  </g>
+</svg>

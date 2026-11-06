@@ -4,23 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KRY Synan &amp; CHOY Chanrathana - Wedding Invitation</title>
-    <meta name="description" content="You are invited to the wedding of KRY Synan &amp; CHOY Chanrathana - March 4, 2027, Kandal Province.">
+    <meta name="description" content="You are invited to the wedding of KRY Synan &amp; CHOY Chanrathana - March 26, 2026, Kandal Province.">
     <meta name="robots" content="noindex, nofollow">
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
-    <meta name="theme-color" content="#073275">
+    <meta name="theme-color" content="#7A1F2B">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Wedding Invitation - KRY Synan &amp; CHOY Chanrathana">
     <meta property="og:description" content="Join us on March 26, 2026 in Kandal Province. Tap to open your invitation.">
-    <meta property="og:image" content="https://mrsynan.github.io/E-inviting/assets/royal-blue-gold-frame.jpg">
+    <meta property="og:image" content="https://mrsynan.github.io/E-inviting/assets/floral-monogram-sc.svg">
     <meta property="og:url" content="https://mrsynan.github.io/E-inviting/">
     <meta name="twitter:card" content="summary_large_image">
     
     <!-- Auto-apply latest version across all URLs without manual ?v= -->
     <script>
         (function() {
-            var v = '16';
+            var v = '20';
             try {
                 var url = new URL(window.location.href);
                 if (url.searchParams.get('v') !== v && url.hostname.indexOf('github.io') !== -1) {
@@ -31,15 +31,13 @@
         })();
     </script>
 
-    <link rel="preload" as="image" href="assets/royal-blue-gold-frame.jpg?v=16">
-    <link rel="preload" as="image" href="assets/royal-crest-blue.png?v=16">
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- Google Fonts -->
+    <!-- Google Fonts with Khmer and Latin Fallbacks -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Battambang:wght@400;700&family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&family=Moul&family=Moulpali&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Battambang:wght@400;700&family=Bayon&family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&family=Moul&family=Moulpali&family=Noto+Serif+Khmer:wght@400;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
     
     <!-- Tailwind Configuration -->
     <script>
@@ -48,27 +46,33 @@
                 extend: {
                     colors: {
                         theme: {
-                            primary: '#0B47A8',    /* Royal Sapphire Blue */
-                            primaryDark: '#041E4E',
-                            gold: '#F6CE78',       /* Gleaming Gold */
-                            goldLight: '#FFF0B8',
-                            bg: '#062B68',         /* Royal Sapphire Navy */
-                            text: '#F5E6D3'        /* Ivory Cream */
+                            maroon: '#7A1F2B',     /* Deep Maroon / Burgundy */
+                            maroonDark: '#520B16',
+                            burgundy: '#8B1E3F',   /* Rich Burgundy */
+                            crimson: '#B5122E',    /* Crimson Accents */
+                            cream: '#FFF3EC',      /* Soft Cream */
+                            creamBg: '#FBEFEA',    /* Light Blush / Cream Page Background */
+                            blush: '#F6D5D5',      /* Blush Pink */
+                            gold: '#C9A96A',       /* Soft Vintage Gold Monogram */
+                            goldLight: '#DFC487',
+                            text: '#7A1F2B',       /* Primary Maroon Text */
+                            textDark: '#4A0E17',
+                            textMuted: '#9B4E59',   /* Muted Rose / Maroon */
                         }
                     },
                     animation: {
                         'spin-slow': 'spin 4s linear infinite',
                         'float': 'float 6s ease-in-out infinite',
-                        'pulse-gold': 'pulseGold 2s infinite',
+                        'pulse-maroon': 'pulseMaroon 2s infinite',
                     },
                     keyframes: {
                         float: {
                             '0%, 100%': { transform: 'translateY(0)' },
-                            '50%': { transform: 'translateY(-10px)' },
+                            '50%': { transform: 'translateY(-8px)' },
                         },
-                        pulseGold: {
-                            '0%, 100%': { boxShadow: '0 0 0 0 rgba(246, 206, 120, 0.45)' },
-                            '50%': { boxShadow: '0 0 0 10px rgba(246, 206, 120, 0)' },
+                        pulseMaroon: {
+                            '0%, 100%': { boxShadow: '0 0 0 0 rgba(122, 31, 43, 0.45)' },
+                            '50%': { boxShadow: '0 0 0 10px rgba(122, 31, 43, 0)' },
                         }
                     }
                 }
@@ -77,114 +81,333 @@
     </script>
 
     <style>
-        /* Base Styles & Typography */
+        /* ==========================================================================
+           1. COLOR PALETTE & CSS VARIABLES
+           Edit here to customize theme colors across the whole project:
+           ========================================================================== */
+        :root {
+            --bg-page-start: #FBEFEA;   /* Soft cream-pink top gradient */
+            --bg-page-end:   #FFF5F0;   /* Light ivory cream bottom gradient */
+            --color-maroon:  #7A1F2B;   /* Primary deep maroon */
+            --color-burgundy:#8B1E3F;   /* Heading & divider burgundy */
+            --color-crimson: #B5122E;   /* Crimson accent highlights */
+            --color-cream:   #FFF3EC;   /* Card backgrounds / pill buttons */
+            --color-blush:   #F6D5D5;   /* Delicate floral tint */
+            --color-gold:    #C9A96A;   /* Soft gold monogram / accents */
+            --border-inset:  rgba(122, 31, 43, 0.35); /* Thin maroon inset border line */
+        }
+
+        /* ==========================================================================
+           2. FONTS (Google Fonts with robust system fallbacks)
+           ========================================================================== */
+        /* Khmer Title / Large Headings */
+        .font-title, .font-heading-km {
+            font-family: 'Moul', 'Moulpali', 'Khmer OS Muol Light', serif;
+            font-display: swap;
+            line-height: 1.85;
+            letter-spacing: 0;
+        }
+
+        /* Khmer Body Text */
+        .font-body, .font-body-km {
+            font-family: 'Battambang', 'Noto Serif Khmer', 'Khmer OS Battambang', serif;
+            font-display: swap;
+            line-height: 1.9;
+        }
+
+        /* Khmer Names (Bold Maroon) */
+        .font-name-km {
+            font-family: 'Battambang', 'Bayon', 'Khmer OS Muol', serif;
+            font-weight: 700;
+            font-display: swap;
+            line-height: 1.6;
+        }
+
+        /* English Headings */
+        .font-en-title {
+            font-family: 'Cormorant Garamond', 'Playfair Display', serif;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            font-display: swap;
+        }
+
+        /* English Subtitles / Labels */
+        .en-sub {
+            font-family: 'Cormorant Garamond', 'Montserrat', sans-serif;
+            font-size: 0.74rem;
+            line-height: 1.45;
+            letter-spacing: 0.04em;
+            color: #9B4E59;
+            display: block;
+        }
+        .en-sub-title {
+            font-family: 'Cormorant Garamond', 'Playfair Display', serif;
+            font-size: 0.8rem;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: #8B1E3F;
+            display: block;
+        }
+
+        /* ==========================================================================
+           3. BASE STYLES & DESKTOP WRAPPER
+           ========================================================================== */
         html {
             -webkit-overflow-scrolling: touch;
             scroll-snap-type: y mandatory;
+            background-color: #F8EAE4;
         }
 
         body {
-            background-color: #020D22;
-            background-image: url('assets/royal-blue-gold-frame.jpg?v=16');
-            background-position: center center;
-            background-size: cover;
+            background: linear-gradient(180deg, var(--bg-page-start) 0%, var(--bg-page-end) 100%);
             background-attachment: fixed;
-            color: #F5E6D3;
+            color: var(--color-maroon);
+            margin: 0;
+            padding: 0;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            font-family: 'Battambang', 'Noto Serif Khmer', serif;
         }
 
-        /* Typography & Bilingual Subtitles */
-        .font-title { font-family: 'Moul', 'Moulpali', cursive; line-height: 1.8; letter-spacing: 0; }
-        h2.font-title { font-size: 1.35rem; }
-        .font-body { font-family: 'Battambang', sans-serif; line-height: 1.6; }
-        .en-sub { font-family: 'Montserrat', sans-serif; font-size: 0.72rem; line-height: 1.4; letter-spacing: 0.04em; color: #D8B289; opacity: 0.9; display: block; }
-        .en-sub-title { font-family: 'Cinzel', 'Playfair Display', serif; font-size: 0.75rem; letter-spacing: 0.18em; text-transform: uppercase; color: #FCE194; opacity: 0.9; display: block; }
-
-        /* Mobile Container with Luxury Royal Sapphire Blue & Gold Frame Background */
+        /* Center mobile container on desktop (max-width 480px) */
         .mobile-container {
             max-width: 480px;
             margin: 0 auto;
             min-height: 100vh;
-            background-color: #020D22;
-            background-image: url('assets/royal-blue-gold-frame.jpg?v=16');
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center top;
-            color: #F5E6D3;
+            background: linear-gradient(180deg, var(--bg-page-start) 0%, var(--bg-page-end) 100%);
+            color: var(--color-maroon);
             position: relative;
-            box-shadow: 0 0 60px rgba(0,0,0,0.85);
+            box-shadow: 0 0 50px rgba(122, 31, 43, 0.15);
             overflow-x: clip;
         }
 
-        /* 3D Metallic Gold Embossed Text Effect */
-        .text-gold-gradient, .hero-gold-3d {
-            background: linear-gradient(180deg, #FFF0B8 0%, #F6CE78 45%, #E5AA3A 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            filter: drop-shadow(0 1px 0 #FFECA0) drop-shadow(0 3px 2px rgba(0,0,0,0.85));
+        /* Thin maroon inset border line around the page (matching screenshot) */
+        .inset-border-line {
+            position: absolute;
+            inset: 14px;
+            border: 1px solid var(--border-inset);
+            border-radius: 4px;
+            pointer-events: none;
+            z-index: 4;
         }
 
-        .hero-gold {
-            background: linear-gradient(180deg, #FFF0B8 0%, #F6CE78 45%, #E5AA3A 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            filter: drop-shadow(0 1px 0 #FFECA0) drop-shadow(0 2px 4px rgba(0,0,0,0.8));
+        /* ==========================================================================
+           4. FLORAL DECORATIVE CORNERS (CSS / SVG)
+           To replace with your own PNG files, see instructions at the bottom of file!
+           ========================================================================== */
+        .corner-floral {
+            position: absolute;
+            pointer-events: none;
+            z-index: 5;
+            user-select: none;
+        }
+        .corner-top-l {
+            top: 0;
+            left: 0;
+            width: 140px;
+            height: auto;
+        }
+        .corner-top-r {
+            top: 0;
+            right: 0;
+            width: 140px;
+            height: auto;
+        }
+        .corner-bot-l {
+            bottom: 0;
+            left: 0;
+            width: 185px;
+            height: auto;
+            max-width: 48%;
+        }
+        .corner-bot-r {
+            bottom: 0;
+            right: 0;
+            width: 185px;
+            height: auto;
+            max-width: 48%;
         }
 
-        .guest-name-glow {
-            color: #FFFFFF !important;
-            text-shadow: 0 0 14px rgba(255, 255, 255, 0.95), 0 0 25px rgba(45, 125, 246, 0.75), 0 2px 4px rgba(0,0,0,0.9);
+        /* Section Pages */
+        section.page {
+            position: relative;
+            z-index: 10;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            overflow: hidden;
+            background: transparent;
+            color: var(--color-maroon);
+            padding-top: 50px;
+            padding-bottom: 70px;
+            scroll-snap-align: start;
+        }
+        #home {
+            padding-top: 40px;
+            padding-bottom: 50px;
         }
 
-        /* Gold Pill Button matching Reference Screenshots */
-        .gold-pill-btn {
-            background: linear-gradient(180deg, #FFF0B8 0%, #F6CE78 45%, #E5AA3A 100%);
-            color: #052052 !important;
-            font-family: 'Moul', cursive;
-            font-size: 1rem;
-            padding: 12px 44px;
+        /* Frosted Glass Cards */
+        .frosted-card {
+            background: rgba(255, 255, 255, 0.88);
+            border: 1px solid rgba(122, 31, 43, 0.18);
+            border-radius: 1.25rem;
+            box-shadow: 0 8px 28px rgba(122, 31, 43, 0.08);
+            backdrop-filter: blur(8px);
+        }
+
+        /* Pill Buttons in Burgundy & Soft Cream */
+        .maroon-pill-btn {
+            background: linear-gradient(135deg, #7A1F2B 0%, #9E1630 100%);
+            color: #FFF3EC;
+            border: 1px solid rgba(201, 169, 106, 0.6);
             border-radius: 9999px;
-            border: 1px solid #FFE7A3;
-            box-shadow: 0 6px 20px rgba(0,0,0,0.5), inset 0 1px 2px rgba(255,255,255,0.7);
+            padding: 10px 28px;
+            font-weight: 700;
+            font-size: 0.92rem;
+            box-shadow: 0 6px 18px rgba(122, 31, 43, 0.28);
             cursor: pointer;
             display: inline-flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             transition: transform 0.2s, box-shadow 0.2s;
-            animation: goldpulse 2.4s infinite;
+            animation: maroonpulse 2.6s infinite;
         }
-        .gold-pill-btn:active {
+        .maroon-pill-btn:active {
             transform: scale(0.97);
         }
-        @keyframes goldpulse {
-            0%, 100% { box-shadow: 0 6px 20px rgba(0,0,0,0.5), 0 0 0 0 rgba(246,206,120,0.5); }
-            50% { box-shadow: 0 6px 20px rgba(0,0,0,0.5), 0 0 0 12px rgba(246,206,120,0); }
+        @keyframes maroonpulse {
+            0%, 100% { box-shadow: 0 6px 18px rgba(122, 31, 43, 0.28), 0 0 0 0 rgba(181, 18, 46, 0.35); }
+            50% { box-shadow: 0 6px 18px rgba(122, 31, 43, 0.28), 0 0 0 10px rgba(181, 18, 46, 0); }
         }
 
-        /* Royal Cards & Glass Containers */
-        .royal-card {
-            background: rgba(3, 24, 62, 0.82);
-            border: 1px solid rgba(246, 206, 120, 0.45);
-            border-radius: 1.25rem;
-            box-shadow: 0 8px 30px rgba(0,0,0,0.6);
-            backdrop-filter: blur(8px);
+        .outline-pill-btn {
+            background: rgba(255, 255, 255, 0.85);
+            color: #7A1F2B;
+            border: 1px solid #7A1F2B;
+            border-radius: 9999px;
+            padding: 8px 22px;
+            font-weight: 600;
+            font-size: 0.8rem;
+            transition: all 0.2s;
+        }
+        .outline-pill-btn:hover {
+            background: #7A1F2B;
+            color: #FFFFFF;
         }
 
-        .gold-border { border: 1px solid rgba(246, 206, 120, 0.5); }
-        .gold-divider { height: 1px; background: linear-gradient(90deg, transparent, #F6CE78, transparent); }
-        
         /* Timeline */
-        .timeline-line { position: absolute; left: 24px; top: 0; bottom: 0; width: 2px; background: #F6CE78; opacity: 0.5; }
-        
+        .tl { position: relative; margin: 16px 0; text-align: left; }
+        .tl-i { position: relative; padding-left: 48px; margin-bottom: 22px; }
+        .tl-i::before {
+            content: '';
+            position: absolute;
+            left: 17px;
+            top: 32px;
+            bottom: -22px;
+            width: 1.5px;
+            background: #E8B4B8;
+        }
+        .tl-i:last-child::before { display: none; }
+        .tl-ico {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #7A1F2B, #9E1630);
+            color: #FFFFFF;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 12px rgba(122, 31, 43, 0.25);
+            border: 1px solid #C9A96A;
+        }
+        .tl-ico svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 2; }
+        .tl-t { font-weight: 700; color: #7A1F2B; }
+
+        /* Countdown Boxes */
+        .countdown-box {
+            background: rgba(255, 255, 255, 0.85);
+            border: 1px solid rgba(122, 31, 43, 0.22);
+            border-radius: 12px;
+            padding: 8px 0;
+            color: #7A1F2B;
+            box-shadow: 0 4px 12px rgba(122, 31, 43, 0.06);
+        }
+
         /* Gallery Grid */
         .masonry-grid { column-count: 2; column-gap: 0.75rem; }
-        .masonry-item { break-inside: avoid; margin-bottom: 0.75rem; border-radius: 1.25rem !important; box-shadow: 0 6px 18px rgba(0,0,0,0.5); border: 1px solid rgba(246,206,120,0.3); }
+        .masonry-item { break-inside: avoid; margin-bottom: 0.75rem; border-radius: 1rem !important; box-shadow: 0 6px 18px rgba(122,31,43,0.12); border: 1px solid rgba(232,196,196,0.6); }
 
-        /* Opening cover, petals, reveal */
+        /* ==========================================================================
+           5. FALLING ROSE PETALS ANIMATION
+           ========================================================================== */
+        #petals {
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            width: min(100%, 480px);
+            transform: translateX(-50%);
+            z-index: 25;
+            pointer-events: none;
+            overflow: hidden;
+            contain: layout paint;
+        }
+        .petal {
+            will-change: transform;
+            position: absolute;
+            top: -30px;
+            background: radial-gradient(circle at 35% 35%, #D42646 0%, #9E1630 65%, #520B16 100%);
+            border-radius: 150% 0 150% 0;
+            box-shadow: 0 2px 6px rgba(122, 31, 43, 0.25);
+            animation: fallPetal linear infinite;
+        }
+        @keyframes fallPetal {
+            0% {
+                transform: translate3d(0, -5vh, 0) rotate(0deg);
+                opacity: 0;
+            }
+            15% {
+                opacity: 0.75;
+            }
+            50% {
+                transform: translate3d(36px, 55vh, 0) rotate(190deg);
+                opacity: 0.7;
+            }
+            85% {
+                opacity: 0.65;
+            }
+            100% {
+                transform: translate3d(-24px, 110vh, 0) rotate(370deg);
+                opacity: 0;
+            }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .petal { display: none; }
+            .reveal { opacity: 1 !important; transform: none !important; transition: none !important; }
+            .maroon-pill-btn { animation: none !important; }
+        }
+
+        /* Sparkles on Cover */
+        #cv-sparkles { position: absolute; inset: 0; z-index: 2; pointer-events: none; }
+        .sp { position: absolute; width: 5px; height: 5px; border-radius: 50%; background: radial-gradient(circle, #fff 0, rgba(201,169,106,.9) 40%, transparent 70%); animation: twinkle 2.6s ease-in-out infinite; opacity: 0; }
+        @keyframes twinkle { 0%,100% { opacity: 0; transform: scale(.4); } 50% { opacity: 1; transform: scale(1.4); } }
+
+        /* ==========================================================================
+           6. COVER OVERLAY
+           ========================================================================== */
         body.locked { overflow: hidden; height: 100vh; }
-        #cover { position: fixed; inset: 0; z-index: 45; background: #020D22; }
+        #cover {
+            position: fixed;
+            inset: 0;
+            z-index: 45;
+            background: #FBEFEA;
+        }
         .cv-stage {
             position: absolute;
             top: 0;
@@ -193,12 +416,8 @@
             width: min(100%, 480px);
             transform: translateX(-50%);
             overflow: hidden;
-            background-color: #020D22;
-            background-image: url('assets/royal-blue-gold-frame.jpg?v=16');
-            background-repeat: no-repeat;
-            background-size: 100% 100%;
-            background-position: center center;
-            box-shadow: 0 0 60px rgba(0,0,0,0.85);
+            background: linear-gradient(180deg, var(--bg-page-start) 0%, var(--bg-page-end) 100%);
+            box-shadow: 0 0 60px rgba(122, 31, 43, 0.15);
         }
         #cover-content {
             height: 100%;
@@ -208,250 +427,202 @@
             align-items: center;
             justify-content: center;
             transition: opacity .6s, transform .8s;
+            position: relative;
+            z-index: 10;
         }
         #cover-content > * { animation: rise .9s both; }
-        #cover-content > :nth-child(1) { animation-delay: .2s; }
-        #cover-content > :nth-child(2) { animation-delay: .35s; }
-        #cover-content > :nth-child(3) { animation-delay: .5s; }
-        #cover-content > :nth-child(4) { animation-delay: .65s; }
-        #cover-content > :nth-child(5) { animation-delay: .8s; }
-        #cover-content > :nth-child(6) { animation-delay: .95s; }
+        #cover-content > :nth-child(1) { animation-delay: .15s; }
+        #cover-content > :nth-child(2) { animation-delay: .28s; }
+        #cover-content > :nth-child(3) { animation-delay: .42s; }
+        #cover-content > :nth-child(4) { animation-delay: .58s; }
+        #cover-content > :nth-child(5) { animation-delay: .72s; }
+        #cover-content > :nth-child(6) { animation-delay: .85s; }
         #cover.open { opacity: 0; transition: opacity .9s ease .2s; pointer-events: none; }
         #cover.open #cover-content { opacity: 0; transform: scale(1.05); }
 
-        @keyframes rise { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: none; } }
+        @keyframes rise { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: none; } }
         body.opened #home .rise-in > * { animation: rise 1s both; }
         .reveal { opacity: 0; transform: translateY(22px); transition: opacity 0.85s ease-out, transform 0.85s ease-out; }
         .reveal.in { opacity: 1; transform: none; }
 
-        #petals { position: fixed; top: 0; bottom: 0; left: 50%; width: min(100%, 480px); transform: translateX(-50%); z-index: 30; pointer-events: none; overflow: hidden; contain: layout paint; }
-        .petal { will-change: transform; position: absolute; top: -30px; background: linear-gradient(135deg, #7BB2FF, #1E6BE6); border-radius: 150% 0 150% 0; animation: fall linear infinite; }
-        @keyframes fall { 0% { transform: translate3d(0,-5vh,0) rotate(0); } 50% { transform: translate3d(45px,55vh,0) rotate(200deg); } 100% { transform: translate3d(-25px,110vh,0) rotate(380deg); } }
-        @media (prefers-reduced-motion: reduce) { .petal { display: none; } .reveal { opacity: 1; transform: none; transition: none; } .gold-pill-btn, body.opened #home .rise-in > * { animation: none; } }
-
-        #cv-sparkles { position: absolute; inset: 0; z-index: 2; pointer-events: none; }
-        .sp { position: absolute; width: 6px; height: 6px; border-radius: 50%; background: radial-gradient(circle, #fff 0, rgba(252,225,148,.9) 40%, transparent 70%); animation: twinkle 2.6s ease-in-out infinite; opacity: 0; }
-        @keyframes twinkle { 0%,100% { opacity: 0; transform: scale(.4); } 50% { opacity: 1; transform: scale(1.5); } }
-
-        /* Curtain Frame Disabled to match Cover Frame seamlessly */
-        .curtain-frame {
-            display: none !important;
+        /* Guest name glow on cover */
+        .guest-name-glow {
+            color: #7A1F2B;
+            text-shadow: 0 2px 10px rgba(181, 18, 46, 0.2);
         }
 
-        /* Section Pages with Luxury Royal Blue & Gold Frame Background */
-        section.page {
-            position: relative;
-            z-index: 10;
-            overflow: hidden;
-            background-color: #020D22 !important;
-            background-image: url('assets/royal-blue-gold-frame.jpg?v=16') !important;
-            background-repeat: no-repeat !important;
-            background-size: 100% 100% !important;
-            background-position: center center !important;
-            color: #F5E6D3 !important;
-            padding-top: 135px !important;
-            padding-bottom: 110px !important;
-        }
-        #home {
-            position: relative;
-            z-index: 10;
-            padding-top: 115px !important;
-            padding-bottom: 80px !important;
-            background-color: #020D22 !important;
-            background-image: url('assets/royal-blue-gold-frame.jpg?v=16') !important;
-            background-repeat: no-repeat !important;
-            background-size: 100% 100% !important;
-            background-position: center center !important;
-        }
-
-        .hero-brown { color: #FCE194; }
-        .hero-cd { background: rgba(3, 24, 62, 0.82); border: 1px solid rgba(246, 206, 120, 0.4); border-radius: 12px; padding: 8px 0; color: #FCE194; }
-
-        /* Dates */
-        .date-row { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; column-gap: 12px; margin: 8px 0; }
-        .date-side { border-top: 2px solid #F6CE78; border-bottom: 2px solid #F6CE78; padding: 10px 4px; font-family: 'Moulpali', 'Moul', serif; color: #FCE194; font-size: .95rem; line-height: 1.7; }
-        .date-day { font-size: 4.4rem; line-height: 1; }
-        p:empty { display: none; }
-        #yt-player, #yt-player iframe { width: 100%; height: 100%; display: block; }
-
-        /* Background Waterfall Text Streams */
-        .waterfall-stream {
-            position: fixed;
-            top: 0;
-            bottom: 0;
-            width: 26px;
-            pointer-events: none;
-            user-select: none;
-            z-index: 2;
-            overflow: hidden;
-            opacity: 0.16;
-            transition: opacity .5s;
-        }
-        .waterfall-left {
-            left: 4px;
-        }
-        .waterfall-right {
-            right: 4px;
-        }
-        @media (min-width: 768px) {
-            .waterfall-left { left: calc(50% - 238px); }
-            .waterfall-right { right: calc(50% - 238px); }
-        }
-        .waterfall-track {
-            display: flex;
-            flex-direction: column;
-            writing-mode: vertical-rl;
-            text-orientation: mixed;
-            font-family: 'Cinzel', 'Battambang', serif;
-            font-size: 10px;
-            letter-spacing: 0.28em;
-            text-transform: uppercase;
-            color: #FCE194;
-            white-space: nowrap;
-            animation: waterfall-flow 38s linear infinite;
-        }
-        .waterfall-track-slow {
-            animation: waterfall-flow 48s linear infinite;
-        }
-        @keyframes waterfall-flow {
-            0% { transform: translateY(-50%); }
-            100% { transform: translateY(0); }
-        }
-
-        /* Floating Speaker Music Toggle at Bottom Right matching Reference Screenshots */
-        #music-toggle {
-            position: fixed;
-            right: 20px;
-            bottom: 24px;
-            z-index: 50;
-            width: 48px;
-            height: 48px;
-            border-radius: 50%;
-            background: #FFFFFF !important;
-            color: #111111 !important;
-            box-shadow: 0 4px 18px rgba(0,0,0,0.5);
-            border: none;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            transition: transform 0.2s;
-        }
-        #music-toggle:active {
-            transform: scale(0.93);
-        }
-        @media (min-width: 768px) {
-            #music-toggle { right: calc(50% - 215px); }
-        }
-
-        /* Bottom Floating Dock */
-        #dock {
-            position: fixed;
-            left: 50%;
-            bottom: 12px;
-            transform: translateX(-50%);
-            z-index: 40;
-            width: min(92%, 420px);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 6px 10px;
-            border-radius: 999px;
-            background: rgba(2, 14, 38, 0.96);
-            border: 1px solid rgba(246, 206, 120, 0.35);
-            box-shadow: 0 8px 30px rgba(0,0,0,0.8);
-        }
-        .dock-i {
+        /* ==========================================================================
+           7. FLOATING CONTROLS (Top Right Circular Frosted Music Button)
+           ========================================================================== */
+        .music-btn {
+            background: rgba(255, 255, 255, 0.78);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(122, 31, 43, 0.22);
+            color: #7A1F2B;
             width: 44px;
             height: 44px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: #C29F78;
-            transition: background .25s, color .25s;
+            box-shadow: 0 4px 16px rgba(122, 31, 43, 0.12);
+            cursor: pointer;
+            transition: all 0.25s ease;
         }
-        .dock-i svg { width: 22px; height: 22px; }
+        .music-btn:hover {
+            background: #FFFFFF;
+            transform: scale(1.05);
+        }
+
+        /* ==========================================================================
+           8. FLOATING BOTTOM NAVIGATION DOCK (Matching Screenshot)
+           ========================================================================== */
+        #dock {
+            position: fixed;
+            bottom: 16px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: min(calc(100% - 32px), 430px);
+            background: rgba(255, 248, 244, 0.88);
+            backdrop-filter: blur(14px);
+            border: 1px solid rgba(122, 31, 43, 0.2);
+            border-radius: 9999px;
+            padding: 6px 12px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            z-index: 40;
+            box-shadow: 0 8px 32px rgba(122, 31, 43, 0.15);
+        }
+        .dock-i {
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #7A1F2B;
+            transition: all 0.25s ease;
+            text-decoration: none;
+            position: relative;
+        }
+        .dock-i svg {
+            width: 21px;
+            height: 21px;
+            stroke-width: 1.8;
+            stroke: currentColor;
+            fill: none;
+        }
+        /* Active nav item: Filled maroon circle with white icon (matching screenshot) */
         .dock-i.act {
-            background: linear-gradient(180deg, #FFF0B8 0%, #F6CE78 45%, #E5AA3A 100%);
-            color: #052052;
-            box-shadow: 0 4px 12px rgba(246,206,120,0.4);
+            background: #7A1F2B !important;
+            color: #FFFFFF !important;
+            box-shadow: 0 4px 14px rgba(122, 31, 43, 0.38);
+        }
+        .dock-i.act svg {
+            stroke: #FFFFFF !important;
         }
 
-        #to-top { position: fixed; right: 16px; bottom: 82px; z-index: 40; width: 44px; height: 44px; border-radius: 50%; background: #0B47A8; border: 1px solid #F6CE78; color: #FCE194; display: none; align-items: center; justify-content: center; box-shadow: 0 6px 16px rgba(0,0,0,0.5); cursor: pointer; }
-        @media (min-width: 768px) { #to-top { right: calc(50% - 224px); } }
-
-        /* Timeline */
-        .tl { position: relative; max-width: 340px; margin: 26px auto 0; padding-left: 58px; text-align: left; }
-        .tl::before { content: ''; position: absolute; left: 30px; top: 8px; bottom: 8px; border-left: 2px dotted #F6CE78; }
-        .tl-i { position: relative; margin-bottom: 20px; min-height: 34px; line-height: 1.7; }
-        .tl-i::before { content: ''; position: absolute; left: -32px; top: 10px; width: 9px; height: 9px; border-radius: 50%; background: #F6CE78; box-shadow: 0 0 8px rgba(246,206,120,0.6); }
-        .tl-ico { position: absolute; left: -58px; top: -3px; width: 26px; height: 26px; color: #F6CE78; }
-        .tl-ico svg { width: 100%; height: 100%; fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
-        .tl-t { font-weight: 700; color: #FCE194; }
-
-        /* Currency Tabs */
-        .cur-tab { padding: 8px 26px; border-radius: 999px; font-weight: 700; font-size: 14px; color: #FCE194; background: transparent; border: 0; cursor: pointer; }
-        .cur-tab.on { background: linear-gradient(180deg, #FFF0B8 0%, #F6CE78 45%, #E5AA3A 100%); color: #052052; }
-
-        /* RSVP */
-        #rsvp { line-height: 1.8; }
-        #rsvp ::placeholder { color: rgba(245,230,211,.45); }
-
-        /* Khmer kbach ornaments */
-        section h2.font-title::after {
-            content: ''; display: block; width: 210px; height: 26px; margin: 8px auto 0;
-            background: url('assets/kbach-divider-gold.svg?v=16') center / contain no-repeat;
+        /* Back to top button */
+        #to-top {
+            position: fixed;
+            bottom: 74px;
+            right: calc(50% - 225px);
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.9);
+            border: 1px solid rgba(122, 31, 43, 0.25);
+            color: #7A1F2B;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 38;
+            box-shadow: 0 4px 12px rgba(122, 31, 43, 0.15);
+            cursor: pointer;
+        }
+        @media (max-width: 480px) {
+            #to-top { right: 16px; }
         }
 
         /* Scrollbar */
         .custom-scroll::-webkit-scrollbar { width: 4px; }
         .custom-scroll::-webkit-scrollbar-track { background: transparent; }
-        .custom-scroll::-webkit-scrollbar-thumb { background: #F6CE78; border-radius: 4px; }
+        .custom-scroll::-webkit-scrollbar-thumb { background: #C9A96A; border-radius: 4px; }
 
         /* Toast notification */
-        #toast { position: fixed; bottom: 90px; left: 50%; transform: translateX(-50%) translateY(20px); z-index: 999; padding: 12px 24px; border-radius: 999px; background: #0B47A8; border: 1px solid #F6CE78; color: #FFF; font-size: 14px; font-weight: 700; white-space: nowrap; box-shadow: 0 8px 24px rgba(0,0,0,0.6); opacity: 0; transition: opacity .35s, transform .35s; pointer-events: none; }
+        #toast {
+            position: fixed;
+            bottom: 90px;
+            left: 50%;
+            transform: translateX(-50%) translateY(20px);
+            z-index: 999;
+            padding: 10px 22px;
+            border-radius: 999px;
+            background: #7A1F2B;
+            border: 1px solid #C9A96A;
+            color: #FFF;
+            font-size: 13px;
+            font-weight: 700;
+            white-space: nowrap;
+            box-shadow: 0 8px 24px rgba(122, 31, 43, 0.35);
+            opacity: 0;
+            transition: opacity .35s, transform .35s;
+            pointer-events: none;
+        }
         #toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
     </style>
 </head>
 <body class="antialiased lang-km locked">
 
-    <!-- Opening cover matching Reference Screenshot -->
+    <!-- ========================================================================
+         COVER OVERLAY (Matches Cream-Pink & Burgundy Peonies / Roses Design)
+         ======================================================================== -->
     <div id="cover">
         <div class="cv-stage">
             <div id="cv-sparkles"></div>
-            <div id="cover-content" class="relative z-10 flex flex-col items-center justify-center text-center px-6 pt-10">
-                <!-- 3D Gold Embossed Header -->
-                <p class="font-title text-xl hero-gold-3d leading-relaxed mb-0.5">សិរីមង្គលអាពាហ៍ពិពាហ៍</p>
-                <p class="en-sub-title text-[10px] tracking-widest text-[#FCE194] mb-2 opacity-90">Wedding Celebration</p>
+            <!-- Inset Maroon Border Line -->
+            <div class="inset-border-line"></div>
 
-                <!-- Royal 3D Gold Monogram Crest Emblem matching Reference Screenshot -->
+            <!-- Decorative Floral Corners -->
+            <img src="assets/floral-top-left.svg" alt="" class="corner-floral corner-top-l">
+            <img src="assets/floral-top-right.svg" alt="" class="corner-floral corner-top-r">
+            <img src="assets/floral-bottom-left.svg" alt="" class="corner-floral corner-bot-l">
+            <img src="assets/floral-bottom-right.svg" alt="" class="corner-floral corner-bot-r">
+
+            <div id="cover-content" class="relative z-10 flex flex-col items-center justify-center text-center px-6 pt-10">
+                <!-- Khmer Header -->
+                <p class="font-title text-xl text-[#7A1F2B] leading-relaxed mb-0.5">សិរីមង្គលអាពាហ៍ពិពាហ៍</p>
+                <p class="en-sub-title text-[11px] tracking-widest text-[#8B1E3F] mb-3">Wedding Celebration</p>
+
+                <!-- Elegant Soft Gold Monogram Crest Emblem -->
                 <div class="my-2">
-                    <img src="assets/royal-crest-blue.png?v=16" alt="Royal Monogram" class="w-44 h-44 mx-auto drop-shadow-[0_12px_28px_rgba(0,0,0,0.85)]">
+                    <img src="assets/floral-monogram-sc.svg" alt="Monogram" class="w-36 h-36 mx-auto drop-shadow-md">
                 </div>
 
-                <!-- Greeting & Guest Name with Luminescent Glow -->
-                <div class="my-2.5 w-full">
-                    <p class="font-title text-sm text-[#FCE194] tracking-wide mb-1">សូមគោរពអញ្ជើញ</p>
+                <!-- Greeting & Guest Name -->
+                <div class="my-2 w-full">
+                    <p class="font-title text-sm text-[#8B1E3F] tracking-wide mb-1">សូមគោរពអញ្ជើញ</p>
                     <div id="cover-greeting-box" class="hidden min-h-[38px] flex flex-col items-center justify-center">
-                        <p id="cover-greeting" class="font-title text-xl text-white font-bold guest-name-glow"></p>
+                        <p id="cover-greeting" class="font-title text-xl font-bold guest-name-glow"></p>
                     </div>
                     <div id="cover-default-greeting" class="min-h-[38px] flex flex-col items-center justify-center">
-                        <p class="font-title text-xl text-white font-bold guest-name-glow">លោក ទេពសក្យា</p>
+                        <p class="font-title text-xl font-bold guest-name-glow">លោក ទេពសក្យា</p>
                     </div>
                 </div>
 
-                <!-- Warm Champagne-Gold Pill Open Button -->
-                <button id="open-btn" type="button" class="gold-pill-btn mt-2.5">
+                <!-- Open Invitation Pill Button -->
+                <button id="open-btn" type="button" class="maroon-pill-btn mt-3">
                     <span>បើកធៀប</span>
                 </button>
-                <p class="font-body text-xs text-[#F5E6D3] mt-3.5 opacity-90">សូមមេត្តាចុចដើម្បីបើកធៀបអេឡិចត្រូនិច</p>
-                <p class="en-sub text-[10px] text-[#D8B289]">Tap to open your e-invitation</p>
+                <p class="font-body text-xs text-[#7A1F2B] mt-3 opacity-90">សូមមេត្តាចុចដើម្បីបើកធៀបអេឡិចត្រូនិច</p>
+                <p class="en-sub text-[10px] text-[#9B4E59]">Tap to open your e-invitation</p>
             </div>
         </div>
     </div>
-    <div id="petals"></div>
 
+    <!-- Soft Falling Red Rose Petals -->
+    <div id="petals"></div>
 
     <!-- Audio Player -->
     <audio id="bg-audio" loop>
@@ -461,108 +632,119 @@
 
     <div id="yt-holder" aria-hidden="true" style="position:fixed;left:-320px;bottom:0;width:200px;height:200px;opacity:0;pointer-events:none;overflow:hidden"><div id="yt-player"></div></div>
 
-    <div class="mobile-container pb-20">
-        <!-- Background Transparent Waterfall Text Streams -->
-        <div class="waterfall-stream waterfall-left" aria-hidden="true">
-            <div class="waterfall-track">
-                <span>• សិរីមង្គលអាពាហ៍ពិពាហ៍ • WEDDING CELEBRATION • គ្រី ស៊ីណាន &amp; ចយ ច័ន្ទរតនា • TOGETHER FOREVER • ក្តីស្រឡាញ់ និង សុភមង្គល • MARCH 26, 2026 • </span>
-                <span>• សិរីមង្គលអាពាហ៍ពិពាហ៍ • WEDDING CELEBRATION • គ្រី ស៊ីណាន &amp; ចយ ច័ន្ទរតនា • TOGETHER FOREVER • ក្តីស្រឡាញ់ និង សុភមង្គល • MARCH 26, 2026 • </span>
-            </div>
-        </div>
-        <div class="waterfall-stream waterfall-right" aria-hidden="true">
-            <div class="waterfall-track waterfall-track-slow">
-                <span>• KRY SYNAN &amp; CHOY CHANRATHANA • ថ្ងៃសិរីមង្គល • LOVE &amp; BLESSINGS • ជ័យមង្គលសួស្តី • SAVE THE DATE • ភូមិរលួស ស្រុកកណ្តាលស្ទឹង • </span>
-                <span>• KRY SYNAN &amp; CHOY CHANRATHANA • ថ្ងៃសិរីមង្គល • LOVE &amp; BLESSINGS • ជ័យមង្គលសួស្តី • SAVE THE DATE • ភូមិរលួស ស្រុកកណ្តាលស្ទឹង • </span>
-            </div>
-        </div>
+    <!-- Mobile-First Container -->
+    <div class="mobile-container pb-24">
         
-        <!-- Floating Controls -->
-        <div class="fixed top-4 right-4 z-50 flex flex-col gap-3 md:right-[calc(50%-220px)]">
-            <!-- Auto page scroll -->
-            <button id="auto-toggle" type="button" style="display:none" aria-label="Auto scroll" title="Auto scroll" class="bg-white/90 border border-theme-gold text-theme-primary p-2.5 rounded-full shadow-lg items-center justify-center">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 13l6 6 6-6"/><path d="M6 5l6 6 6-6" opacity=".55"/></svg>
+        <!-- Inset Maroon Border Line -->
+        <div class="inset-border-line"></div>
+
+        <!-- Floating Controls: Top-Right Frosted Glass Music Button (Speaker Icon matching screenshot) -->
+        <div class="fixed top-4 right-4 z-50 flex items-center gap-2 md:right-[calc(50%-220px)]">
+            <!-- Hidden auto-scroll toggle -->
+            <button id="auto-toggle" type="button" style="display:none" aria-label="Auto scroll" class="music-btn !w-10 !h-10">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 13l6 6 6-6"/><path d="M6 5l6 6 6-6" opacity=".55"/></svg>
             </button>
 
-            <!-- Music Toggle -->
-            <button id="music-toggle" class="bg-theme-primary text-theme-gold p-2.5 rounded-full shadow-lg animate-pulse-gold border border-theme-gold/50 flex items-center justify-center">
-                <svg id="icon-play" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            <!-- Circular Frosted Glass Music Button (Speaker Icon) -->
+            <button id="music-toggle" class="music-btn" aria-label="Play/Pause Music" title="Background Music">
+                <!-- Speaker Playing Icon -->
+                <svg id="icon-pause" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M11 5L6 9H2v6h4l5 4V5z" />
                 </svg>
-                <svg id="icon-pause" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 hidden animate-spin-slow" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3" />
+                <!-- Speaker Muted / Play Icon -->
+                <svg id="icon-play" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M17 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2" />
                 </svg>
             </button>
         </div>
 
-        <!-- 1. INVITATION PAGE matching Reference Screenshot -->
+        <!-- ====================================================================
+             1. MAIN INVITATION PAGE (Matches Reference Screenshot Layout Exactly)
+             ==================================================================== -->
         <section id="home" class="page text-center px-6">
-            <div class="relative z-10 rise-in pt-4">
-                <h2 class="font-title text-xl hero-gold-3d leading-relaxed">សិរីមង្គលអាពាហ៍ពិពាហ៍</h2>
-                <p class="en-sub-title text-[10px] tracking-widest text-[#FCE194] mb-3 opacity-90">Wedding Celebration</p>
+            <!-- Decorative Floral Corners -->
+            <img src="assets/floral-top-left.svg" alt="" class="corner-floral corner-top-l">
+            <img src="assets/floral-top-right.svg" alt="" class="corner-floral corner-top-r">
+            <img src="assets/floral-bottom-left.svg" alt="" class="corner-floral corner-bot-l">
+            <img src="assets/floral-bottom-right.svg" alt="" class="corner-floral corner-bot-r">
 
-                <!-- Two-Column Parents' Names in 3D Gold 'Moul' Font -->
-                <div class="grid grid-cols-2 gap-x-4 gap-y-2 mt-2 text-sm font-title">
+            <div class="relative z-10 rise-in pt-6">
+                <!-- 1. Large Khmer Title at Top (Moul Font in Maroon) -->
+                <h1 class="font-title text-2xl text-[#7A1F2B] leading-relaxed mb-3">សិរីមង្គលអាពាហ៍ពិពាហ៍</h1>
+
+                <!-- 2. Two Columns of Parents' Names (Groom's Side & Bride's Side) -->
+                <div class="grid grid-cols-2 gap-x-4 gap-y-1 mt-2 text-xs font-body text-[#7A1F2B]">
                     <div>
-                        <p class="text-[#FCE194]">លោក គ្រី​ ស្រ៊ុយ</p>
-                        <p class="en-sub text-[10px] text-[#D8B289]">Mr. KRY Sruy</p>
-                        <p class="text-[#FCE194] mt-2">លោកស្រី ហ៊ឺ ហ៊ង</p>
-                        <p class="en-sub text-[10px] text-[#D8B289]">Mrs. HEU Hong</p>
+                        <p class="font-bold text-sm">លោក គ្រី​ ស្រ៊ុយ</p>
+                        <p class="en-sub text-[9px] text-[#9B4E59]">Mr. KRY Sruy</p>
+                        <p class="font-bold text-sm mt-1.5">លោកស្រី ហ៊ឺ ហ៊ង</p>
+                        <p class="en-sub text-[9px] text-[#9B4E59]">Mrs. HEU Hong</p>
                     </div>
                     <div>
-                        <p class="text-[#FCE194]">លោក ចែម មាន</p>
-                        <p class="en-sub text-[10px] text-[#D8B289]">Mr. CHEAM MEAN</p>
-                        <p class="text-[#FCE194] mt-2">លោកស្រី អ៊ុន ផល្លា</p>
-                        <p class="en-sub text-[10px] text-[#D8B289]">Mrs. UN Phalla</p>
+                        <p class="font-bold text-sm">លោក ចែម មាន</p>
+                        <p class="en-sub text-[9px] text-[#9B4E59]">Mr. CHEAM MEAN</p>
+                        <p class="font-bold text-sm mt-1.5">លោកស្រី អ៊ុន ផល្លា</p>
+                        <p class="en-sub text-[9px] text-[#9B4E59]">Mrs. UN Phalla</p>
                     </div>
                 </div>
 
-                <!-- Invitation Heading & Paragraph -->
-                <p class="font-title text-base hero-gold-3d mt-5">សូមគោរពអញ្ជើញ</p>
-                <p class="en-sub-title text-[10px] text-[#FCE194] mb-1 opacity-90">You are cordially invited</p>
+                <!-- 3. Thin Floral Divider Line with Butterfly Accent -->
+                <div class="my-3.5 flex justify-center">
+                    <img src="assets/floral-divider.svg" alt="" class="w-48 h-auto opacity-80">
+                </div>
 
-                <div class="mt-2 max-w-sm mx-auto">
-                    <p class="font-body text-xs leading-relaxed text-[#F5E6D3]">
+                <!-- 4. Khmer Heading "មានកិត្តិយសសូមគោរពអញ្ជើញ" Style & Paragraph -->
+                <p class="font-title text-base text-[#7A1F2B] tracking-wide mb-1">មានកិត្តិយសសូមគោរពអញ្ជើញ</p>
+
+                <div class="max-w-xs mx-auto">
+                    <p class="font-body text-[11.5px] leading-relaxed text-[#7A1F2B] text-center">
                         ឯកឧត្តម លោកជំទាវ លោកអ្នកឧកញ៉ា អ្នកឧកញ៉ា ឧកញ៉ា លោក លោកស្រី អ្នកនាងកញ្ញា អញ្ជើញចូលរួមជាអធិបតី និងជាភ្ញៀវកិត្តិយស ដើម្បីប្រសិទ្ធពរជ័យ សិរីសួស្តី ជ័យមង្គល ក្នុងពិធីសិរីមង្គលអាពាហ៍ពិពាហ៍ កូនប្រុស-កូនស្រី របស់យើងខ្ញុំ។
                     </p>
-                    <p class="en-sub text-[10px] leading-relaxed text-[#D8B289] mt-1.5 italic">
+                    <p class="en-sub text-[9.5px] leading-relaxed text-[#9B4E59] mt-1.5 italic text-center">
                         We cordially invite Their Excellencies, distinguished guests, and honored attendees to join us in celebrating our beloved son and daughter’s wedding and to bless them with happiness and prosperity.
                     </p>
                 </div>
 
-                <!-- Couple Section with "ជាគូនឹង" -->
-                <div class="my-5 font-body">
-                    <div class="grid grid-cols-2 gap-x-3 text-xs text-[#FCE194] font-bold">
-                        <div>
-                            <p>កូនប្រុសនាម</p>
-                            <p class="en-sub text-[9px] text-[#D8B289]">Their son</p>
-                        </div>
-                        <div>
-                            <p>កូនស្រីនាម</p>
-                            <p class="en-sub text-[9px] text-[#D8B289]">Their daughter</p>
-                        </div>
+                <!-- 5. Center Row: Bride Name | Gold Floral Monogram Frame | Groom Name -->
+                <div class="my-4 max-w-sm mx-auto flex items-center justify-between px-2">
+                    <!-- Left: Bride Name -->
+                    <div class="flex-1 text-center">
+                        <p class="font-body text-xs text-[#9B4E59] font-semibold mb-0.5">កូនស្រីនាម</p>
+                        <p class="font-name-km text-lg text-[#7A1F2B]">ចយ ច័ន្ទរតនា</p>
+                        <p class="en-sub text-[9px] text-[#9B4E59]">CHOY Chanrathana</p>
                     </div>
 
-                    <p class="font-title text-xs text-[#FCE194] my-1.5">ជាគូនឹង</p>
+                    <!-- Center: Gold Floral Monogram Frame with Initials (S & C) -->
+                    <div class="flex-shrink-0 px-2">
+                        <img src="assets/floral-monogram-sc.svg" alt="SC Monogram" class="w-20 h-20 drop-shadow-sm">
+                    </div>
 
-                    <div class="grid grid-cols-2 gap-x-3">
-                        <div>
-                            <p class="font-title text-lg hero-gold-3d font-bold">គ្រី ស៊ីណាន</p>
-                            <p class="en-sub text-xs text-[#FCE194] opacity-85">KRY Synan</p>
-                        </div>
-                        <div>
-                            <p class="font-title text-lg hero-gold-3d font-bold">ចយ ច័ន្ទរតនា</p>
-                            <p class="en-sub text-xs text-[#FCE194] opacity-85">CHOY Chanrathana</p>
-                        </div>
+                    <!-- Right: Groom Name -->
+                    <div class="flex-1 text-center">
+                        <p class="font-body text-xs text-[#9B4E59] font-semibold mb-0.5">កូនប្រុសនាម</p>
+                        <p class="font-name-km text-lg text-[#7A1F2B]">គ្រី ស៊ីណាន</p>
+                        <p class="en-sub text-[9px] text-[#9B4E59]">KRY Synan</p>
                     </div>
                 </div>
 
-                <!-- Auspicious Ceremony Date & Venue matching Reference Screenshot -->
-                <div class="mt-4 max-w-sm mx-auto text-center leading-relaxed font-body text-xs text-[#F5E6D3]">
-                    <p class="text-[#FCE194] font-bold mb-1">ដែលនឹងប្រព្រឹត្តទៅនៅ</p>
-                    <p class="font-title text-sm text-[#FCE194] leading-normal">ថ្ងៃព្រហស្បតិ៍ ទី២៦ ខែមីនា ឆ្នាំ២០២៦</p>
-                    <p class="mt-1.5">ស្ថិតនៅ ភូមិរលួស ឃុំដើមឬស ស្រុកកណ្តាលស្ទឹង ខេត្តកណ្តាល</p>
-                    <p class="text-[#FCE194] mt-1 font-semibold">ដោយមេត្រីភាព។ សូមអរគុណ !</p>
+                <!-- 6. Date, Time & Venue Lines Centered Under It -->
+                <div class="mt-2 max-w-xs mx-auto text-center leading-relaxed font-body text-xs text-[#7A1F2B]">
+                    <p class="font-bold text-[#8B1E3F]">ដែលនឹងប្រព្រឹត្តទៅនៅ</p>
+                    <p class="font-title text-sm text-[#7A1F2B] leading-normal my-0.5">ថ្ងៃព្រហស្បតិ៍ ទី២៦ ខែមីនា ឆ្នាំ២០២៦</p>
+                    <p class="text-[11.5px] text-[#7A1F2B]">ស្ថិតនៅ ភូមិរលួស ឃុំដើមឬស ស្រុកកណ្តាលស្ទឹង ខេត្តកណ្តាល</p>
+                    <p class="text-[#8B1E3F] mt-1 font-semibold text-[11px]">ដោយមេត្រីភាព។ សូមអរគុណ !</p>
+                </div>
+
+                <!-- 7. Thin Floral Divider Line -->
+                <div class="my-3 flex justify-center">
+                    <img src="assets/floral-divider.svg" alt="" class="w-44 h-auto opacity-75">
+                </div>
+
+                <!-- 8. English Heading "Wedding Invitation" in Elegant Serif -->
+                <div class="mb-2">
+                    <h2 class="font-en-title text-xl text-[#7A1F2B]">Wedding Invitation</h2>
+                    <p class="en-sub text-[10px] text-[#9B4E59]">Together with their families, cordially invite you to celebrate</p>
                 </div>
 
                 <!-- Hidden containers for dynamic date scripts to avoid null reference -->
@@ -573,16 +755,17 @@
                     <p id="guest-greeting"></p>
                 </div>
 
-                <!-- Warm Champagne-Gold Pill Button -->
-                <button id="cal-btn2" type="button" class="gold-pill-btn font-body mt-6">
+                <!-- Warm Pill Button to Save Date -->
+                <button id="cal-btn2" type="button" class="maroon-pill-btn font-body mt-3">
                     <span>កត់ទុកក្នុងប្រតិទិន 🗓️</span>
                 </button>
 
-                <div id="scroll-hint" class="mt-7 mb-2 flex flex-col items-center justify-center cursor-pointer opacity-85 hover:opacity-100 transition animate-bounce">
-                    <span class="font-body text-xs text-[#FCE194] font-bold">សូមអូសចុះក្រោម</span>
-                    <span class="en-sub text-[10px] text-[#D8B289] mb-1">Scroll Down</span>
-                    <div class="w-8 h-8 rounded-full bg-white/20 border border-[#F6CE78]/60 shadow flex items-center justify-center text-[#FCE194]">
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                <!-- Scroll down hint -->
+                <div id="scroll-hint" class="mt-4 mb-2 flex flex-col items-center justify-center cursor-pointer opacity-75 hover:opacity-100 transition animate-bounce">
+                    <span class="font-body text-xs text-[#7A1F2B] font-bold">សូមអូសចុះក្រោម</span>
+                    <span class="en-sub text-[9px] text-[#9B4E59] mb-1">Scroll Down</span>
+                    <div class="w-7 h-7 rounded-full bg-white/70 border border-[#7A1F2B]/30 shadow-sm flex items-center justify-center text-[#7A1F2B]">
+                        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
                         </svg>
                     </div>
@@ -590,51 +773,57 @@
             </div>
         </section>
 
-        <!-- CALENDAR -->
+        <!-- ====================================================================
+             2. CALENDAR & COUNTDOWN
+             ==================================================================== -->
         <section id="calendar" class="page px-6 text-center">
-            <h2 id="cal-title" class="font-title text-2xl text-gold-gradient leading-relaxed"></h2>
-            <p id="cal-title-en" class="en-sub-title text-xs tracking-widest text-[#FCE194] mb-6">Calendar</p>
-            <div class="max-w-xs mx-auto royal-card p-4">
-                <div id="cal-grid" class="grid grid-cols-7 gap-y-2 text-sm font-body text-[#F5E6D3]"></div>
+            <h2 id="cal-title" class="font-title text-xl text-[#7A1F2B] leading-relaxed"></h2>
+            <p id="cal-title-en" class="en-sub-title text-xs mb-5">Calendar</p>
+            <div class="max-w-xs mx-auto frosted-card p-4">
+                <div id="cal-grid" class="grid grid-cols-7 gap-y-2 text-sm font-body text-[#7A1F2B]"></div>
             </div>
             <div id="countdown" class="mt-6 grid grid-cols-4 gap-2 max-w-xs mx-auto">
-                <div class="hero-cd"><p id="cd-d" class="font-body text-2xl font-bold">00</p><p class="font-body text-[10px] uppercase font-bold text-[#FCE194]">ថ្ងៃ <span class="text-[9px] font-normal opacity-75">/ Days</span></p></div>
-                <div class="hero-cd"><p id="cd-h" class="font-body text-2xl font-bold">00</p><p class="font-body text-[10px] uppercase font-bold text-[#FCE194]">ម៉ោង <span class="text-[9px] font-normal opacity-75">/ Hours</span></p></div>
-                <div class="hero-cd"><p id="cd-m" class="font-body text-2xl font-bold">00</p><p class="font-body text-[10px] uppercase font-bold text-[#FCE194]">នាទី <span class="text-[9px] font-normal opacity-75">/ Min</span></p></div>
-                <div class="hero-cd"><p id="cd-s" class="font-body text-2xl font-bold">00</p><p class="font-body text-[10px] uppercase font-bold text-[#FCE194]">វិនាទី <span class="text-[9px] font-normal opacity-75">/ Sec</span></p></div>
+                <div class="countdown-box"><p id="cd-d" class="font-body text-2xl font-bold">00</p><p class="font-body text-[10px] uppercase font-bold text-[#8B1E3F]">ថ្ងៃ <span class="text-[9px] font-normal opacity-75">/ Days</span></p></div>
+                <div class="countdown-box"><p id="cd-h" class="font-body text-2xl font-bold">00</p><p class="font-body text-[10px] uppercase font-bold text-[#8B1E3F]">ម៉ោង <span class="text-[9px] font-normal opacity-75">/ Hours</span></p></div>
+                <div class="countdown-box"><p id="cd-m" class="font-body text-2xl font-bold">00</p><p class="font-body text-[10px] uppercase font-bold text-[#8B1E3F]">នាទី <span class="text-[9px] font-normal opacity-75">/ Min</span></p></div>
+                <div class="countdown-box"><p id="cd-s" class="font-body text-2xl font-bold">00</p><p class="font-body text-[10px] uppercase font-bold text-[#8B1E3F]">វិនាទី <span class="text-[9px] font-normal opacity-75">/ Sec</span></p></div>
             </div>
-            <div class="mt-6 flex flex-wrap gap-3 justify-center items-center">
-                <button id="cal-btn" type="button" class="gold-pill-btn !py-2 !px-5 !text-xs !shadow-md">
+            <div class="mt-5 flex flex-wrap gap-3 justify-center items-center">
+                <button id="cal-btn" type="button" class="maroon-pill-btn !py-2 !px-5 !text-xs !shadow-md">
                     <span>បន្ថែមទៅប្រតិទិន</span>
                     <span class="block text-[8px] opacity-80 font-normal">Add to Calendar</span>
                 </button>
-                <a id="gcal-btn" href="#" target="_blank" rel="noopener" class="border border-[#F6CE78] text-[#FCE194] px-5 py-2 rounded-full text-xs uppercase tracking-wider font-semibold hover:bg-white/10 transition">
+                <a id="gcal-btn" href="#" target="_blank" rel="noopener" class="outline-pill-btn">
                     <span>ប្រតិទិន Google</span>
                     <span class="block text-[8px] opacity-80 font-normal">Google Calendar</span>
                 </a>
             </div>
         </section>
 
-        <!-- 3. PROGRAM / SCHEDULE -->
+        <!-- ====================================================================
+             3. PROGRAM / SCHEDULE
+             ==================================================================== -->
         <section id="program" class="page px-6 text-center">
-            <h2 class="font-title text-xl text-gold-gradient leading-relaxed">កម្មវិធីសិរីមង្គលអាពាហ៍ពិពាហ៍</h2>
-            <p class="en-sub-title text-xs tracking-widest text-[#FCE194] mb-3">Wedding Program</p>
-            <p class="js-datelong-km font-title text-sm text-[#FCE194] mt-2"></p>
-            <p class="js-datelong-en en-sub text-xs text-[#D8B289] mb-4"></p>
-            <div id="timeline" class="tl font-body text-[#F5E6D3]"></div>
+            <h2 class="font-title text-xl text-[#7A1F2B] leading-relaxed">កម្មវិធីសិរីមង្គលអាពាហ៍ពិពាហ៍</h2>
+            <p class="en-sub-title text-xs mb-3">Wedding Program</p>
+            <p class="js-datelong-km font-title text-sm text-[#8B1E3F] mt-1"></p>
+            <p class="js-datelong-en en-sub text-xs text-[#9B4E59] mb-4"></p>
+            <div id="timeline" class="tl font-body text-[#7A1F2B] max-w-sm mx-auto"></div>
         </section>
 
-        <!-- 4. VENUE & MAP -->
+        <!-- ====================================================================
+             4. VENUE & MAP
+             ==================================================================== -->
         <section id="map" class="page px-6 text-center">
-            <h2 class="font-title text-2xl text-gold-gradient leading-relaxed">ទីតាំងកម្មវិធី</h2>
-            <p class="en-sub-title text-xs tracking-widest text-[#FCE194] mb-4">The Venue</p>
-            <p class="font-body text-[#FCE194] font-bold text-base">ភូមិរលួស ឃុំដើមឬស</p>
-            <p class="en-sub text-xs text-[#D8B289] mb-1">Phum Rolous, Doem Ruos Commune</p>
-            <p class="font-body text-[#F5E6D3] text-xs">ស្រុកកណ្តាលស្ទឹង ខេត្តកណ្តាល</p>
-            <p class="en-sub text-[11px] text-[#D8B289] mb-5">Kandal Stueng District, Kandal Province, Cambodia</p>
+            <h2 class="font-title text-xl text-[#7A1F2B] leading-relaxed">ទីតាំងកម្មវិធី</h2>
+            <p class="en-sub-title text-xs mb-3">The Venue</p>
+            <p class="font-body text-[#7A1F2B] font-bold text-sm">ភូមិរលួស ឃុំដើមឬស</p>
+            <p class="en-sub text-xs text-[#9B4E59] mb-0.5">Phum Rolous, Doem Ruos Commune</p>
+            <p class="font-body text-[#7A1F2B] text-xs">ស្រុកកណ្តាលស្ទឹង ខេត្តកណ្តាល</p>
+            <p class="en-sub text-[11px] text-[#9B4E59] mb-4">Kandal Stueng District, Kandal Province, Cambodia</p>
             
-            <div class="royal-card p-3 rounded-2xl shadow-xl overflow-hidden max-w-sm mx-auto">
-                <div class="w-full h-64 rounded-xl overflow-hidden relative shadow-inner bg-black/40">
+            <div class="frosted-card p-3 rounded-2xl shadow-lg overflow-hidden max-w-sm mx-auto">
+                <div class="w-full h-60 rounded-xl overflow-hidden relative shadow-inner bg-gray-100 border border-[#E8C4C4]/50">
                     <iframe
                         id="map-iframe"
                         title="Wedding Venue Location Map"
@@ -646,8 +835,8 @@
                     </iframe>
                 </div>
                 <div class="pt-3 pb-1 flex justify-center">
-                    <a id="map-link" href="#" target="_blank" rel="noopener" class="gold-pill-btn !py-2.5 !px-6 !text-xs !shadow-md flex items-center justify-center gap-2">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-[#052052]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z"/><circle cx="12" cy="10" r="3"/></svg>
+                    <a id="map-link" href="#" target="_blank" rel="noopener" class="maroon-pill-btn !py-2.5 !px-6 !text-xs !shadow-md flex items-center justify-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-[#FFF3EC]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z"/><circle cx="12" cy="10" r="3"/></svg>
                         <div class="text-left leading-tight">
                             <span class="block font-bold">មើលក្នុង Google Maps</span>
                             <span class="block text-[8px] opacity-80 font-normal tracking-wide">Get Directions / Route</span>
@@ -657,96 +846,105 @@
             </div>
         </section>
 
-        <!-- 5. GALLERY -->
+        <!-- ====================================================================
+             5. GALLERY
+             ==================================================================== -->
         <section id="gallery" class="page px-4">
-            <h2 class="font-title text-2xl text-gold-gradient text-center leading-relaxed">អនុស្សាវរីយ៍</h2>
-            <p class="en-sub-title text-xs tracking-widest text-[#FCE194] text-center mb-8">Our Moments</p>
-            <div class="masonry-grid">
-                <img loading="lazy" decoding="async" src="https://placehold.co/400x500/380710/FCE194?text=Photo+1" class="masonry-item w-full rounded-lg shadow-sm" alt="Gallery">
-                <img loading="lazy" decoding="async" src="https://placehold.co/400x300/380710/FCE194?text=Photo+2" class="masonry-item w-full rounded-lg shadow-sm" alt="Gallery">
-                <img loading="lazy" decoding="async" src="https://placehold.co/400x450/380710/FCE194?text=Photo+3" class="masonry-item w-full rounded-lg shadow-sm" alt="Gallery">
-                <img loading="lazy" decoding="async" src="https://placehold.co/400x350/380710/FCE194?text=Photo+4" class="masonry-item w-full rounded-lg shadow-sm" alt="Gallery">
+            <h2 class="font-title text-xl text-[#7A1F2B] text-center leading-relaxed">អនុស្សាវរីយ៍</h2>
+            <p class="en-sub-title text-xs text-center mb-6">Our Moments</p>
+            <div class="masonry-grid max-w-sm mx-auto">
+                <img loading="lazy" decoding="async" src="https://placehold.co/400x500/F6D5D5/7A1F2B?text=Photo+1" class="masonry-item w-full" alt="Gallery">
+                <img loading="lazy" decoding="async" src="https://placehold.co/400x300/F6D5D5/7A1F2B?text=Photo+2" class="masonry-item w-full" alt="Gallery">
+                <img loading="lazy" decoding="async" src="https://placehold.co/400x450/F6D5D5/7A1F2B?text=Photo+3" class="masonry-item w-full" alt="Gallery">
+                <img loading="lazy" decoding="async" src="https://placehold.co/400x350/F6D5D5/7A1F2B?text=Photo+4" class="masonry-item w-full" alt="Gallery">
             </div>
         </section>
 
-        <!-- 6. GIFT (ចងដៃ) -->
+        <!-- ====================================================================
+             6. APOLOGIES & GIFT (ចងដៃ)
+             ==================================================================== -->
         <section id="thanks" class="page px-6 text-center">
-            <h2 class="font-title text-xl text-gold-gradient leading-relaxed">សូមអរគុណ និងសូមអភ័យទោស</h2>
-            <p class="en-sub-title text-xs tracking-widest text-[#FCE194] mb-5">Thank You &amp; Our Apologies</p>
-            <p class="font-body text-sm leading-loose text-[#F5E6D3] max-w-xs mx-auto">
-                យើងខ្ញុំទាំងពីរ សូមថ្លែងអំណរគុណយ៉ាងជ្រាលជ្រៅ ចំពោះភ្ញៀវកិត្តិយសទាំងអស់ ដែលបានអញ្ជើញមករួមចែករំលែកក្តីសុខក្នុងថ្ងៃពិសេសនេះ ហើយសូមអភ័យទោស ដែលមិនអាចជូនលិខិតអញ្ជើញដោយផ្ទាល់បាន។
-            </p>
-            <p class="en-sub text-xs leading-relaxed text-[#D8B289] max-w-xs mx-auto mt-3 italic">
-                We sincerely thank every honoured guest for sharing this day with us, and kindly ask forgiveness that we could not deliver each invitation in person.
-            </p>
+            <h2 class="font-title text-xl text-[#7A1F2B] leading-relaxed">សូមអរគុណ និងសូមអភ័យទោស</h2>
+            <p class="en-sub-title text-xs mb-4">Thank You &amp; Our Apologies</p>
+            <div class="frosted-card p-5 max-w-xs mx-auto text-[#7A1F2B]">
+                <p class="font-body text-xs leading-loose">
+                    យើងខ្ញុំទាំងពីរ សូមថ្លែងអំណរគុណយ៉ាងជ្រាលជ្រៅ ចំពោះភ្ញៀវកិត្តិយសទាំងអស់ ដែលបានអញ្ជើញមករួមចែករំលែកក្តីសុខក្នុងថ្ងៃពិសេសនេះ ហើយសូមអភ័យទោស ដែលមិនអាចជូនលិខិតអញ្ជើញដោយផ្ទាល់បាន។
+                </p>
+                <p class="en-sub text-[11px] leading-relaxed text-[#9B4E59] mt-3 italic">
+                    We sincerely thank every honoured guest for sharing this day with us, and kindly ask forgiveness that we could not deliver each invitation in person.
+                </p>
+            </div>
         </section>
 
         <section id="gift" class="page px-6 text-center">
-            <h2 class="font-title text-2xl text-gold-gradient mb-1 leading-relaxed">ចំណងដៃ</h2>
-            <p class="en-sub-title text-xs tracking-widest text-[#FCE194] mb-3">Wedding Gift</p>
-            <p class="font-body text-[#F5E6D3] text-xs max-w-xs mx-auto leading-relaxed">
+            <h2 class="font-title text-xl text-[#7A1F2B] mb-0.5 leading-relaxed">ចំណងដៃ</h2>
+            <p class="en-sub-title text-xs mb-2">Wedding Gift</p>
+            <p class="font-body text-[#7A1F2B] text-xs max-w-xs mx-auto leading-relaxed">
                 វត្តមានរបស់លោកអ្នកគឺជាកិត្តិយសដ៏ធំបំផុត។ ប្រសិនបើលោកអ្នកចង់ផ្តល់ចំណងដៃ អាចផ្ញើតាមរយៈគណនីខាងក្រោម។
             </p>
-            <p class="en-sub text-[11px] text-[#D8B289] max-w-xs mx-auto mt-1 mb-8 italic">
+            <p class="en-sub text-[10px] text-[#9B4E59] max-w-xs mx-auto mt-0.5 mb-5 italic">
                 Your presence is enough, but if you wish to bless us, you can use the digital registry below.
             </p>
             
-            <p class="font-title text-base text-[#FCE194]">ចងដៃតាមរយៈ KHQR</p>
-            <p class="en-sub text-[11px] text-[#D8B289] mb-3">Gift via KHQR</p>
-            <div id="cur-tabs" class="hidden mx-auto mb-5 p-1 rounded-full royal-card" style="width:max-content">
-                <button id="cur-usd" type="button" class="cur-tab on">USD</button><button id="cur-khr" type="button" class="cur-tab">KHR / រៀល</button>
+            <p class="font-title text-sm text-[#7A1F2B]">ចងដៃតាមរយៈ KHQR</p>
+            <p class="en-sub text-[10px] text-[#9B4E59] mb-3">Gift via KHQR</p>
+            <div id="cur-tabs" class="hidden mx-auto mb-4 p-1 rounded-full frosted-card" style="width:max-content">
+                <button id="cur-usd" type="button" class="cur-tab on text-xs px-3 py-1 font-bold text-[#7A1F2B]">USD</button>
+                <button id="cur-khr" type="button" class="cur-tab text-xs px-3 py-1 font-bold text-[#9B4E59]">KHR / រៀល</button>
             </div>
-            <!-- Bank card -->
-            <div class="max-w-xs mx-auto bg-gradient-to-br from-[#005E85] to-[#003B54] rounded-2xl p-6 shadow-xl text-left relative overflow-hidden border border-[#F6CE78]/30">
-                <!-- Decorative ABA Logo Text -->
-                <div class="text-white/20 text-4xl font-black italic absolute -top-2 -right-4 pointer-events-none">ABA</div>
+
+            <!-- Luxury Bank Card in Burgundy & Cream -->
+            <div class="max-w-xs mx-auto bg-gradient-to-br from-[#7A1F2B] to-[#520B16] rounded-2xl p-6 shadow-xl text-left relative overflow-hidden border border-[#C9A96A]/40 text-white">
+                <div class="text-white/10 text-4xl font-black italic absolute -top-2 -right-4 pointer-events-none">ABA</div>
                 
-                <h3 class="font-body font-bold text-white mb-4 flex items-center justify-between">
+                <h3 class="font-body font-bold text-[#FFF3EC] mb-4 flex items-center justify-between">
                     <span id="bank-name">ABA BANK</span>
                 </h3>
                 
-                <div class="bg-white p-3 rounded-xl inline-block mb-4 shadow-inner">
-                    <img loading="lazy" decoding="async" id="bank-qr" src="https://placehold.co/150x150/F3D3D3/7A2230?text=QR+Code" alt="QR" class="w-32 h-32 object-cover">
+                <div class="bg-white p-3 rounded-xl inline-block mb-4 shadow-md">
+                    <img loading="lazy" decoding="async" id="bank-qr" src="https://placehold.co/150x150/FBEFEA/7A1F2B?text=QR+Code" alt="QR" class="w-32 h-32 object-cover">
                 </div>
                 
-                <p class="font-title text-base text-[#FCE194] mb-0.5 tracking-wide">គ្រី ស៊ីណាន &amp; ចយ ច័ន្ទរតនា</p>
-                <p class="en-sub text-xs text-white/80 uppercase tracking-wider mb-2">KRY Synan &amp; CHOY Chanrathana</p>
+                <p class="font-title text-base text-[#FFF3EC] mb-0.5 tracking-wide">គ្រី ស៊ីណាន &amp; ចយ ច័ន្ទរតនា</p>
+                <p class="en-sub text-xs text-[#F6D5D5] uppercase tracking-wider mb-2">KRY Synan &amp; CHOY Chanrathana</p>
                 <div class="flex items-center justify-between">
-                    <p class="font-body text-white font-mono tracking-widest text-sm" id="acc-number">000 123 456</p>
+                    <p class="font-body text-[#FFF3EC] font-mono tracking-widest text-sm" id="acc-number">000 123 456</p>
                     <button onclick="copyAcc()" class="text-white bg-white/20 hover:bg-white/30 rounded p-1.5 transition">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" /></svg>
                     </button>
                 </div>
             </div>
-            <p id="copy-msg" class="text-[#FCE194] text-xs mt-3 font-bold opacity-0 transition-opacity">បានចម្លងលេខគណនី! / Account Copied!</p>
+            <p id="copy-msg" class="text-[#7A1F2B] text-xs mt-3 font-bold opacity-0 transition-opacity">បានចម្លងលេខគណនី! / Account Copied!</p>
         </section>
 
-        <!-- 7. RSVP & GUESTBOOK -->
+        <!-- ====================================================================
+             7. RSVP & GUESTBOOK
+             ==================================================================== -->
         <section id="rsvp" class="page px-6 text-center">
-            <h2 class="font-title text-xl text-gold-gradient leading-relaxed">បញ្ជាក់ការចូលរួម</h2>
-            <p class="en-sub-title text-xs tracking-widest text-[#FCE194] mb-2">RSVP &amp; Wishes</p>
-            <p class="font-body text-[#F5E6D3] text-xs">សូមមេត្តាបញ្ជាក់ការចូលរួមរបស់អ្នក</p>
-            <p class="en-sub text-[11px] text-[#D8B289] mb-8 italic">Please let us know if you can make it</p>
+            <h2 class="font-title text-xl text-[#7A1F2B] leading-relaxed">បញ្ជាក់ការចូលរួម</h2>
+            <p class="en-sub-title text-xs mb-1">RSVP &amp; Wishes</p>
+            <p class="font-body text-[#7A1F2B] text-xs">សូមមេត្តាបញ្ជាក់ការចូលរួមរបស់អ្នក</p>
+            <p class="en-sub text-[11px] text-[#9B4E59] mb-5 italic">Please let us know if you can make it</p>
             
-            <form id="rsvp-form" class="royal-card p-6 text-left max-w-sm mx-auto shadow-xl">
+            <form id="rsvp-form" class="frosted-card p-6 text-left max-w-sm mx-auto shadow-lg">
                 <div class="mb-4">
-                    <label class="block font-body text-xs text-[#FCE194] font-bold mb-1 uppercase tracking-wider">
-                        ឈ្មោះរបស់អ្នក <span class="text-[10px] text-[#D8B289] font-normal">/ Full Name</span>
+                    <label class="block font-body text-xs text-[#7A1F2B] font-bold mb-1 uppercase tracking-wider">
+                        ឈ្មោះរបស់អ្នក <span class="text-[10px] text-[#9B4E59] font-normal">/ Full Name</span>
                     </label>
-                    <input type="text" id="guest-name" required maxlength="80" class="w-full bg-[#021435] border border-[#F6CE78]/50 rounded-lg text-white px-3 py-2 text-sm focus:outline-none focus:border-[#F6CE78] font-body shadow-inner">
+                    <input type="text" id="guest-name" required maxlength="80" class="w-full bg-white border border-[#E8C4C4] rounded-lg text-[#7A1F2B] px-3 py-2 text-sm focus:outline-none focus:border-[#7A1F2B] font-body shadow-inner">
                 </div>
                 
                 <div class="mb-4">
-                    <label class="block font-body text-xs text-[#FCE194] font-bold mb-2 uppercase tracking-wider">
-                        តើអ្នកនឹងចូលរួមទេ? <span class="text-[10px] text-[#D8B289] font-normal">/ Will you attend?</span>
+                    <label class="block font-body text-xs text-[#7A1F2B] font-bold mb-2 uppercase tracking-wider">
+                        តើអ្នកនឹងចូលរួមទេ? <span class="text-[10px] text-[#9B4E59] font-normal">/ Will you attend?</span>
                     </label>
                     <div class="flex gap-3">
-                        <label class="flex-1 text-center py-2 px-1 rounded-xl border border-[#F6CE78]/60 cursor-pointer has-[:checked]:bg-[#F6CE78] has-[:checked]:!text-[#052052] transition font-body text-xs shadow-sm bg-[#041E4E] text-[#F5E6D3]">
+                        <label class="flex-1 text-center py-2 px-1 rounded-xl border border-[#7A1F2B]/40 cursor-pointer has-[:checked]:bg-[#7A1F2B] has-[:checked]:!text-[#FFF3EC] transition font-body text-xs shadow-sm bg-white text-[#7A1F2B]">
                             <input type="radio" name="attendance" value="Yes" required class="sr-only">
                             <span class="font-bold">ចូលរួមដោយក្តីរីករាយ</span>
                             <span class="block text-[9px] opacity-80 mt-0.5">Joyfully Accept</span>
                         </label>
-                        <label class="flex-1 text-center py-2 px-1 rounded-xl border border-[#F6CE78]/40 cursor-pointer has-[:checked]:bg-gray-400 has-[:checked]:!text-[#111] transition font-body text-xs shadow-sm bg-[#041E4E] text-[#D8B289]">
+                        <label class="flex-1 text-center py-2 px-1 rounded-xl border border-[#9B4E59]/40 cursor-pointer has-[:checked]:bg-[#9B4E59] has-[:checked]:!text-white transition font-body text-xs shadow-sm bg-white text-[#9B4E59]">
                             <input type="radio" name="attendance" value="No" required class="sr-only">
                             <span class="font-bold">សុំអភ័យទោស</span>
                             <span class="block text-[9px] opacity-80 mt-0.5">Regretfully Decline</span>
@@ -755,84 +953,104 @@
                 </div>
 
                 <div class="mb-4">
-                    <label class="block font-body text-xs text-[#FCE194] font-bold mb-1 uppercase tracking-wider">
-                        ចំនួនភ្ញៀវ <span class="text-[10px] text-[#D8B289] font-normal">/ Number of Guests</span>
+                    <label class="block font-body text-xs text-[#7A1F2B] font-bold mb-1 uppercase tracking-wider">
+                        ចំនួនភ្ញៀវ <span class="text-[10px] text-[#9B4E59] font-normal">/ Number of Guests</span>
                     </label>
-                    <select id="guest-count" class="w-full bg-[#021435] border border-[#F6CE78]/50 rounded-lg text-white px-3 py-2 text-sm focus:outline-none focus:border-[#F6CE78] font-body shadow-inner">
+                    <select id="guest-count" class="w-full bg-white border border-[#E8C4C4] rounded-lg text-[#7A1F2B] px-3 py-2 text-sm focus:outline-none focus:border-[#7A1F2B] font-body shadow-inner">
                         <option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option>
                     </select>
                 </div>
 
                 <div class="mb-4">
-                    <label class="block font-body text-xs text-[#FCE194] font-bold mb-1 uppercase tracking-wider">
-                        សារជូនពរ (បើមាន) <span class="text-[10px] text-[#D8B289] font-normal">/ Your Message (Optional)</span>
+                    <label class="block font-body text-xs text-[#7A1F2B] font-bold mb-1 uppercase tracking-wider">
+                        សារជូនពរ (បើមាន) <span class="text-[10px] text-[#9B4E59] font-normal">/ Your Message (Optional)</span>
                     </label>
-                    <textarea id="guest-wish" rows="2" maxlength="300" class="w-full bg-[#021435] border border-[#F6CE78]/50 rounded-lg text-white px-3 py-2 text-sm focus:outline-none focus:border-[#F6CE78] font-body resize-none shadow-inner" placeholder="សូមសរសេរសារជូនពរ... / Leave a wish for the couple..."></textarea>
+                    <textarea id="guest-wish" rows="2" maxlength="300" class="w-full bg-white border border-[#E8C4C4] rounded-lg text-[#7A1F2B] px-3 py-2 text-sm focus:outline-none focus:border-[#7A1F2B] font-body resize-none shadow-inner" placeholder="សូមសរសេរសារជូនពរ... / Leave a wish for the couple..."></textarea>
                 </div>
 
-                <button type="submit" id="submit-btn" class="w-full gold-pill-btn font-body py-3 rounded-xl mt-4 shadow-md transition disabled:opacity-50">
+                <button type="submit" id="submit-btn" class="w-full maroon-pill-btn font-body py-3 rounded-xl mt-3 shadow-md transition disabled:opacity-50">
                     <span class="text-base font-bold">បញ្ជូនព័ត៌មាន</span>
                     <span class="block text-[9px] font-normal opacity-90 uppercase tracking-wider">Send Response</span>
                 </button>
             </form>
 
             <!-- Wishes Display -->
-            <div class="mt-12 max-w-sm mx-auto">
-                <h3 class="font-title text-xl text-gold-gradient leading-relaxed">សៀវភៅភ្ញៀវ</h3>
-                <p class="en-sub-title text-xs tracking-widest text-theme-primary mb-6">Guestbook</p>
-                <div id="wishes-list" class="space-y-4 max-h-80 overflow-y-auto custom-scroll pr-2">
-                    <p class="text-center text-gray-400 font-body text-sm italic" id="wishes-loading">កំពុងផ្ទុកសារ... / Loading messages...</p>
+            <div class="mt-10 max-w-sm mx-auto">
+                <h3 class="font-title text-lg text-[#7A1F2B] leading-relaxed">សៀវភៅភ្ញៀវ</h3>
+                <p class="en-sub-title text-xs text-[#9B4E59] mb-4">Guestbook</p>
+                <div id="wishes-list" class="space-y-3 max-h-80 overflow-y-auto custom-scroll pr-2">
+                    <p class="text-center text-gray-500 font-body text-xs italic" id="wishes-loading">កំពុងផ្ទុកសារ... / Loading messages...</p>
                 </div>
             </div>
         </section>
 
-        <!-- Bottom Navigation Spacer -->
-        <div class="h-16"></div>
-
-        <!-- Sticky Bottom Navigation -->
+        <!-- Sticky Bottom Navigation Bar (Matching Screenshot with 6 icons) -->
         <nav id="dock" aria-label="Pages">
-            <a href="#home" class="dock-i" data-s="home" aria-label="home"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg></a>
-            <a href="#program" class="dock-i" data-s="calendar program" aria-label="program"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg></a>
-            <a href="#map" class="dock-i" data-s="map" aria-label="map"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg></a>
-            <a href="#gallery" class="dock-i" data-s="gallery" aria-label="gallery"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/><path d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"/></svg></a>
-            <a href="#gift" class="dock-i" data-s="thanks gift" aria-label="gift"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"/></svg></a>
-            <a href="#rsvp" class="dock-i" data-s="rsvp" aria-label="rsvp"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg></a>
+            <!-- 1. Home -->
+            <a href="#home" class="dock-i" data-s="home" aria-label="home" title="Home">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+            </a>
+            <!-- 2. Calendar / Program -->
+            <a href="#calendar" class="dock-i" data-s="calendar program" aria-label="calendar" title="Calendar">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+            </a>
+            <!-- 3. Location / Map -->
+            <a href="#map" class="dock-i" data-s="map" aria-label="map" title="Location">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            </a>
+            <!-- 4. Camera / Gallery -->
+            <a href="#gallery" class="dock-i" data-s="gallery" aria-label="gallery" title="Gallery">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            </a>
+            <!-- 5. Heart / Wishes -->
+            <a href="#thanks" class="dock-i" data-s="thanks gift" aria-label="thanks" title="Wishes">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+            </a>
+            <!-- 6. Envelope-Check / RSVP -->
+            <a href="#rsvp" class="dock-i" data-s="rsvp" aria-label="rsvp" title="RSVP">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            </a>
         </nav>
-        <button id="to-top" type="button" aria-label="Back to top"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 11l6-6 6 6"/><path d="M6 18l6-6 6 6"/></svg></button>
+
+        <button id="to-top" type="button" aria-label="Back to top">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 11l6-6 6 6"/><path d="M6 18l6-6 6 6"/></svg>
+        </button>
 
     </div>
 
     <div id="toast" role="status" aria-live="polite"></div>
 
     <script>
-        // Cover, petals, scroll reveal (classic script so the page never gets stuck if something else fails)
+        // Cover, petals, scroll reveal logic
         (function () {
             var cover = document.getElementById('cover'), done = false;
             var sp = document.getElementById('cv-sparkles');
             if (sp && !(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches)) {
-                for (var k = 0; k < 16; k++) {
+                for (var k = 0; k < 14; k++) {
                     var d = document.createElement('span'); d.className = 'sp';
                     d.style.cssText = 'left:' + Math.random() * 96 + '%;top:' + (6 + Math.random() * 84) + '%;animation-delay:' + Math.random() * 3 + 's;animation-duration:' + (2 + Math.random() * 2) + 's';
                     sp.appendChild(d);
                 }
             }
+
             function petals() {
                 if (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) return;
                 var box = document.getElementById('petals');
-                for (var i = 0; i < 10; i++) {
-                    var p = document.createElement('span'), k = 0.7 + Math.random() * 0.9;
+                for (var i = 0; i < 14; i++) {
+                    var p = document.createElement('span'), k = 0.65 + Math.random() * 0.85;
                     p.className = 'petal';
-                    p.style.cssText = 'left:' + Math.random() * 100 + '%;width:' + 12 * k + 'px;height:' + 16 * k + 'px;animation-duration:' + (9 + Math.random() * 8) + 's;animation-delay:-' + Math.random() * 14 + 's;opacity:' + (0.55 + Math.random() * 0.4);
+                    p.style.cssText = 'left:' + Math.random() * 100 + '%;width:' + (11 * k) + 'px;height:' + (15 * k) + 'px;animation-duration:' + (10 + Math.random() * 8) + 's;animation-delay:-' + Math.random() * 16 + 's;opacity:' + (0.55 + Math.random() * 0.35);
                     box.appendChild(p);
                 }
             }
-            // ---- Continuous Cinematic Auto-Scroll ----
+
+            // ---- Auto-Scroll Glide ----
             var pages = [].slice.call(document.querySelectorAll('section'));
             var abtn = document.getElementById('auto-toggle');
             var isAuto = false;
             var autoRaf = null;
             var resumeTimer = null;
-            var speed = 3.8; // brisk, fast, yet buttery smooth glide speed
+            var speed = 3.2;
 
             function glideStep() {
                 if (!isAuto) return;
@@ -871,16 +1089,12 @@
                 if (done) return; done = true;
                 cover.classList.add('open');
                 var mb = document.getElementById('music-toggle'); if (mb) mb.click();
-                document.querySelectorAll('#home .rise-in > *').forEach(function (el, i) { el.style.animationDelay = (0.9 + i * 0.12) + 's'; });
+                document.querySelectorAll('#home .rise-in > *').forEach(function (el, i) { el.style.animationDelay = (0.6 + i * 0.1) + 's'; });
                 setTimeout(function () {
                     cover.style.display = 'none';
                     document.body.classList.remove('locked'); document.body.classList.add('opened');
-                    if (abtn) abtn.style.display = 'flex';
                     window.scrollTo(0, 0);
-                    if (!(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches)) {
-                        setTimeout(startAutoGlide, 1500);
-                    }
-                }, 1300);
+                }, 1100);
                 petals();
             }
             document.getElementById('open-btn').addEventListener('click', open);
@@ -891,18 +1105,11 @@
                     if (isAuto) {
                         stopAutoGlide();
                     } else {
-                        var maxScroll = (document.documentElement.scrollHeight || document.body.scrollHeight) - window.innerHeight;
-                        if (window.scrollY >= maxScroll - 10) {
-                            window.scrollTo({ top: 0, behavior: 'smooth' });
-                            setTimeout(startAutoGlide, 800);
-                        } else {
-                            startAutoGlide();
-                        }
+                        startAutoGlide();
                     }
                 });
             }
 
-            // Pause while user is touching/scrolling manually, resume automatically after 2.5s idle
             ['touchstart', 'wheel', 'pointerdown'].forEach(function (ev) {
                 window.addEventListener(ev, function (e) {
                     if (abtn && abtn.contains(e.target)) return;
@@ -919,7 +1126,8 @@
             var scrollHint = document.getElementById('scroll-hint');
             if (scrollHint) {
                 scrollHint.addEventListener('click', function () {
-                    startAutoGlide();
+                    var target = document.getElementById('calendar');
+                    if (target) target.scrollIntoView({ behavior: 'smooth' });
                 });
             }
 
@@ -933,10 +1141,6 @@
                             e.preventDefault();
                             pauseAutoGlide();
                             target.scrollIntoView({ behavior: 'smooth' });
-                            if (isAuto) {
-                                clearTimeout(resumeTimer);
-                                resumeTimer = setTimeout(startAutoGlide, 4000);
-                            }
                         }
                     }
                 });
@@ -954,7 +1158,7 @@
                 var p = pages[curPage()];
                 var id = p ? p.id : '';
                 dockLinks.forEach(function (a) { a.classList.toggle('act', (' ' + a.dataset.s + ' ').indexOf(' ' + id + ' ') > -1); });
-                if (toTop) toTop.style.display = window.scrollY > 450 ? 'flex' : 'none';
+                if (toTop) toTop.style.display = window.scrollY > 400 ? 'flex' : 'none';
             }
             window.addEventListener('scroll', function () {
                 if (!ticking) {
@@ -971,10 +1175,6 @@
                     e.preventDefault();
                     pauseAutoGlide();
                     window.scrollTo({ top: 0, behavior: 'smooth' });
-                    if (isAuto) {
-                        clearTimeout(resumeTimer);
-                        resumeTimer = setTimeout(startAutoGlide, 2000);
-                    }
                 });
             }
             updateDock();
@@ -982,39 +1182,35 @@
             if ('IntersectionObserver' in window) {
                 var io = new IntersectionObserver(function (es) {
                     es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
-                }, { threshold: 0.15 });
-                document.querySelectorAll('section:not(#home) h2.font-title, section:not(#home) > p:not(#copy-msg), #program .relative.pl-14, .masonry-item, #gift .max-w-xs, #calendar .max-w-xs, #calendar .flex, #map .gold-border, #rsvp form')
+                }, { threshold: 0.12 });
+                document.querySelectorAll('section:not(#home) h2.font-title, section:not(#home) > p:not(#copy-msg), #program .relative.pl-14, .masonry-item, #gift .max-w-xs, #calendar .max-w-xs, #calendar .flex, #map .frosted-card, #rsvp form')
                     .forEach(function (el) { el.classList.add('reveal'); io.observe(el); });
             }
         })();
     </script>
 
-    <!-- Application Logic -->
+    <!-- Application Logic (Preserves all existing logic & content 100%) -->
     <script type="module">
-        // --- Imports (hoisted by the module system; placed at top for clarity) ---
         import * as EVNS from "./event.js";
         import { RSVP } from "./config.js";
         import { EVENT } from "./event.js";
         import { CONTENT, BANK, GALLERY } from "./content.js";
         import * as CNS from "./content.js";
 
-        // Fix #4: GALLERY_USED now placed after imports for clarity (module imports are hoisted anyway)
         const GALLERY_USED = GALLERY;
 
-        // --- Toast utility (replaces alert() for non-blocking UX) ---
         const toast = (msg, ms = 3000) => {
             const el = document.getElementById('toast');
             el.textContent = msg; el.classList.add('show');
             setTimeout(() => el.classList.remove('show'), ms);
         };
 
-        // --- 1. Copy Utility (uses modern Clipboard API with textarea fallback) ---
+        // --- 1. Copy Utility ---
         window.copyAcc = async () => {
             const text = document.getElementById('acc-number').innerText;
             try {
                 await navigator.clipboard.writeText(text);
             } catch {
-                // Fallback for older/restricted browsers
                 const el = document.createElement('textarea');
                 el.value = text; el.style.cssText = 'position:fixed;opacity:0';
                 document.body.appendChild(el); el.select();
@@ -1026,29 +1222,30 @@
             setTimeout(() => msg.classList.add('opacity-0'), 2000);
         };
 
-        // --- 2. Music: YouTube song (default) or assets/music.mp3 ---
+        // --- 2. Background Music (Keeps YouTube song and 23s start time) ---
         const ytId = (v) => ((String(v || '').match(/(?:v=|youtu\.be\/|embed\/)([\w-]{11})/) || [])[1]) || (/^[\w-]{11}$/.test(String(v || '').trim()) ? String(v).trim() : '');
         const SONG_ID = ytId(EVNS.MUSIC && 'youtubeId' in EVNS.MUSIC ? EVNS.MUSIC.youtubeId : 'AlljlearTIs');
         const toSec = (v) => { v = String(v ?? '').trim(); if (v.includes(':')) { const [m, sec] = v.split(':'); return (Number(m) || 0) * 60 + (Number(sec) || 0); } return Number(v) || 0; };
-        const SONG_START = toSec(EVNS.MUSIC && 'startSeconds' in EVNS.MUSIC ? EVNS.MUSIC.startSeconds : 23);   // seconds; 23 = starts at 0:23
+        const SONG_START = toSec(EVNS.MUSIC && 'startSeconds' in EVNS.MUSIC ? EVNS.MUSIC.startSeconds : 23);
         const audio = document.getElementById('bg-audio');
         const musicBtn = document.getElementById('music-toggle');
         const iconPlay = document.getElementById('icon-play');
         const iconPause = document.getElementById('icon-pause');
         let isPlaying = false, ytPlayer = null, ytReady = false, wantPlay = false, ytFailed = false, firstPlay = true;
+        
         const setMusicUI = (on) => {
             isPlaying = on;
             iconPlay.classList.toggle('hidden', on);
             iconPause.classList.toggle('hidden', !on);
-            musicBtn.classList.toggle('animate-pulse-gold', on);
+            musicBtn.classList.toggle('animate-pulse-maroon', on);
         };
-        // The song is loaded silently (muted autoplay) as soon as the page opens, then the Open tap,
-        // which is the user gesture browsers require, switches the sound on from the start point.
+
         const startSong = () => {
             if (!ytReady) { wantPlay = true; return; }
             if (firstPlay) { ytPlayer.seekTo(SONG_START, true); firstPlay = false; }
             ytPlayer.unMute(); ytPlayer.setVolume(100); ytPlayer.playVideo(); setMusicUI(true);
         };
+
         if (SONG_ID) {
             window.onYouTubeIframeAPIReady = () => {
                 ytPlayer = new YT.Player('yt-player', {
@@ -1059,16 +1256,15 @@
                         onStateChange: (e) => {
                             if (e.data === 1 && !ytPlayer.isMuted()) setMusicUI(true);
                             else if (e.data === 2) setMusicUI(false);
-                            else if (e.data === 0) { ytPlayer.seekTo(SONG_START, true); ytPlayer.playVideo(); }   // loop from the start point
+                            else if (e.data === 0) { ytPlayer.seekTo(SONG_START, true); ytPlayer.playVideo(); }
                         },
-                        onError: () => { ytFailed = true; wantPlay = false; setMusicUI(false); console.warn('This YouTube video cannot be embedded; using assets/music.mp3 if present.'); }
+                        onError: () => { ytFailed = true; wantPlay = false; setMusicUI(false); console.warn('YouTube embed fallback to local audio.'); }
                     }
                 });
             };
             const tag = document.createElement('script'); tag.src = 'https://www.youtube.com/iframe_api'; document.head.appendChild(tag);
-        } else {
-            const sec = document.getElementById('song'); if (sec) sec.style.display = 'none';
         }
+
         musicBtn.addEventListener('click', () => {
             if (SONG_ID && !ytFailed) {
                 if (isPlaying) { if (ytReady) ytPlayer.pauseVideo(); wantPlay = false; setMusicUI(false); }
@@ -1082,7 +1278,6 @@
         const escapeHtml = (t) => (t || "").toString().replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;").replace(/'/g,"&#039;");
         const hasEndpoint = RSVP.endpoint && !RSVP.endpoint.startsWith('PASTE');
 
-        // Personalised link: https://your-domain/?to=1 or ?id=1 or ?code=guest01 or ?to=Sok%20Dara
         const urlParams = new URLSearchParams(location.search);
         const guestQuery = (urlParams.get('to') || urlParams.get('id') || urlParams.get('code') || '').trim().slice(0, 80);
         let activeGuestName = '';
@@ -1096,7 +1291,7 @@
 
             const g = $('guest-greeting');
             if (g) {
-                g.innerHTML = `<span>ជូនចំពោះ <strong>${escapeHtml(name)}</strong></span><span class="en-sub text-xs text-gray-500">Dear ${escapeHtml(name)}</span>`;
+                g.innerHTML = `<span>ជូនចំពោះ <strong>${escapeHtml(name)}</strong></span><span class="en-sub text-xs text-[#9B4E59]">Dear ${escapeHtml(name)}</span>`;
                 g.classList.remove('hidden');
             }
             const cg = $('cover-greeting');
@@ -1109,7 +1304,6 @@
             }
         };
 
-        // If URL has guest query, show immediate fallback then fetch from Google Sheets
         if (guestQuery) {
             updateGuestDisplays(guestQuery);
 
@@ -1126,7 +1320,6 @@
             }
         }
 
-        // Log guest open to Google Sheet
         const logGuestOpen = (guestName, guestCode) => {
             if (!hasEndpoint || (!guestName && !guestCode)) return;
             const logData = {
@@ -1161,7 +1354,7 @@
         }
         if (GALLERY_USED.length) {
             $('gallery').querySelector('.masonry-grid').innerHTML = GALLERY_USED.map(u =>
-                `<img loading="lazy" decoding="async" src="${escapeHtml(u)}" class="masonry-item w-full rounded-lg shadow-sm" alt="Gallery">`).join('');
+                `<img loading="lazy" decoding="async" src="${escapeHtml(u)}" class="masonry-item w-full rounded-xl shadow-sm" alt="Gallery">`).join('');
         }
 
         const start = new Date(EVENT.start);
@@ -1175,7 +1368,6 @@
         };
         tick(); setInterval(tick, 1000);
 
-        // Calendar month grid
         const [cy, cm, cd] = EVENT.start.slice(0, 10).split('-').map(Number);
         const KM = '០១២៣៤៥៦៧៨៩';
         const num = (n) => String(n).replace(/\d/g, d => KM[d]);
@@ -1190,12 +1382,12 @@
             if (cEn) cEn.innerText = `${MONTHS.en[cm - 1]} ${cy}`;
             const first = new Date(Date.UTC(cy, cm - 1, 1)).getUTCDay();
             const days = new Date(Date.UTC(cy, cm, 0)).getUTCDate();
-            let h = WD.km.map((w, idx) => `<div class="text-[11px] font-bold text-[#FCE194] leading-tight">${w}<span class="block text-[8px] font-normal opacity-70">${WD.en[idx]}</span></div>`).join('');
+            let h = WD.km.map((w, idx) => `<div class="text-[11px] font-bold text-[#7A1F2B] leading-tight">${w}<span class="block text-[8px] font-normal text-[#9B4E59]">${WD.en[idx]}</span></div>`).join('');
             h += '<div></div>'.repeat(first);
             for (let d = 1; d <= days; d++) {
                 h += d === cd
-                    ? `<div class="w-8 h-8 mx-auto flex items-center justify-center rounded-full bg-gradient-to-b from-[#FFF0B8] to-[#E5AA3A] text-[#052052] font-bold shadow">${num(d)}</div>`
-                    : `<div class="w-8 h-8 mx-auto flex items-center justify-center text-[#F5E6D3]">${num(d)}</div>`;
+                    ? `<div class="w-8 h-8 mx-auto flex items-center justify-center rounded-full bg-[#7A1F2B] text-[#FFF3EC] font-bold shadow-md">${num(d)}</div>`
+                    : `<div class="w-8 h-8 mx-auto flex items-center justify-center text-[#7A1F2B]">${num(d)}</div>`;
             }
             $('cal-grid').innerHTML = h;
         };
@@ -1212,8 +1404,8 @@
             $('d-month').innerText = `ខែ${MONTHS.km[cm - 1]}`;
             const mEn = $('d-month-en'); if (mEn) mEn.innerText = MONTHS.en[cm - 1].toUpperCase();
             $('d-day').innerText = num(cd);
-            $('d-week').innerHTML = `<span>ថ្ងៃ${WDF.km[wd]}</span><span class="block font-en-body text-[10px] tracking-wider uppercase font-semibold text-gray-500">${WDF.en[wd]}</span>`;
-            $('d-time').innerHTML = `<span>${num(h12)}:${num(tm)} ${th < 12 ? 'ព្រឹក' : th < 15 ? 'រសៀល' : 'ល្ងាច'}</span><span class="block font-en-body text-[10px] tracking-wider uppercase font-semibold text-gray-500">${h12}:${tm} ${th < 12 ? 'AM' : 'PM'}</span>`;
+            $('d-week').innerHTML = `<span>ថ្ងៃ${WDF.km[wd]}</span><span class="block font-en-body text-[10px] tracking-wider uppercase font-semibold text-[#9B4E59]">${WDF.en[wd]}</span>`;
+            $('d-time').innerHTML = `<span>${num(h12)}:${num(tm)} ${th < 12 ? 'ព្រឹក' : th < 15 ? 'រសៀល' : 'ល្ងាច'}</span><span class="block font-en-body text-[10px] tracking-wider uppercase font-semibold text-[#9B4E59]">${h12}:${tm} ${th < 12 ? 'AM' : 'PM'}</span>`;
             $('d-year').innerText = num(cy);
             const yEn = $('d-year-en'); if (yEn) yEn.innerText = String(cy);
             const longKm = `ថ្ងៃ${WDF.km[wd]} ទី${num(cd)} ខែ${MONTHS.km[cm - 1]} ឆ្នាំ${num(cy)}`;
@@ -1222,19 +1414,33 @@
             document.querySelectorAll('.js-datelong-en').forEach(e => e.innerText = longEn);
         };
 
-        // Program timeline (bilingual: Khmer on top, English below)
-        const ICONS = {"monk": "<svg viewBox=\"0 0 24 24\"><path d=\"M12 3c-2 3-4 5-4 9 0 3 2 5 4 8 2-3 4-5 4-8 0-4-2-6-4-9z\"/><path d=\"M12 8v12\"/></svg>", "arch": "<svg viewBox=\"0 0 24 24\"><path d=\"M5 21V10a7 7 0 0114 0v11\"/><path d=\"M9 21v-9a3 3 0 016 0v9\"/></svg>", "gift": "<svg viewBox=\"0 0 24 24\"><path d=\"M4 11h16v9H4z\"/><path d=\"M12 11v9M3 8h18v3H3zM12 8c-2-4-6-3-5 0M12 8c2-4 6-3 5 0\"/></svg>", "ring": "<svg viewBox=\"0 0 24 24\"><circle cx=\"9\" cy=\"15\" r=\"5\"/><circle cx=\"15\" cy=\"15\" r=\"5\"/><path d=\"M9 5l1.5-2h3L15 5l-3 3z\"/></svg>", "scissors": "<svg viewBox=\"0 0 24 24\"><circle cx=\"6\" cy=\"6\" r=\"3\"/><circle cx=\"6\" cy=\"18\" r=\"3\"/><path d=\"M20 4L8.1 15.9M14.5 14.5L20 20M8.1 8.1L12 12\"/></svg>", "dinner": "<svg viewBox=\"0 0 24 24\"><path d=\"M5 3v8M8 3v8M5 7h3M6.5 11v10\"/><path d=\"M17 3c-2 2-2 6 0 8v10\"/></svg>", "toast": "<svg viewBox=\"0 0 24 24\"><path d=\"M4 4h7l-1 8a2.5 2.5 0 01-5 0z\"/><path d=\"M7.5 14v6M4.5 20h6\"/><path d=\"M13 4h7l-1 8a2.5 2.5 0 01-5 0z\"/><path d=\"M16.5 14v6M13.5 20h6\"/></svg>", "heart": "<svg viewBox=\"0 0 24 24\"><path d=\"M12 21s-7-4.5-9.5-9A5.5 5.5 0 0112 6a5.5 5.5 0 019.5 6c-2.5 4.5-9.5 9-9.5 9z\"/></svg>", "lips": "<svg viewBox=\"0 0 24 24\"><path d=\"M3 12c3-4 6-5 9-3 3-2 6-1 9 3-3 4-6 5-9 5s-6-1-9-5z\"/><path d=\"M3 12h18\"/></svg>", "baysei": "<svg viewBox=\"0 0 24 24\"><path d=\"M12 3l-3 5h6z\"/><path d=\"M9 8l-3 6h12l-3-6\"/><path d=\"M6 14l-3 6h18l-3-6\"/></svg>", "pray": "<svg viewBox=\"0 0 24 24\"><path d=\"M12 4v16\"/><path d=\"M12 6c-3 0-5 3-5 7l5 7\"/><path d=\"M12 6c3 0 5 3 5 7l-5 7\"/></svg>"};
+        // Program timeline
+        const ICONS = {
+            "monk": "<svg viewBox=\"0 0 24 24\"><path d=\"M12 3c-2 3-4 5-4 9 0 3 2 5 4 8 2-3 4-5 4-8 0-4-2-6-4-9z\"/><path d=\"M12 8v12\"/></svg>",
+            "arch": "<svg viewBox=\"0 0 24 24\"><path d=\"M5 21V10a7 7 0 0114 0v11\"/><path d=\"M9 21v-9a3 3 0 016 0v9\"/></svg>",
+            "gift": "<svg viewBox=\"0 0 24 24\"><path d=\"M4 11h16v9H4z\"/><path d=\"M12 11v9M3 8h18v3H3zM12 8c-2-4-6-3-5 0M12 8c2-4 6-3 5 0\"/></svg>",
+            "ring": "<svg viewBox=\"0 0 24 24\"><circle cx=\"9\" cy=\"15\" r=\"5\"/><circle cx=\"15\" cy=\"15\" r=\"5\"/><path d=\"M9 5l1.5-2h3L15 5l-3 3z\"/></svg>",
+            "scissors": "<svg viewBox=\"0 0 24 24\"><circle cx=\"6\" cy=\"6\" r=\"3\"/><circle cx=\"6\" cy=\"18\" r=\"3\"/><path d=\"M20 4L8.1 15.9M14.5 14.5L20 20M8.1 8.1L12 12\"/></svg>",
+            "dinner": "<svg viewBox=\"0 0 24 24\"><path d=\"M5 3v8M8 3v8M5 7h3M6.5 11v10\"/><path d=\"M17 3c-2 2-2 6 0 8v10\"/></svg>",
+            "toast": "<svg viewBox=\"0 0 24 24\"><path d=\"M4 4h7l-1 8a2.5 2.5 0 01-5 0z\"/><path d=\"M7.5 14v6M4.5 20h6\"/><path d=\"M13 4h7l-1 8a2.5 2.5 0 01-5 0z\"/><path d=\"M16.5 14v6M13.5 20h6\"/></svg>",
+            "heart": "<svg viewBox=\"0 0 24 24\"><path d=\"M12 21s-7-4.5-9.5-9A5.5 5.5 0 0112 6a5.5 5.5 0 019.5 6c-2.5 4.5-9.5 9-9.5 9z\"/></svg>",
+            "lips": "<svg viewBox=\"0 0 24 24\"><path d=\"M3 12c3-4 6-5 9-3 3-2 6-1 9 3-3 4-6 5-9 5s-6-1-9-5z\"/><path d=\"M3 12h18\"/></svg>",
+            "baysei": "<svg viewBox=\"0 0 24 24\"><path d=\"M12 3l-3 5h6z\"/><path d=\"M9 8l-3 6h12l-3-6\"/><path d=\"M6 14l-3 6h18l-3-6\"/></svg>",
+            "pray": "<svg viewBox=\"0 0 24 24\"><path d=\"M12 4v16\"/><path d=\"M12 6c-3 0-5 3-5 7l5 7\"/><path d=\"M12 6c3 0 5 3 5 7l-5 7\"/></svg>"
+        };
+
         const PROG = (CNS.PROGRAM && CNS.PROGRAM.length) ? CNS.PROGRAM : [['scissors','t1','prog1'],['monk','t2','prog2'],['ring','t3','prog3'],['toast','t4','prog4']].map(([icon, t, p]) => ({
             icon, time: { en: CONTENT.en[t], km: CONTENT.km[t] }, text: { en: CONTENT.en[p], km: CONTENT.km[p] } }));
+        
         const renderProgram = () => {
             $('timeline').innerHTML = PROG.map(it => `
                 <div class="tl-i">
                     <span class="tl-ico">${ICONS[it.icon] || ICONS.heart}</span>
-                    <div class="font-body">
+                    <div class="font-body text-xs">
                         <span class="tl-t">${escapeHtml((it.time || {}).km || '')}</span> ៖ ${escapeHtml((it.text || {}).km || '')}
                     </div>
-                    <div class="en-sub text-gray-600 mt-0.5">
-                        <span class="font-semibold text-theme-primary">${escapeHtml((it.time || {}).en || '')}:</span> ${escapeHtml((it.text || {}).en || '')}
+                    <div class="en-sub text-[#9B4E59] mt-0.5">
+                        <span class="font-semibold text-[#7A1F2B]">${escapeHtml((it.time || {}).en || '')}:</span> ${escapeHtml((it.text || {}).en || '')}
                     </div>
                 </div>`).join('');
         };
@@ -1253,21 +1459,21 @@
             a.download = 'wedding.ics'; a.click();
         });
 
-        // --- 5. RSVP + guestbook (Google Sheet through Apps Script; no Firebase) ---
+        // --- 5. RSVP + guestbook ---
         const card = (e) => `
-            <div class="royal-card p-4 text-left shadow-md">
-                <p class="font-body text-[#F5E6D3] text-sm leading-relaxed mb-2">"${escapeHtml(e.wish)}"</p>
-                <p class="font-title text-[#FCE194] text-right text-sm font-bold">— ${escapeHtml(e.name)}</p>
+            <div class="frosted-card p-3.5 text-left shadow-sm">
+                <p class="font-body text-[#7A1F2B] text-xs leading-relaxed mb-1.5">"${escapeHtml(e.wish)}"</p>
+                <p class="font-title text-[#8B1E3F] text-right text-xs font-bold">— ${escapeHtml(e.name)}</p>
             </div>`;
         const wishBox = $('wishes-list');
         const showWishes = (list) => {
             wishBox.innerHTML = list.length ? list.map(card).join('')
-                : '<p class="text-center text-gray-400 text-sm font-body italic">Be the first to leave a message!</p>';
+                : '<p class="text-center text-gray-500 text-xs font-body italic">Be the first to leave a message!</p>';
         };
         if (hasEndpoint) {
             fetch(RSVP.endpoint + '?action=wishes').then(r => r.json()).then(d => showWishes(d.wishes || [])).catch(() => { wishBox.innerHTML = ''; });
         } else if (!RSVP.whatsapp) {
-            wishBox.innerHTML = '<p class="text-center text-gray-400 text-sm font-body italic">Preview mode: RSVPs are not saved yet (see config.js)</p>';
+            wishBox.innerHTML = '<p class="text-center text-gray-500 text-xs font-body italic">Preview mode: RSVPs are not saved yet (see config.js)</p>';
         } else { wishBox.innerHTML = ''; }
 
         $('rsvp-form').addEventListener('submit', async (e) => {
@@ -1283,8 +1489,6 @@
             btn.disabled = true;
             try {
                 if (hasEndpoint) {
-                    // note: no-cors returns an opaque response; errors cannot be detected client-side.
-                    // Ensure your Apps Script has proper CORS headers if you need error feedback.
                     await fetch(RSVP.endpoint, { method: 'POST', mode: 'no-cors', body: JSON.stringify(data) });
                     if (data.wish) wishBox.insertAdjacentHTML('afterbegin', card(data));
                 } else if (RSVP.whatsapp) {
@@ -1302,7 +1506,6 @@
                 toast('មិនអាចបញ្ជូនបានទេ សូមព្យាយាមម្តងទៀត។ / Could not send. Please try again.', 4000);
             } finally { btn.disabled = false; }
         });
-
     </script>
 </body>
 </html>

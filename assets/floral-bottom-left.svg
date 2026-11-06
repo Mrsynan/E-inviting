@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 320" fill="none">
+  <defs>
+    <!-- Gradients for realistic burgundy peonies and cream roses -->
+    <radialGradient id="burgundyPeony" cx="45%" cy="45%" r="55%">
+      <stop offset="0%" stop-color="#C2203D"/>
+      <stop offset="35%" stop-color="#9E1630"/>
+      <stop offset="70%" stop-color="#730E22"/>
+      <stop offset="100%" stop-color="#4A0513"/>
+    </radialGradient>
+    <radialGradient id="deepRose" cx="40%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#A81932"/>
+      <stop offset="50%" stop-color="#7A1024"/>
+      <stop offset="100%" stop-color="#3D030D"/>
+    </radialGradient>
+    <radialGradient id="creamRose" cx="45%" cy="45%" r="55%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="45%" stop-color="#FFF3EC"/>
+      <stop offset="80%" stop-color="#FCE1D4"/>
+      <stop offset="100%" stop-color="#E8BEAD"/>
+    </radialGradient>
+    <radialGradient id="blushRose" cx="40%" cy="40%" r="55%">
+      <stop offset="0%" stop-color="#FFF5F2"/>
+      <stop offset="50%" stop-color="#FAD2CD"/>
+      <stop offset="85%" stop-color="#EAA6A0"/>
+      <stop offset="100%" stop-color="#C9706C"/>
+    </radialGradient>
+    <linearGradient id="leafGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6F8364"/>
+      <stop offset="50%" stop-color="#4E6144"/>
+      <stop offset="100%" stop-color="#303E29"/>
+    </linearGradient>
+    <linearGradient id="leafGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8FA283"/>
+      <stop offset="60%" stop-color="#586C4E"/>
+      <stop offset="100%" stop-color="#394833"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background Line-Art Sketches reaching upwards -->
+  <g stroke="#8B1E3F" stroke-width="1.1" stroke-linecap="round" opacity="0.45" fill="none">
+    <path d="M40,280 Q50,180 80,120 T140,40"/>
+    <path d="M70,290 Q110,210 160,140 T220,70"/>
+    <path d="M10,240 Q40,160 90,100"/>
+    <!-- Line art leaves -->
+    <path d="M82,122 Q105,105 110,128 Q92,138 82,122 Z" fill="#FCE9E4" fill-opacity="0.3"/>
+    <path d="M138,42 Q158,25 168,48 Q148,58 138,42 Z" fill="#FCE9E4" fill-opacity="0.3"/>
+    <path d="M162,142 Q188,128 192,150 Q172,160 162,142 Z" fill="#FCE9E4" fill-opacity="0.3"/>
+    <!-- Tiny line-art buds -->
+    <circle cx="140" cy="40" r="3.5" fill="#8B1E3F" fill-opacity="0.6"/>
+    <circle cx="220" cy="70" r="3" fill="#8B1E3F" fill-opacity="0.6"/>
+  </g>
+
+  <!-- Botanical Greenery Leaves -->
+  <g>
+    <!-- Leaf 1 (Top Left) -->
+    <path d="M70,160 C55,120 85,90 115,85 C110,115 95,145 70,160 Z" fill="url(#leafGrad1)"/>
+    <path d="M70,160 Q95,120 115,85" stroke="#8FA283" stroke-width="1.2" opacity="0.6"/>
+    <!-- Leaf 2 (Upper Right) -->
+    <path d="M120,180 C130,130 170,110 200,115 C185,145 155,170 120,180 Z" fill="url(#leafGrad2)"/>
+    <path d="M120,180 Q160,145 200,115" stroke="#A8BCA0" stroke-width="1.2" opacity="0.6"/>
+    <!-- Leaf 3 (Right Outer) -->
+    <path d="M180,240 C210,215 250,225 270,250 C240,265 205,260 180,240 Z" fill="url(#leafGrad1)"/>
+    <path d="M180,240 Q225,235 270,250" stroke="#8FA283" stroke-width="1.2" opacity="0.6"/>
+    <!-- Leaf 4 (Far Edge) -->
+    <path d="M220,270 C250,260 285,280 295,305 C265,310 235,295 220,270 Z" fill="url(#leafGrad2)"/>
+  </g>
+
+  <!-- Large Burgundy Peony (Bottom Left Corner) -->
+  <g transform="translate(68, 252)">
+    <!-- Outer Deep Shadow Petals -->
+    <path d="M-65,-20 C-75,-5 -60,25 -35,45 C-5,60 30,55 55,30 C75,5 65,-25 45,-45 C20,-60 -20,-65 -50,-45 Z" fill="#3D030D" opacity="0.85"/>
+    <path d="M-55,-15 C-65,10 -35,42 -10,48 C20,52 50,32 58,10 C65,-15 45,-40 20,-50 C-10,-58 -45,-40 -55,-15 Z" fill="url(#deepRose)"/>
+    
+    <!-- Mid Petals -->
+    <path d="M-45,5 C-50,28 -20,44 5,42 C30,40 48,20 46,-5 C44,-28 20,-42 -5,-40 C-28,-38 -42,-15 -45,5 Z" fill="url(#burgundyPeony)"/>
+    <path d="M-35,-20 C-48,-5 -40,20 -18,28 C5,35 30,22 35,0 C40,-20 22,-35 -2,-34 C-20,-33 -30,-28 -35,-20 Z" fill="#9E1630"/>
+    <path d="M-25,12 C-35,0 -20,-22 0,-25 C20,-28 32,-10 28,10 C24,28 5,30 -12,28 C-20,25 -22,18 -25,12 Z" fill="#BD1C3B"/>
+    
+    <!-- Center Ruffled Peony Petals -->
+    <path d="M-15,-10 C-22,2 -12,18 2,16 C16,14 20,-2 10,-12 C0,-20 -10,-18 -15,-10 Z" fill="#D82A4B"/>
+    <path d="M-8,-5 C-12,4 -5,12 3,10 C10,8 12,-3 5,-8 C-1,-12 -6,-10 -8,-5 Z" fill="#E84867"/>
+    <path d="M-3,0 C-5,5 0,8 4,6 C7,4 6,-2 2,-4 C-1,-5 -3,-2 -3,0 Z" fill="#FF8CA0"/>
+  </g>
+
+  <!-- Cream & Soft Blush Rose (Sitting next to peony, slightly upper-right) -->
+  <g transform="translate(172, 215) scale(0.95)">
+    <!-- Base shadow -->
+    <circle cx="0" cy="0" r="46" fill="#D9A897" opacity="0.5"/>
+    <!-- Outer Cream Petals -->
+    <path d="M-40,-15 C-48,8 -32,35 -5,42 C22,48 45,30 46,5 C47,-20 28,-42 0,-44 C-25,-46 -35,-32 -40,-15 Z" fill="url(#creamRose)"/>
+    <path d="M-32,-25 C-44,-8 -35,18 -15,28 C8,36 34,25 36,2 C38,-18 20,-35 -5,-36 C-20,-37 -28,-32 -32,-25 Z" fill="url(#blushRose)"/>
+    <path d="M-22,5 C-28,20 -5,30 15,24 C30,18 30,-5 18,-18 C5,-28 -15,-18 -22,5 Z" fill="url(#creamRose)"/>
+    
+    <!-- Rose Cup / Heart -->
+    <path d="M-14,-10 C-18,4 -5,16 8,14 C20,12 20,-4 10,-12 C0,-20 -10,-18 -14,-10 Z" fill="#FCE1D4"/>
+    <path d="M-8,-4 C-10,5 -2,10 6,8 C12,6 12,-2 5,-6 C0,-10 -6,-8 -8,-4 Z" fill="#EAA6A0"/>
+    <path d="M-3,0 Q0,5 4,2 Q6,-2 1,-3 Z" fill="#C9706C"/>
+  </g>
+
+  <!-- Delicate Rosebud & Stems -->
+  <g transform="translate(115, 120) scale(0.7)">
+    <path d="M-10,25 C-5,5 0,-15 10,-25 C15,-10 18,10 5,30 Z" fill="url(#burgundyPeony)"/>
+    <path d="M-15,30 Q-2,10 8,-22" stroke="#4E6144" stroke-width="2"/>
+    <path d="M-12,28 C-18,20 -14,5 -5,12 C-2,20 -8,28 -12,28 Z" fill="url(#leafGrad1)"/>
+  </g>
+</svg>

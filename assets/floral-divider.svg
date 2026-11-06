@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 24" fill="none">
+  <!-- Delicate maroon & blush floral divider -->
+  <g stroke="#8B1E3F" stroke-width="0.9" stroke-linecap="round" opacity="0.75">
+    <!-- Left line fading to center -->
+    <path d="M10,12 L85,12"/>
+    <!-- Right line fading to center -->
+    <path d="M155,12 L230,12"/>
+    
+    <!-- Left Leaf Sprig -->
+    <path d="M75,12 Q82,7 88,10 Q82,14 75,12 Z" fill="#F6D5D5" fill-opacity="0.5"/>
+    <path d="M65,12 Q72,17 78,14 Q72,10 65,12 Z" fill="#F6D5D5" fill-opacity="0.4"/>
+
+    <!-- Right Leaf Sprig -->
+    <path d="M165,12 Q158,7 152,10 Q158,14 165,12 Z" fill="#F6D5D5" fill-opacity="0.5"/>
+    <path d="M175,12 Q168,17 162,14 Q168,10 175,12 Z" fill="#F6D5D5" fill-opacity="0.4"/>
+
+    <!-- Center Tiny Blossom or Butterfly -->
+    <g transform="translate(120, 12)">
+      <!-- Romantic Butterfly Motif matching reference screenshot -->
+      <!-- Left Wings -->
+      <path d="M-1,-1 C-5,-9 -14,-8 -12,-2 C-11,2 -4,2 -1,1 Z" fill="#F6D5D5" fill-opacity="0.6"/>
+      <path d="M-1,1 C-6,3 -10,7 -8,10 C-6,12 -3,7 -1,3 Z" fill="#F6D5D5" fill-opacity="0.4"/>
+      <!-- Right Wings -->
+      <path d="M1,-1 C5,-9 14,-8 12,-2 C11,2 4,2 1,1 Z" fill="#F6D5D5" fill-opacity="0.6"/>
+      <path d="M1,1 C6,3 10,7 8,10 C6,12 3,7 1,3 Z" fill="#F6D5D5" fill-opacity="0.4"/>
+      <!-- Body & Antennae -->
+      <line x1="0" y1="-3" x2="0" y2="4" stroke="#8B1E3F" stroke-width="1.2"/>
+      <path d="M0,-3 Q-3,-7 -5,-8" stroke-width="0.8"/>
+      <path d="M0,-3 Q3,-7 5,-8" stroke-width="0.8"/>
+    </g>
+  </g>
+</svg>
