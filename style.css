@@ -100,40 +100,89 @@ body {
     z-index: 3;
 }
 
-/* 4. FLORAL DECORATIVE CORNERS (Item 4: z-index below text, text area clear) */
-.corner-floral {
-    position: absolute;
+/* ==========================================================================
+   4. CORNER FLORAL DECORATIONS (Swap image filenames in HTML/assets if needed)
+   - flower-bottom-left.png: position: fixed; bottom: 0; left: 0; width: 48vw; max-width: 215px;
+   - flower-bottom-left.png mirrored: same size, right: 0; transform: scaleX(-1);
+   - flower-top-right.png: position: fixed; top: 0; right: 0; width: 36vw; max-width: 165px;
+   - flower-top-right.png mirrored: same size, left: 0; transform: scaleX(-1);
+   ========================================================================== */
+.corner-flower {
+    position: fixed;
     pointer-events: none;
-    z-index: 1; /* Below text (which is z-index 10) */
+    z-index: 1; /* Behind text (z-index 10), above background */
+    object-fit: contain;
     user-select: none;
+    -webkit-user-select: none;
 }
-.corner-top-l {
-    top: 0;
-    left: 0;
-    width: 88px;
-    max-width: 24%;
-    height: auto;
+.cv-stage .corner-flower {
+    position: absolute;
+    z-index: 1;
 }
-.corner-top-r {
-    top: 0;
-    right: 0;
-    width: 88px;
-    max-width: 24%;
-    height: auto;
-}
-.corner-bot-l {
+
+/* Bottom Left: luxury burgundy peonies and cream roses */
+.flower-bottom-left {
     bottom: 0;
     left: 0;
-    width: 145px;
-    max-width: 38%;
+    width: 55vw;
+    max-width: 260px;
     height: auto;
 }
-.corner-bot-r {
+
+/* Bottom Right: mirrored horizontally */
+.flower-bottom-right {
     bottom: 0;
     right: 0;
-    width: 145px;
-    max-width: 38%;
+    width: 55vw;
+    max-width: 260px;
     height: auto;
+    transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+}
+
+/* Top Right: delicate botanical line-art with watercolor wash */
+.flower-top-right {
+    top: 0;
+    right: 0;
+    width: 40vw;
+    max-width: 200px;
+    height: auto;
+}
+
+/* Top Left: mirrored horizontally */
+.flower-top-left {
+    top: 0;
+    left: 0;
+    width: 40vw;
+    max-width: 200px;
+    height: auto;
+    transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+}
+
+/* Scale down nicely on smaller mobile screens so flowers stay in corners and never cross text or music button */
+@media (max-width: 420px) {
+    .flower-top-left,
+    .flower-top-right {
+        width: 30vw;
+        max-width: 130px;
+    }
+    .flower-bottom-left,
+    .flower-bottom-right {
+        width: 40vw;
+        max-width: 180px;
+    }
+}
+
+@media (min-width: 481px) {
+    .corner-flower:not(.cv-stage .corner-flower).flower-bottom-left,
+    .corner-flower:not(.cv-stage .corner-flower).flower-top-left {
+        left: calc(50% - 240px);
+    }
+    .corner-flower:not(.cv-stage .corner-flower).flower-bottom-right,
+    .corner-flower:not(.cv-stage .corner-flower).flower-top-right {
+        right: calc(50% - 240px);
+    }
 }
 
 /* 5. SECTIONS & CONTENT SPACING */
@@ -159,23 +208,23 @@ section.page {
 /* Specific Font Sizes matching Item 2 */
 .hero-title-km {
     font-size: 26px !important;
-    line-height: 1.5;
+    line-height: 1.4;
     color: #7A1F2B;
-    margin-bottom: 24px; /* Vertical spacing */
+    margin-bottom: 14px; /* Vertical spacing */
 }
 
 .parents-names-km {
     font-size: 15px !important;
-    line-height: 1.6;
+    line-height: 1.5;
     color: #7A1F2B;
 }
 
 .invitation-heading-km {
     font-size: 20px !important;
-    line-height: 1.6;
+    line-height: 1.5;
     color: #7A1F2B;
-    margin-top: 24px;
-    margin-bottom: 12px;
+    margin-top: 14px;
+    margin-bottom: 8px;
 }
 
 /* Item 3: Center alignment and text-wrap: balance */
@@ -200,9 +249,12 @@ section.page {
     font-size: 18px !important;
     line-height: 1.5;
     color: #7A1F2B;
+    text-shadow: 0 0 10px rgba(255, 245, 240, 0.95), 0 0 4px rgba(255, 245, 240, 0.9);
 }
 
-/* 6. FALLING ROSE PETALS (Item 5: smaller 8-14px, blur 0.4px, z-index 2 below text) */
+/* ==========================================================================
+   6. FALLING ROSE PETALS (using assets/petal.png; Swap filename here if needed)
+   ========================================================================== */
 #petals {
     position: fixed;
     top: 0;
@@ -218,19 +270,20 @@ section.page {
 .petal {
     will-change: transform;
     position: absolute;
-    top: -24px;
-    background: radial-gradient(circle at 35% 35%, #C94A5A 0%, #B5122E 65%, #7A1F2B 100%);
-    border-radius: 150% 0 150% 0;
-    filter: blur(0.4px);
-    box-shadow: 0 1px 4px rgba(122, 31, 43, 0.2);
+    top: -30px;
+    pointer-events: none;
+    object-fit: contain;
+    filter: drop-shadow(0 2px 4px rgba(122, 31, 43, 0.25));
     animation: fallPetal linear infinite;
+    user-select: none;
+    -webkit-user-select: none;
 }
 @keyframes fallPetal {
-    0% { transform: translate3d(0, -4vh, 0) rotate(0deg); opacity: 0; }
-    15% { opacity: 0.75; }
-    50% { transform: translate3d(32px, 55vh, 0) rotate(190deg); opacity: 0.65; }
-    85% { opacity: 0.6; }
-    100% { transform: translate3d(-20px, 110vh, 0) rotate(370deg); opacity: 0; }
+    0% { transform: translate3d(0, -5vh, 0) rotate(0deg); opacity: 0; }
+    15% { opacity: var(--p-op, 0.8); }
+    50% { transform: translate3d(24px, 55vh, 0) rotate(180deg); opacity: var(--p-op, 0.75); }
+    85% { opacity: var(--p-op, 0.7); }
+    100% { transform: translate3d(-18px, 110vh, 0) rotate(360deg); opacity: 0; }
 }
 
 /* 7. MUSIC BUTTON (Item 6: 48px frosted-glass white circle, no grey ring) */
