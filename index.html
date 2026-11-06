@@ -20,7 +20,7 @@
     <!-- Auto-apply latest version across all URLs without manual ?v= -->
     <script>
         (function() {
-            var v = '23';
+            var v = '24';
             try {
                 var url = new URL(window.location.href);
                 if (url.searchParams.get('v') !== v && url.hostname.indexOf('github.io') !== -1) {
@@ -40,7 +40,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Battambang:wght@400;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600&family=Moulpali&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
     
     <!-- External stylesheet -->
-    <link rel="stylesheet" href="style.css?v=23">
+    <link rel="stylesheet" href="style.css?v=24">
 
     <style>
         /* Inlined critical styles to guarantee zero FOUC */
@@ -416,15 +416,64 @@
         .butterfly-anim {
             animation: gentleButterfly 3.5s ease-in-out infinite;
         }
+        /* Ultra-Luxury Baroque Cartouche Open Button */
+        .btn-luxury-cartouche,
         .btn-baroque {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
             background: transparent;
             border: none;
             padding: 0;
             cursor: pointer;
             outline: none;
-            transition: transform 0.2s cubic-bezier(0.2, 0.8, 0.2, 1);
             -webkit-tap-highlight-color: transparent;
-            display: inline-block;
+            transition: transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
+        }
+        .btn-luxury-cartouche:hover,
+        .btn-baroque:hover {
+            transform: scale(1.035);
+        }
+        .btn-luxury-cartouche:active,
+        .btn-baroque:active {
+            transform: scale(0.96);
+        }
+        .btn-cartouche-bg {
+            width: 250px;
+            height: auto;
+            display: block;
+            filter: drop-shadow(0 4px 10px rgba(122, 31, 43, 0.22));
+            transition: filter 0.25s ease;
+        }
+        @media (min-width: 400px) {
+            .btn-cartouche-bg {
+                width: 270px;
+            }
+        }
+        .btn-luxury-cartouche:hover .btn-cartouche-bg,
+        .btn-baroque:hover .btn-cartouche-bg {
+            filter: drop-shadow(0 6px 16px rgba(122, 31, 43, 0.35)) brightness(1.04);
+        }
+        .btn-cartouche-text {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 19px;
+            line-height: 1;
+            color: #FFF6F0;
+            letter-spacing: 0.04em;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.45), 0 0 10px rgba(255, 235, 205, 0.6);
+            pointer-events: none;
+            user-select: none;
+            padding-bottom: 2px;
+        }
+        @media (min-width: 400px) {
+            .btn-cartouche-text {
+                font-size: 20.5px;
+            }
         }
     </style>
 </head>
@@ -479,10 +528,11 @@
                     <img src="assets/gold-baroque-divider-exact.png" alt="" class="w-[265px] sm:w-[290px] h-auto opacity-95 pointer-events-none">
                 </div>
 
-                <!-- 5. Baroque Cartouche Open Button -->
+                <!-- 5. Baroque Cartouche Open Button (Ultra-Luxury 3D Gold Plaque with Crisp Typography) -->
                 <div class="w-full flex justify-center mt-1 mb-1">
-                    <button id="open-btn" type="button" class="btn-baroque group" aria-label="Open Invitation">
-                        <img src="assets/btn-baroque-exact.png" alt="បើកលិខិតអញ្ជើញ" class="w-[245px] sm:w-[265px] h-auto block drop-shadow-lg transition-transform duration-200 group-hover:scale-[1.03] group-active:scale-95">
+                    <button id="open-btn" type="button" class="btn-luxury-cartouche group" aria-label="Open Invitation">
+                        <img src="assets/btn-cartouche-luxury.png" alt="" class="btn-cartouche-bg select-none pointer-events-none">
+                        <span class="btn-cartouche-text font-moulpali">បើកលិខិតអញ្ជើញ</span>
                     </button>
                 </div>
             </div>
