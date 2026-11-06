@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KRY Synan &amp; CHOY Chanrathana - Wedding Invitation</title>
-    <meta name="description" content="You are invited to the wedding of KRY Synan &amp; CHOY Chanrathana - March 26, 2026, Kandal Province.">
+    <meta name="description" content="You are invited to the wedding of KRY Synan &amp; CHOY Chanrathana - Kandal Province.">
     <meta name="robots" content="noindex, nofollow">
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
@@ -12,7 +12,7 @@
     <meta name="theme-color" content="#7A1F2B">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Wedding Invitation - KRY Synan &amp; CHOY Chanrathana">
-    <meta property="og:description" content="Join us on March 26, 2026 in Kandal Province. Tap to open your invitation.">
+    <meta property="og:description" content="Tap to open your invitation.">
     <meta property="og:image" content="https://mrsynan.github.io/E-inviting/assets/floral-monogram-sc.svg">
     <meta property="og:url" content="https://mrsynan.github.io/E-inviting/">
     <meta name="twitter:card" content="summary_large_image">
@@ -20,7 +20,7 @@
     <!-- Auto-apply latest version across all URLs without manual ?v= -->
     <script>
         (function() {
-            var v = '20';
+            var v = '21';
             try {
                 var url = new URL(window.location.href);
                 if (url.searchParams.get('v') !== v && url.hostname.indexOf('github.io') !== -1) {
@@ -37,315 +37,145 @@
     <!-- Google Fonts with Khmer and Latin Fallbacks -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Battambang:wght@400;700&family=Bayon&family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&family=Moul&family=Moulpali&family=Noto+Serif+Khmer:wght@400;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Battambang:wght@400;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600&family=Moulpali&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
     
-    <!-- Tailwind Configuration -->
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        theme: {
-                            maroon: '#7A1F2B',     /* Deep Maroon / Burgundy */
-                            maroonDark: '#520B16',
-                            burgundy: '#8B1E3F',   /* Rich Burgundy */
-                            crimson: '#B5122E',    /* Crimson Accents */
-                            cream: '#FFF3EC',      /* Soft Cream */
-                            creamBg: '#FBEFEA',    /* Light Blush / Cream Page Background */
-                            blush: '#F6D5D5',      /* Blush Pink */
-                            gold: '#C9A96A',       /* Soft Vintage Gold Monogram */
-                            goldLight: '#DFC487',
-                            text: '#7A1F2B',       /* Primary Maroon Text */
-                            textDark: '#4A0E17',
-                            textMuted: '#9B4E59',   /* Muted Rose / Maroon */
-                        }
-                    },
-                    animation: {
-                        'spin-slow': 'spin 4s linear infinite',
-                        'float': 'float 6s ease-in-out infinite',
-                        'pulse-maroon': 'pulseMaroon 2s infinite',
-                    },
-                    keyframes: {
-                        float: {
-                            '0%, 100%': { transform: 'translateY(0)' },
-                            '50%': { transform: 'translateY(-8px)' },
-                        },
-                        pulseMaroon: {
-                            '0%, 100%': { boxShadow: '0 0 0 0 rgba(122, 31, 43, 0.45)' },
-                            '50%': { boxShadow: '0 0 0 10px rgba(122, 31, 43, 0)' },
-                        }
-                    }
-                }
-            }
-        }
-    </script>
+    <!-- External stylesheet -->
+    <link rel="stylesheet" href="style.css?v=21">
 
     <style>
-        /* ==========================================================================
-           1. COLOR PALETTE & CSS VARIABLES
-           Edit here to customize theme colors across the whole project:
-           ========================================================================== */
+        /* Inlined critical styles to guarantee zero FOUC */
         :root {
-            --bg-page-start: #FBEFEA;   /* Soft cream-pink top gradient */
-            --bg-page-end:   #FFF5F0;   /* Light ivory cream bottom gradient */
-            --color-maroon:  #7A1F2B;   /* Primary deep maroon */
-            --color-burgundy:#8B1E3F;   /* Heading & divider burgundy */
-            --color-crimson: #B5122E;   /* Crimson accent highlights */
-            --color-cream:   #FFF3EC;   /* Card backgrounds / pill buttons */
-            --color-blush:   #F6D5D5;   /* Delicate floral tint */
-            --color-gold:    #C9A96A;   /* Soft gold monogram / accents */
-            --border-inset:  rgba(122, 31, 43, 0.35); /* Thin maroon inset border line */
+            --bg-page-start: #FBEFEA;
+            --bg-page-end:   #FFF5F0;
+            --color-maroon:  #7A1F2B;
+            --border-inset:  rgba(122, 31, 43, 0.32);
         }
 
-        /* ==========================================================================
-           2. FONTS (Google Fonts with robust system fallbacks)
-           ========================================================================== */
-        /* Khmer Title / Large Headings */
-        .font-title, .font-heading-km {
-            font-family: 'Moul', 'Moulpali', 'Khmer OS Muol Light', serif;
-            font-display: swap;
-            line-height: 1.85;
-            letter-spacing: 0;
+        /* Item 1: Moulpali with font-weight: 400 and font-synthesis: none */
+        .font-moulpali {
+            font-family: 'Moulpali', cursive;
+            font-weight: 400 !important;
+            font-synthesis: none !important;
+            -webkit-font-synthesis: none !important;
         }
 
-        /* Khmer Body Text */
-        .font-body, .font-body-km {
-            font-family: 'Battambang', 'Noto Serif Khmer', 'Khmer OS Battambang', serif;
-            font-display: swap;
-            line-height: 1.9;
+        /* Item 1: Battambang regular 400 */
+        .font-battambang {
+            font-family: 'Battambang', sans-serif;
+            font-weight: 400 !important;
         }
 
-        /* Khmer Names (Bold Maroon) */
-        .font-name-km {
-            font-family: 'Battambang', 'Bayon', 'Khmer OS Muol', serif;
-            font-weight: 700;
-            font-display: swap;
-            line-height: 1.6;
+        /* Item 1: Battambang bold 700 ONLY (no Moul) */
+        .font-battambang-bold {
+            font-family: 'Battambang', sans-serif;
+            font-weight: 700 !important;
         }
 
-        /* English Headings */
+        /* English fonts */
         .font-en-title {
             font-family: 'Cormorant Garamond', 'Playfair Display', serif;
             font-weight: 600;
-            letter-spacing: 0.08em;
-            font-display: swap;
         }
-
-        /* English Subtitles / Labels */
+        .font-en-body {
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            font-size: 0.78rem;
+            line-height: 1.5;
+            color: #9B4E59;
+        }
         .en-sub {
             font-family: 'Cormorant Garamond', 'Montserrat', sans-serif;
-            font-size: 0.74rem;
-            line-height: 1.45;
-            letter-spacing: 0.04em;
+            font-size: 0.72rem;
+            line-height: 1.4;
             color: #9B4E59;
             display: block;
         }
         .en-sub-title {
             font-family: 'Cormorant Garamond', 'Playfair Display', serif;
-            font-size: 0.8rem;
+            font-size: 0.78rem;
             letter-spacing: 0.16em;
             text-transform: uppercase;
             color: #8B1E3F;
             display: block;
         }
 
-        /* ==========================================================================
-           3. BASE STYLES & DESKTOP WRAPPER
-           ========================================================================== */
-        html {
-            -webkit-overflow-scrolling: touch;
-            scroll-snap-type: y mandatory;
-            background-color: #F8EAE4;
+        /* Item 2 & 3: Mobile 390px typography sizes and center text-wrap: balance */
+        .hero-title-km {
+            font-size: 26px !important;
+            line-height: 1.5;
+            color: #7A1F2B;
+            margin-bottom: 24px;
+        }
+        .parents-names-km {
+            font-size: 15px !important;
+            line-height: 1.6;
+            color: #7A1F2B;
+        }
+        .invitation-heading-km {
+            font-size: 20px !important;
+            line-height: 1.6;
+            color: #7A1F2B;
+            margin-top: 24px;
+            margin-bottom: 12px;
+        }
+        .invitation-body-km {
+            font-size: 14px !important;
+            line-height: 1.9 !important;
+            color: #7A1F2B;
+            text-align: center !important;
+            text-wrap: balance !important;
+            max-width: 350px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .couple-name-km {
+            font-size: 22px !important;
+            line-height: 1.4;
+            color: #7A1F2B;
+        }
+        .ceremony-date-km {
+            font-size: 18px !important;
+            line-height: 1.5;
+            color: #7A1F2B;
         }
 
-        body {
-            background: linear-gradient(180deg, var(--bg-page-start) 0%, var(--bg-page-end) 100%);
-            background-attachment: fixed;
-            color: var(--color-maroon);
-            margin: 0;
-            padding: 0;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-            font-family: 'Battambang', 'Noto Serif Khmer', serif;
-        }
-
-        /* Center mobile container on desktop (max-width 480px) */
-        .mobile-container {
-            max-width: 480px;
-            margin: 0 auto;
-            min-height: 100vh;
-            background: linear-gradient(180deg, var(--bg-page-start) 0%, var(--bg-page-end) 100%);
-            color: var(--color-maroon);
-            position: relative;
-            box-shadow: 0 0 50px rgba(122, 31, 43, 0.15);
-            overflow-x: clip;
-        }
-
-        /* Thin maroon inset border line around the page (matching screenshot) */
-        .inset-border-line {
-            position: absolute;
-            inset: 14px;
-            border: 1px solid var(--border-inset);
-            border-radius: 4px;
-            pointer-events: none;
-            z-index: 4;
-        }
-
-        /* ==========================================================================
-           4. FLORAL DECORATIVE CORNERS (CSS / SVG)
-           To replace with your own PNG files, see instructions at the bottom of file!
-           ========================================================================== */
+        /* Item 4: Florals with z-index below text and clipped away from text */
         .corner-floral {
             position: absolute;
             pointer-events: none;
-            z-index: 5;
+            z-index: 1; /* Below text (z-index 10) */
             user-select: none;
         }
         .corner-top-l {
             top: 0;
             left: 0;
-            width: 140px;
+            width: 88px;
+            max-width: 24%;
             height: auto;
         }
         .corner-top-r {
             top: 0;
             right: 0;
-            width: 140px;
+            width: 88px;
+            max-width: 24%;
             height: auto;
         }
         .corner-bot-l {
             bottom: 0;
             left: 0;
-            width: 185px;
+            width: 145px;
+            max-width: 38%;
             height: auto;
-            max-width: 48%;
         }
         .corner-bot-r {
             bottom: 0;
             right: 0;
-            width: 185px;
+            width: 145px;
+            max-width: 38%;
             height: auto;
-            max-width: 48%;
         }
 
-        /* Section Pages */
-        section.page {
-            position: relative;
-            z-index: 10;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            overflow: hidden;
-            background: transparent;
-            color: var(--color-maroon);
-            padding-top: 50px;
-            padding-bottom: 70px;
-            scroll-snap-align: start;
-        }
-        #home {
-            padding-top: 40px;
-            padding-bottom: 50px;
-        }
-
-        /* Frosted Glass Cards */
-        .frosted-card {
-            background: rgba(255, 255, 255, 0.88);
-            border: 1px solid rgba(122, 31, 43, 0.18);
-            border-radius: 1.25rem;
-            box-shadow: 0 8px 28px rgba(122, 31, 43, 0.08);
-            backdrop-filter: blur(8px);
-        }
-
-        /* Pill Buttons in Burgundy & Soft Cream */
-        .maroon-pill-btn {
-            background: linear-gradient(135deg, #7A1F2B 0%, #9E1630 100%);
-            color: #FFF3EC;
-            border: 1px solid rgba(201, 169, 106, 0.6);
-            border-radius: 9999px;
-            padding: 10px 28px;
-            font-weight: 700;
-            font-size: 0.92rem;
-            box-shadow: 0 6px 18px rgba(122, 31, 43, 0.28);
-            cursor: pointer;
-            display: inline-flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            transition: transform 0.2s, box-shadow 0.2s;
-            animation: maroonpulse 2.6s infinite;
-        }
-        .maroon-pill-btn:active {
-            transform: scale(0.97);
-        }
-        @keyframes maroonpulse {
-            0%, 100% { box-shadow: 0 6px 18px rgba(122, 31, 43, 0.28), 0 0 0 0 rgba(181, 18, 46, 0.35); }
-            50% { box-shadow: 0 6px 18px rgba(122, 31, 43, 0.28), 0 0 0 10px rgba(181, 18, 46, 0); }
-        }
-
-        .outline-pill-btn {
-            background: rgba(255, 255, 255, 0.85);
-            color: #7A1F2B;
-            border: 1px solid #7A1F2B;
-            border-radius: 9999px;
-            padding: 8px 22px;
-            font-weight: 600;
-            font-size: 0.8rem;
-            transition: all 0.2s;
-        }
-        .outline-pill-btn:hover {
-            background: #7A1F2B;
-            color: #FFFFFF;
-        }
-
-        /* Timeline */
-        .tl { position: relative; margin: 16px 0; text-align: left; }
-        .tl-i { position: relative; padding-left: 48px; margin-bottom: 22px; }
-        .tl-i::before {
-            content: '';
-            position: absolute;
-            left: 17px;
-            top: 32px;
-            bottom: -22px;
-            width: 1.5px;
-            background: #E8B4B8;
-        }
-        .tl-i:last-child::before { display: none; }
-        .tl-ico {
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 36px;
-            height: 36px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, #7A1F2B, #9E1630);
-            color: #FFFFFF;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 4px 12px rgba(122, 31, 43, 0.25);
-            border: 1px solid #C9A96A;
-        }
-        .tl-ico svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 2; }
-        .tl-t { font-weight: 700; color: #7A1F2B; }
-
-        /* Countdown Boxes */
-        .countdown-box {
-            background: rgba(255, 255, 255, 0.85);
-            border: 1px solid rgba(122, 31, 43, 0.22);
-            border-radius: 12px;
-            padding: 8px 0;
-            color: #7A1F2B;
-            box-shadow: 0 4px 12px rgba(122, 31, 43, 0.06);
-        }
-
-        /* Gallery Grid */
-        .masonry-grid { column-count: 2; column-gap: 0.75rem; }
-        .masonry-item { break-inside: avoid; margin-bottom: 0.75rem; border-radius: 1rem !important; box-shadow: 0 6px 18px rgba(122,31,43,0.12); border: 1px solid rgba(232,196,196,0.6); }
-
-        /* ==========================================================================
-           5. FALLING ROSE PETALS ANIMATION
-           ========================================================================== */
+        /* Item 5: Falling petals smaller (8-14px), softer blur, deep red, z-index 2 below text */
         #petals {
             position: fixed;
             top: 0;
@@ -353,7 +183,7 @@
             left: 50%;
             width: min(100%, 480px);
             transform: translateX(-50%);
-            z-index: 25;
+            z-index: 2; /* Below text (z-index 10) */
             pointer-events: none;
             overflow: hidden;
             contain: layout paint;
@@ -361,214 +191,169 @@
         .petal {
             will-change: transform;
             position: absolute;
-            top: -30px;
-            background: radial-gradient(circle at 35% 35%, #D42646 0%, #9E1630 65%, #520B16 100%);
+            top: -24px;
+            background: radial-gradient(circle at 35% 35%, #C94A5A 0%, #B5122E 65%, #7A1F2B 100%);
             border-radius: 150% 0 150% 0;
-            box-shadow: 0 2px 6px rgba(122, 31, 43, 0.25);
+            filter: blur(0.4px);
+            box-shadow: 0 1px 4px rgba(122, 31, 43, 0.2);
             animation: fallPetal linear infinite;
         }
         @keyframes fallPetal {
-            0% {
-                transform: translate3d(0, -5vh, 0) rotate(0deg);
-                opacity: 0;
-            }
-            15% {
-                opacity: 0.75;
-            }
-            50% {
-                transform: translate3d(36px, 55vh, 0) rotate(190deg);
-                opacity: 0.7;
-            }
-            85% {
-                opacity: 0.65;
-            }
-            100% {
-                transform: translate3d(-24px, 110vh, 0) rotate(370deg);
-                opacity: 0;
-            }
-        }
-        @media (prefers-reduced-motion: reduce) {
-            .petal { display: none; }
-            .reveal { opacity: 1 !important; transform: none !important; transition: none !important; }
-            .maroon-pill-btn { animation: none !important; }
+            0% { transform: translate3d(0, -4vh, 0) rotate(0deg); opacity: 0; }
+            15% { opacity: 0.75; }
+            50% { transform: translate3d(32px, 55vh, 0) rotate(190deg); opacity: 0.65; }
+            85% { opacity: 0.6; }
+            100% { transform: translate3d(-20px, 110vh, 0) rotate(370deg); opacity: 0; }
         }
 
-        /* Sparkles on Cover */
-        #cv-sparkles { position: absolute; inset: 0; z-index: 2; pointer-events: none; }
-        .sp { position: absolute; width: 5px; height: 5px; border-radius: 50%; background: radial-gradient(circle, #fff 0, rgba(201,169,106,.9) 40%, transparent 70%); animation: twinkle 2.6s ease-in-out infinite; opacity: 0; }
-        @keyframes twinkle { 0%,100% { opacity: 0; transform: scale(.4); } 50% { opacity: 1; transform: scale(1.4); } }
-
-        /* ==========================================================================
-           6. COVER OVERLAY
-           ========================================================================== */
-        body.locked { overflow: hidden; height: 100vh; }
-        #cover {
-            position: fixed;
-            inset: 0;
-            z-index: 45;
-            background: #FBEFEA;
+        /* Item 6: Music button 48px frosted glass white circle, no grey ring */
+        .music-btn {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            border: 1px solid rgba(122, 31, 43, 0.18);
+            box-shadow: 0 4px 16px rgba(122, 31, 43, 0.1);
+            color: #7A1F2B;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            outline: none;
+            transition: transform 0.2s, background 0.2s;
+            -webkit-tap-highlight-color: transparent;
         }
-        .cv-stage {
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 50%;
-            width: min(100%, 480px);
-            transform: translateX(-50%);
+        .music-btn:hover {
+            background: rgba(255, 255, 255, 0.88);
+            transform: scale(1.05);
+        }
+        .music-btn svg {
+            width: 22px;
+            height: 22px;
+            stroke: #7A1F2B;
+            stroke-width: 2;
+        }
+
+        /* Item 7: Page content padding-bottom: 110px */
+        .mobile-container {
+            max-width: 480px;
+            margin: 0 auto;
+            min-height: 100vh;
+            background: linear-gradient(180deg, var(--bg-page-start) 0%, var(--bg-page-end) 100%);
+            color: var(--color-maroon);
+            position: relative;
+            box-shadow: 0 0 50px rgba(122, 31, 43, 0.12);
+            overflow-x: clip;
+            padding-bottom: 110px;
+        }
+        section.page {
+            position: relative;
+            z-index: 10; /* Above petals and florals */
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
             overflow: hidden;
+            background: transparent;
+            color: var(--color-maroon);
+            padding-top: 40px;
+            padding-bottom: 110px;
+            scroll-snap-align: start;
+        }
+        #home {
+            padding-top: 44px;
+            padding-bottom: 115px;
+        }
+
+        /* Inset maroon line */
+        .inset-border-line {
+            position: absolute;
+            inset: 14px;
+            border: 1px solid var(--border-inset);
+            border-radius: 4px;
+            pointer-events: none;
+            z-index: 3;
+        }
+
+        /* Item 8: Monogram container z-index 10 */
+        .monogram-container {
+            position: relative;
+            z-index: 10;
+            flex-shrink: 0;
+        }
+
+        /* Cover setup */
+        body.locked { overflow: hidden; height: 100vh; }
+        #cover { position: fixed; inset: 0; z-index: 45; background: #FBEFEA; }
+        .cv-stage {
+            position: absolute; top: 0; bottom: 0; left: 50%; width: min(100%, 480px);
+            transform: translateX(-50%); overflow: hidden;
             background: linear-gradient(180deg, var(--bg-page-start) 0%, var(--bg-page-end) 100%);
             box-shadow: 0 0 60px rgba(122, 31, 43, 0.15);
         }
         #cover-content {
-            height: 100%;
-            padding: 40px 24px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            transition: opacity .6s, transform .8s;
-            position: relative;
-            z-index: 10;
+            height: 100%; padding: 40px 24px; display: flex; flex-direction: column;
+            align-items: center; justify-content: center; transition: opacity .6s, transform .8s;
+            position: relative; z-index: 10;
         }
-        #cover-content > * { animation: rise .9s both; }
-        #cover-content > :nth-child(1) { animation-delay: .15s; }
-        #cover-content > :nth-child(2) { animation-delay: .28s; }
-        #cover-content > :nth-child(3) { animation-delay: .42s; }
-        #cover-content > :nth-child(4) { animation-delay: .58s; }
-        #cover-content > :nth-child(5) { animation-delay: .72s; }
-        #cover-content > :nth-child(6) { animation-delay: .85s; }
         #cover.open { opacity: 0; transition: opacity .9s ease .2s; pointer-events: none; }
         #cover.open #cover-content { opacity: 0; transform: scale(1.05); }
 
-        @keyframes rise { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: none; } }
-        body.opened #home .rise-in > * { animation: rise 1s both; }
-        .reveal { opacity: 0; transform: translateY(22px); transition: opacity 0.85s ease-out, transform 0.85s ease-out; }
-        .reveal.in { opacity: 1; transform: none; }
-
-        /* Guest name glow on cover */
-        .guest-name-glow {
-            color: #7A1F2B;
-            text-shadow: 0 2px 10px rgba(181, 18, 46, 0.2);
-        }
-
-        /* ==========================================================================
-           7. FLOATING CONTROLS (Top Right Circular Frosted Music Button)
-           ========================================================================== */
-        .music-btn {
-            background: rgba(255, 255, 255, 0.78);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(122, 31, 43, 0.22);
-            color: #7A1F2B;
-            width: 44px;
-            height: 44px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 4px 16px rgba(122, 31, 43, 0.12);
-            cursor: pointer;
-            transition: all 0.25s ease;
-        }
-        .music-btn:hover {
-            background: #FFFFFF;
-            transform: scale(1.05);
-        }
-
-        /* ==========================================================================
-           8. FLOATING BOTTOM NAVIGATION DOCK (Matching Screenshot)
-           ========================================================================== */
+        /* Floating bottom dock */
         #dock {
-            position: fixed;
-            bottom: 16px;
-            left: 50%;
-            transform: translateX(-50%);
+            position: fixed; bottom: 16px; left: 50%; transform: translateX(-50%);
             width: min(calc(100% - 32px), 430px);
             background: rgba(255, 248, 244, 0.88);
-            backdrop-filter: blur(14px);
+            backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
             border: 1px solid rgba(122, 31, 43, 0.2);
-            border-radius: 9999px;
-            padding: 6px 12px;
-            display: flex;
-            align-items: center;
-            justify-content: space-around;
-            z-index: 40;
-            box-shadow: 0 8px 32px rgba(122, 31, 43, 0.15);
+            border-radius: 9999px; padding: 6px 12px;
+            display: flex; align-items: center; justify-content: space-around;
+            z-index: 40; box-shadow: 0 8px 32px rgba(122, 31, 43, 0.15);
         }
         .dock-i {
-            width: 42px;
-            height: 42px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #7A1F2B;
-            transition: all 0.25s ease;
-            text-decoration: none;
-            position: relative;
+            width: 42px; height: 42px; border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            color: #7A1F2B; transition: all 0.25s ease; text-decoration: none;
         }
-        .dock-i svg {
-            width: 21px;
-            height: 21px;
-            stroke-width: 1.8;
-            stroke: currentColor;
-            fill: none;
-        }
-        /* Active nav item: Filled maroon circle with white icon (matching screenshot) */
-        .dock-i.act {
-            background: #7A1F2B !important;
-            color: #FFFFFF !important;
-            box-shadow: 0 4px 14px rgba(122, 31, 43, 0.38);
-        }
-        .dock-i.act svg {
-            stroke: #FFFFFF !important;
-        }
+        .dock-i svg { width: 21px; height: 21px; stroke-width: 1.8; stroke: currentColor; fill: none; }
+        .dock-i.act { background: #7A1F2B !important; color: #FFFFFF !important; box-shadow: 0 4px 14px rgba(122, 31, 43, 0.38); }
+        .dock-i.act svg { stroke: #FFFFFF !important; }
 
-        /* Back to top button */
+        .frosted-card {
+            background: rgba(255, 255, 255, 0.88); border: 1px solid rgba(122, 31, 43, 0.18);
+            border-radius: 1.25rem; box-shadow: 0 8px 28px rgba(122, 31, 43, 0.08); backdrop-filter: blur(8px);
+        }
+        .maroon-pill-btn {
+            background: linear-gradient(135deg, #7A1F2B 0%, #9E1630 100%);
+            color: #FFF3EC; border: 1px solid rgba(201, 169, 106, 0.6);
+            border-radius: 9999px; padding: 10px 28px; font-weight: 700; font-size: 0.92rem;
+            box-shadow: 0 6px 18px rgba(122, 31, 43, 0.28); cursor: pointer;
+            display: inline-flex; flex-direction: column; align-items: center; justify-content: center;
+        }
+        .outline-pill-btn {
+            background: rgba(255, 255, 255, 0.85); color: #7A1F2B; border: 1px solid #7A1F2B;
+            border-radius: 9999px; padding: 8px 22px; font-weight: 600; font-size: 0.8rem;
+        }
+        .countdown-box {
+            background: rgba(255, 255, 255, 0.85); border: 1px solid rgba(122, 31, 43, 0.22);
+            border-radius: 12px; padding: 8px 0; color: #7A1F2B; box-shadow: 0 4px 12px rgba(122, 31, 43, 0.06);
+        }
+        .masonry-grid { column-count: 2; column-gap: 0.75rem; }
+        .masonry-item { break-inside: avoid; margin-bottom: 0.75rem; border-radius: 1rem !important; box-shadow: 0 6px 18px rgba(122,31,43,0.12); border: 1px solid rgba(232,196,196,0.6); }
+
         #to-top {
-            position: fixed;
-            bottom: 74px;
-            right: calc(50% - 225px);
-            width: 38px;
-            height: 38px;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.9);
-            border: 1px solid rgba(122, 31, 43, 0.25);
-            color: #7A1F2B;
-            display: none;
-            align-items: center;
-            justify-content: center;
-            z-index: 38;
-            box-shadow: 0 4px 12px rgba(122, 31, 43, 0.15);
-            cursor: pointer;
+            position: fixed; bottom: 74px; right: calc(50% - 225px); width: 38px; height: 38px; border-radius: 50%;
+            background: rgba(255, 255, 255, 0.9); border: 1px solid rgba(122, 31, 43, 0.25); color: #7A1F2B;
+            display: none; align-items: center; justify-content: center; z-index: 38; box-shadow: 0 4px 12px rgba(122, 31, 43, 0.15); cursor: pointer;
         }
-        @media (max-width: 480px) {
-            #to-top { right: 16px; }
-        }
-
-        /* Scrollbar */
-        .custom-scroll::-webkit-scrollbar { width: 4px; }
-        .custom-scroll::-webkit-scrollbar-track { background: transparent; }
-        .custom-scroll::-webkit-scrollbar-thumb { background: #C9A96A; border-radius: 4px; }
-
-        /* Toast notification */
+        @media (max-width: 480px) { #to-top { right: 16px; } }
         #toast {
-            position: fixed;
-            bottom: 90px;
-            left: 50%;
-            transform: translateX(-50%) translateY(20px);
-            z-index: 999;
-            padding: 10px 22px;
-            border-radius: 999px;
-            background: #7A1F2B;
-            border: 1px solid #C9A96A;
-            color: #FFF;
-            font-size: 13px;
-            font-weight: 700;
-            white-space: nowrap;
-            box-shadow: 0 8px 24px rgba(122, 31, 43, 0.35);
-            opacity: 0;
-            transition: opacity .35s, transform .35s;
-            pointer-events: none;
+            position: fixed; bottom: 90px; left: 50%; transform: translateX(-50%) translateY(20px); z-index: 999;
+            padding: 10px 22px; border-radius: 999px; background: #7A1F2B; border: 1px solid #C9A96A; color: #FFF;
+            font-size: 13px; font-weight: 700; white-space: nowrap; box-shadow: 0 8px 24px rgba(122, 31, 43, 0.35);
+            opacity: 0; transition: opacity .35s, transform .35s; pointer-events: none;
         }
         #toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
     </style>
@@ -576,7 +361,7 @@
 <body class="antialiased lang-km locked">
 
     <!-- ========================================================================
-         COVER OVERLAY (Matches Cream-Pink & Burgundy Peonies / Roses Design)
+         COVER OVERLAY
          ======================================================================== -->
     <div id="cover">
         <div class="cv-stage">
@@ -584,44 +369,44 @@
             <!-- Inset Maroon Border Line -->
             <div class="inset-border-line"></div>
 
-            <!-- Decorative Floral Corners -->
+            <!-- Corner Florals (z-index: 1 below text) -->
             <img src="assets/floral-top-left.svg" alt="" class="corner-floral corner-top-l">
             <img src="assets/floral-top-right.svg" alt="" class="corner-floral corner-top-r">
             <img src="assets/floral-bottom-left.svg" alt="" class="corner-floral corner-bot-l">
             <img src="assets/floral-bottom-right.svg" alt="" class="corner-floral corner-bot-r">
 
-            <div id="cover-content" class="relative z-10 flex flex-col items-center justify-center text-center px-6 pt-10">
-                <!-- Khmer Header -->
-                <p class="font-title text-xl text-[#7A1F2B] leading-relaxed mb-0.5">សិរីមង្គលអាពាហ៍ពិពាហ៍</p>
-                <p class="en-sub-title text-[11px] tracking-widest text-[#8B1E3F] mb-3">Wedding Celebration</p>
+            <div id="cover-content">
+                <!-- Title in Moulpali font-weight: 400 -->
+                <p class="font-moulpali hero-title-km leading-relaxed mb-1">សិរីមង្គលអាពាហ៍ពិពាហ៍</p>
+                <p class="en-sub-title text-[11px] tracking-widest text-[#8B1E3F] mb-4">Wedding Celebration</p>
 
-                <!-- Elegant Soft Gold Monogram Crest Emblem -->
-                <div class="my-2">
-                    <img src="assets/floral-monogram-sc.svg" alt="Monogram" class="w-36 h-36 mx-auto drop-shadow-md">
+                <!-- Monogram Frame in Center (z-index 10 above petals) -->
+                <div class="monogram-container my-2">
+                    <img src="assets/floral-monogram-sc.svg" alt="Monogram" class="w-32 h-32 mx-auto drop-shadow-sm">
                 </div>
 
                 <!-- Greeting & Guest Name -->
-                <div class="my-2 w-full">
-                    <p class="font-title text-sm text-[#8B1E3F] tracking-wide mb-1">សូមគោរពអញ្ជើញ</p>
+                <div class="my-2 w-full text-center">
+                    <p class="font-moulpali text-sm text-[#8B1E3F] tracking-wide mb-1">សូមគោរពអញ្ជើញ</p>
                     <div id="cover-greeting-box" class="hidden min-h-[38px] flex flex-col items-center justify-center">
-                        <p id="cover-greeting" class="font-title text-xl font-bold guest-name-glow"></p>
+                        <p id="cover-greeting" class="font-battambang-bold text-xl text-[#7A1F2B]"></p>
                     </div>
                     <div id="cover-default-greeting" class="min-h-[38px] flex flex-col items-center justify-center">
-                        <p class="font-title text-xl font-bold guest-name-glow">លោក ទេពសក្យា</p>
+                        <p class="font-battambang-bold text-xl text-[#7A1F2B]">លោក ទេពសក្យា</p>
                     </div>
                 </div>
 
-                <!-- Open Invitation Pill Button -->
+                <!-- Open Invitation Button -->
                 <button id="open-btn" type="button" class="maroon-pill-btn mt-3">
                     <span>បើកធៀប</span>
                 </button>
-                <p class="font-body text-xs text-[#7A1F2B] mt-3 opacity-90">សូមមេត្តាចុចដើម្បីបើកធៀបអេឡិចត្រូនិច</p>
+                <p class="font-battambang text-xs text-[#7A1F2B] mt-3 opacity-90">សូមមេត្តាចុចដើម្បីបើកធៀបអេឡិចត្រូនិច</p>
                 <p class="en-sub text-[10px] text-[#9B4E59]">Tap to open your e-invitation</p>
             </div>
         </div>
     </div>
 
-    <!-- Soft Falling Red Rose Petals -->
+    <!-- Falling Petals (z-index: 2 below text) -->
     <div id="petals"></div>
 
     <!-- Audio Player -->
@@ -633,25 +418,24 @@
     <div id="yt-holder" aria-hidden="true" style="position:fixed;left:-320px;bottom:0;width:200px;height:200px;opacity:0;pointer-events:none;overflow:hidden"><div id="yt-player"></div></div>
 
     <!-- Mobile-First Container -->
-    <div class="mobile-container pb-24">
+    <div class="mobile-container">
         
         <!-- Inset Maroon Border Line -->
         <div class="inset-border-line"></div>
 
-        <!-- Floating Controls: Top-Right Frosted Glass Music Button (Speaker Icon matching screenshot) -->
+        <!-- Floating Music Control: 48px frosted-glass white circle without grey ring (Item 6) -->
         <div class="fixed top-4 right-4 z-50 flex items-center gap-2 md:right-[calc(50%-220px)]">
-            <!-- Hidden auto-scroll toggle -->
             <button id="auto-toggle" type="button" style="display:none" aria-label="Auto scroll" class="music-btn !w-10 !h-10">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 13l6 6 6-6"/><path d="M6 5l6 6 6-6" opacity=".55"/></svg>
             </button>
 
-            <!-- Circular Frosted Glass Music Button (Speaker Icon) -->
+            <!-- 48px Frosted Glass White Circle Music Button -->
             <button id="music-toggle" class="music-btn" aria-label="Play/Pause Music" title="Background Music">
-                <!-- Speaker Playing Icon -->
+                <!-- Playing Speaker Icon -->
                 <svg id="icon-pause" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M11 5L6 9H2v6h4l5 4V5z" />
                 </svg>
-                <!-- Speaker Muted / Play Icon -->
+                <!-- Paused / Muted Speaker Icon -->
                 <svg id="icon-play" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
                     <path stroke-linecap="round" stroke-linejoin="round" d="M17 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2" />
@@ -660,91 +444,95 @@
         </div>
 
         <!-- ====================================================================
-             1. MAIN INVITATION PAGE (Matches Reference Screenshot Layout Exactly)
+             1. MAIN INVITATION PAGE (All 9 Specific Refinements Applied)
              ==================================================================== -->
         <section id="home" class="page text-center px-6">
-            <!-- Decorative Floral Corners -->
+            <!-- Corner Florals (z-index: 1 below text) -->
             <img src="assets/floral-top-left.svg" alt="" class="corner-floral corner-top-l">
             <img src="assets/floral-top-right.svg" alt="" class="corner-floral corner-top-r">
             <img src="assets/floral-bottom-left.svg" alt="" class="corner-floral corner-bot-l">
             <img src="assets/floral-bottom-right.svg" alt="" class="corner-floral corner-bot-r">
 
-            <div class="relative z-10 rise-in pt-6">
-                <!-- 1. Large Khmer Title at Top (Moul Font in Maroon) -->
-                <h1 class="font-title text-2xl text-[#7A1F2B] leading-relaxed mb-3">សិរីមង្គលអាពាហ៍ពិពាហ៍</h1>
+            <!-- Content Area (z-index: 10 above petals and florals) -->
+            <div class="relative z-10 pt-4">
+                <!-- 1. Title: Moulpali ~26px, weight: 400, font-synthesis: none, maroon #7A1F2B -->
+                <h1 class="font-moulpali hero-title-km">សិរីមង្គលអាពាហ៍ពិពាហ៍</h1>
 
-                <!-- 2. Two Columns of Parents' Names (Groom's Side & Bride's Side) -->
-                <div class="grid grid-cols-2 gap-x-4 gap-y-1 mt-2 text-xs font-body text-[#7A1F2B]">
+                <!-- 2. Parents' Names: Battambang ~15px, weight 400, two columns -->
+                <div class="grid grid-cols-2 gap-x-4 gap-y-1.5 font-battambang parents-names-km">
                     <div>
-                        <p class="font-bold text-sm">លោក គ្រី​ ស្រ៊ុយ</p>
-                        <p class="en-sub text-[9px] text-[#9B4E59]">Mr. KRY Sruy</p>
-                        <p class="font-bold text-sm mt-1.5">លោកស្រី ហ៊ឺ ហ៊ង</p>
-                        <p class="en-sub text-[9px] text-[#9B4E59]">Mrs. HEU Hong</p>
+                        <p>លោក គ្រី​ ស្រ៊ុយ</p>
+                        <p class="en-sub text-[9px]">Mr. KRY Sruy</p>
+                        <p class="mt-1.5">លោកស្រី ហ៊ឺ ហ៊ង</p>
+                        <p class="en-sub text-[9px]">Mrs. HEU Hong</p>
                     </div>
                     <div>
-                        <p class="font-bold text-sm">លោក ចែម មាន</p>
-                        <p class="en-sub text-[9px] text-[#9B4E59]">Mr. CHEAM MEAN</p>
-                        <p class="font-bold text-sm mt-1.5">លោកស្រី អ៊ុន ផល្លា</p>
-                        <p class="en-sub text-[9px] text-[#9B4E59]">Mrs. UN Phalla</p>
+                        <p>លោក ចែម មាន</p>
+                        <p class="en-sub text-[9px]">Mr. CHEAM MEAN</p>
+                        <p class="mt-1.5">លោកស្រី អ៊ុន ផល្លា</p>
+                        <p class="en-sub text-[9px]">Mrs. UN Phalla</p>
                     </div>
                 </div>
 
-                <!-- 3. Thin Floral Divider Line with Butterfly Accent -->
-                <div class="my-3.5 flex justify-center">
-                    <img src="assets/floral-divider.svg" alt="" class="w-48 h-auto opacity-80">
+                <!-- 3. Thin Floral Divider Line with Butterfly Accent (Spacing ~20px) -->
+                <div class="my-5 flex justify-center">
+                    <img src="assets/floral-divider.svg" alt="" class="w-44 h-auto opacity-75">
                 </div>
 
-                <!-- 4. Khmer Heading "មានកិត្តិយសសូមគោរពអញ្ជើញ" Style & Paragraph -->
-                <p class="font-title text-base text-[#7A1F2B] tracking-wide mb-1">មានកិត្តិយសសូមគោរពអញ្ជើញ</p>
+                <!-- 4. Section Heading: Moulpali ~20px, weight 400 -->
+                <p class="font-moulpali invitation-heading-km">មានកិត្តិយសសូមគោរពអញ្ជើញ</p>
 
-                <div class="max-w-xs mx-auto">
-                    <p class="font-body text-[11.5px] leading-relaxed text-[#7A1F2B] text-center">
+                <!-- Khmer Paragraph: Battambang ~14px, line-height: 1.9, CENTERED, text-wrap: balance -->
+                <div class="max-w-[350px] mx-auto mb-6">
+                    <p class="font-battambang invitation-body-km">
                         ឯកឧត្តម លោកជំទាវ លោកអ្នកឧកញ៉ា អ្នកឧកញ៉ា ឧកញ៉ា លោក លោកស្រី អ្នកនាងកញ្ញា អញ្ជើញចូលរួមជាអធិបតី និងជាភ្ញៀវកិត្តិយស ដើម្បីប្រសិទ្ធពរជ័យ សិរីសួស្តី ជ័យមង្គល ក្នុងពិធីសិរីមង្គលអាពាហ៍ពិពាហ៍ កូនប្រុស-កូនស្រី របស់យើងខ្ញុំ។
                     </p>
-                    <p class="en-sub text-[9.5px] leading-relaxed text-[#9B4E59] mt-1.5 italic text-center">
+                    <!-- English Paragraph: Cormorant Garamond, italic -->
+                    <p class="font-en-body text-center mt-2 italic px-2">
                         We cordially invite Their Excellencies, distinguished guests, and honored attendees to join us in celebrating our beloved son and daughter’s wedding and to bless them with happiness and prosperity.
                     </p>
                 </div>
 
-                <!-- 5. Center Row: Bride Name | Gold Floral Monogram Frame | Groom Name -->
-                <div class="my-4 max-w-sm mx-auto flex items-center justify-between px-2">
-                    <!-- Left: Bride Name -->
+                <!-- 5. Center Row: Bride Name | Gold Monogram Frame | Groom Name (Bride/Groom names ~22px Battambang bold ONLY) -->
+                <div class="my-6 max-w-sm mx-auto flex items-center justify-between px-2">
+                    <!-- Left: Bride Name (Battambang Bold 700 ~22px) -->
                     <div class="flex-1 text-center">
-                        <p class="font-body text-xs text-[#9B4E59] font-semibold mb-0.5">កូនស្រីនាម</p>
-                        <p class="font-name-km text-lg text-[#7A1F2B]">ចយ ច័ន្ទរតនា</p>
-                        <p class="en-sub text-[9px] text-[#9B4E59]">CHOY Chanrathana</p>
+                        <p class="font-battambang text-xs text-[#9B4E59] mb-0.5">កូនស្រីនាម</p>
+                        <p class="font-battambang-bold couple-name-km">ចយ ច័ន្ទរតនា</p>
+                        <p class="en-sub text-[9px]">CHOY Chanrathana</p>
                     </div>
 
-                    <!-- Center: Gold Floral Monogram Frame with Initials (S & C) -->
-                    <div class="flex-shrink-0 px-2">
+                    <!-- Center: Gold Oval Floral Monogram Frame (z-index 10 above petals) -->
+                    <div class="monogram-container px-2">
                         <img src="assets/floral-monogram-sc.svg" alt="SC Monogram" class="w-20 h-20 drop-shadow-sm">
                     </div>
 
-                    <!-- Right: Groom Name -->
+                    <!-- Right: Groom Name (Battambang Bold 700 ~22px) -->
                     <div class="flex-1 text-center">
-                        <p class="font-body text-xs text-[#9B4E59] font-semibold mb-0.5">កូនប្រុសនាម</p>
-                        <p class="font-name-km text-lg text-[#7A1F2B]">គ្រី ស៊ីណាន</p>
-                        <p class="en-sub text-[9px] text-[#9B4E59]">KRY Synan</p>
+                        <p class="font-battambang text-xs text-[#9B4E59] mb-0.5">កូនប្រុសនាម</p>
+                        <p class="font-battambang-bold couple-name-km">គ្រី ស៊ីណាន</p>
+                        <p class="en-sub text-[9px]">KRY Synan</p>
                     </div>
                 </div>
 
-                <!-- 6. Date, Time & Venue Lines Centered Under It -->
-                <div class="mt-2 max-w-xs mx-auto text-center leading-relaxed font-body text-xs text-[#7A1F2B]">
-                    <p class="font-bold text-[#8B1E3F]">ដែលនឹងប្រព្រឹត្តទៅនៅ</p>
-                    <p class="font-title text-sm text-[#7A1F2B] leading-normal my-0.5">ថ្ងៃព្រហស្បតិ៍ ទី២៦ ខែមីនា ឆ្នាំ២០២៦</p>
-                    <p class="text-[11.5px] text-[#7A1F2B]">ស្ថិតនៅ ភូមិរលួស ឃុំដើមឬស ស្រុកកណ្តាលស្ទឹង ខេត្តកណ្តាល</p>
-                    <p class="text-[#8B1E3F] mt-1 font-semibold text-[11px]">ដោយមេត្រីភាព។ សូមអរគុណ !</p>
+                <!-- 6. Date Line (~18px Moulpali) & Venue Address (Battambang 400) - Item 9 Original Dates -->
+                <div class="mt-4 max-w-xs mx-auto text-center leading-relaxed">
+                    <p class="font-battambang text-xs text-[#8B1E3F] mb-1 font-semibold">ដែលនឹងប្រព្រឹត្តទៅនៅ</p>
+                    <p id="home-date-line" class="font-moulpali ceremony-date-km leading-normal my-0.5">ថ្ងៃព្រហស្បតិ៍ ទី០៤ ខែមីនា ឆ្នាំ២០២៧</p>
+                    <p id="home-lunar-line" class="font-battambang text-xs text-[#9B4E59] mt-0.5">ត្រូវនឹងថ្ងៃព្រហស្បតិ៍ ១១ រោច ខែផល្គុន ឆ្នាំមមី អដ្ឋស័ក ពុទ្ធសករាជ ២៥៧០</p>
+                    <p id="home-venue-line" class="font-battambang text-xs text-[#7A1F2B] mt-1.5">ស្ថិតនៅ ភូមិរលួស ឃុំដើមឬស ស្រុកកណ្តាលស្ទឹង ខេត្តកណ្តាល</p>
+                    <p class="font-battambang text-[#8B1E3F] mt-1 text-[11px] font-semibold">ដោយមេត្រីភាព។ សូមអរគុណ !</p>
                 </div>
 
-                <!-- 7. Thin Floral Divider Line -->
-                <div class="my-3 flex justify-center">
-                    <img src="assets/floral-divider.svg" alt="" class="w-44 h-auto opacity-75">
+                <!-- 7. Thin Floral Divider Line (Spacing ~20px) -->
+                <div class="my-5 flex justify-center">
+                    <img src="assets/floral-divider.svg" alt="" class="w-40 h-auto opacity-75">
                 </div>
 
-                <!-- 8. English Heading "Wedding Invitation" in Elegant Serif -->
-                <div class="mb-2">
+                <!-- 8. English Heading "Wedding Invitation" in Cormorant Garamond -->
+                <div class="mb-5">
                     <h2 class="font-en-title text-xl text-[#7A1F2B]">Wedding Invitation</h2>
-                    <p class="en-sub text-[10px] text-[#9B4E59]">Together with their families, cordially invite you to celebrate</p>
+                    <p class="font-en-body text-xs mt-1">Together with their families, cordially invite you to celebrate</p>
                 </div>
 
                 <!-- Hidden containers for dynamic date scripts to avoid null reference -->
@@ -755,14 +543,14 @@
                     <p id="guest-greeting"></p>
                 </div>
 
-                <!-- Warm Pill Button to Save Date -->
-                <button id="cal-btn2" type="button" class="maroon-pill-btn font-body mt-3">
+                <!-- Save Date Pill Button -->
+                <button id="cal-btn2" type="button" class="maroon-pill-btn font-battambang mt-2">
                     <span>កត់ទុកក្នុងប្រតិទិន 🗓️</span>
                 </button>
 
                 <!-- Scroll down hint -->
-                <div id="scroll-hint" class="mt-4 mb-2 flex flex-col items-center justify-center cursor-pointer opacity-75 hover:opacity-100 transition animate-bounce">
-                    <span class="font-body text-xs text-[#7A1F2B] font-bold">សូមអូសចុះក្រោម</span>
+                <div id="scroll-hint" class="mt-5 mb-2 flex flex-col items-center justify-center cursor-pointer opacity-75 hover:opacity-100 transition animate-bounce">
+                    <span class="font-battambang text-xs text-[#7A1F2B] font-bold">សូមអូសចុះក្រោម</span>
                     <span class="en-sub text-[9px] text-[#9B4E59] mb-1">Scroll Down</span>
                     <div class="w-7 h-7 rounded-full bg-white/70 border border-[#7A1F2B]/30 shadow-sm flex items-center justify-center text-[#7A1F2B]">
                         <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
@@ -777,16 +565,16 @@
              2. CALENDAR & COUNTDOWN
              ==================================================================== -->
         <section id="calendar" class="page px-6 text-center">
-            <h2 id="cal-title" class="font-title text-xl text-[#7A1F2B] leading-relaxed"></h2>
+            <h2 id="cal-title" class="font-moulpali text-xl text-[#7A1F2B] leading-relaxed"></h2>
             <p id="cal-title-en" class="en-sub-title text-xs mb-5">Calendar</p>
             <div class="max-w-xs mx-auto frosted-card p-4">
-                <div id="cal-grid" class="grid grid-cols-7 gap-y-2 text-sm font-body text-[#7A1F2B]"></div>
+                <div id="cal-grid" class="grid grid-cols-7 gap-y-2 text-sm font-battambang text-[#7A1F2B]"></div>
             </div>
             <div id="countdown" class="mt-6 grid grid-cols-4 gap-2 max-w-xs mx-auto">
-                <div class="countdown-box"><p id="cd-d" class="font-body text-2xl font-bold">00</p><p class="font-body text-[10px] uppercase font-bold text-[#8B1E3F]">ថ្ងៃ <span class="text-[9px] font-normal opacity-75">/ Days</span></p></div>
-                <div class="countdown-box"><p id="cd-h" class="font-body text-2xl font-bold">00</p><p class="font-body text-[10px] uppercase font-bold text-[#8B1E3F]">ម៉ោង <span class="text-[9px] font-normal opacity-75">/ Hours</span></p></div>
-                <div class="countdown-box"><p id="cd-m" class="font-body text-2xl font-bold">00</p><p class="font-body text-[10px] uppercase font-bold text-[#8B1E3F]">នាទី <span class="text-[9px] font-normal opacity-75">/ Min</span></p></div>
-                <div class="countdown-box"><p id="cd-s" class="font-body text-2xl font-bold">00</p><p class="font-body text-[10px] uppercase font-bold text-[#8B1E3F]">វិនាទី <span class="text-[9px] font-normal opacity-75">/ Sec</span></p></div>
+                <div class="countdown-box"><p id="cd-d" class="font-battambang text-2xl font-bold">00</p><p class="font-battambang text-[10px] uppercase font-bold text-[#8B1E3F]">ថ្ងៃ <span class="text-[9px] font-normal opacity-75">/ Days</span></p></div>
+                <div class="countdown-box"><p id="cd-h" class="font-battambang text-2xl font-bold">00</p><p class="font-battambang text-[10px] uppercase font-bold text-[#8B1E3F]">ម៉ោង <span class="text-[9px] font-normal opacity-75">/ Hours</span></p></div>
+                <div class="countdown-box"><p id="cd-m" class="font-battambang text-2xl font-bold">00</p><p class="font-battambang text-[10px] uppercase font-bold text-[#8B1E3F]">នាទី <span class="text-[9px] font-normal opacity-75">/ Min</span></p></div>
+                <div class="countdown-box"><p id="cd-s" class="font-battambang text-2xl font-bold">00</p><p class="font-battambang text-[10px] uppercase font-bold text-[#8B1E3F]">វិនាទី <span class="text-[9px] font-normal opacity-75">/ Sec</span></p></div>
             </div>
             <div class="mt-5 flex flex-wrap gap-3 justify-center items-center">
                 <button id="cal-btn" type="button" class="maroon-pill-btn !py-2 !px-5 !text-xs !shadow-md">
@@ -804,22 +592,22 @@
              3. PROGRAM / SCHEDULE
              ==================================================================== -->
         <section id="program" class="page px-6 text-center">
-            <h2 class="font-title text-xl text-[#7A1F2B] leading-relaxed">កម្មវិធីសិរីមង្គលអាពាហ៍ពិពាហ៍</h2>
+            <h2 class="font-moulpali text-xl text-[#7A1F2B] leading-relaxed">កម្មវិធីសិរីមង្គលអាពាហ៍ពិពាហ៍</h2>
             <p class="en-sub-title text-xs mb-3">Wedding Program</p>
-            <p class="js-datelong-km font-title text-sm text-[#8B1E3F] mt-1"></p>
+            <p class="js-datelong-km font-moulpali text-sm text-[#8B1E3F] mt-1"></p>
             <p class="js-datelong-en en-sub text-xs text-[#9B4E59] mb-4"></p>
-            <div id="timeline" class="tl font-body text-[#7A1F2B] max-w-sm mx-auto"></div>
+            <div id="timeline" class="tl font-battambang text-[#7A1F2B] max-w-sm mx-auto"></div>
         </section>
 
         <!-- ====================================================================
              4. VENUE & MAP
              ==================================================================== -->
         <section id="map" class="page px-6 text-center">
-            <h2 class="font-title text-xl text-[#7A1F2B] leading-relaxed">ទីតាំងកម្មវិធី</h2>
+            <h2 class="font-moulpali text-xl text-[#7A1F2B] leading-relaxed">ទីតាំងកម្មវិធី</h2>
             <p class="en-sub-title text-xs mb-3">The Venue</p>
-            <p class="font-body text-[#7A1F2B] font-bold text-sm">ភូមិរលួស ឃុំដើមឬស</p>
+            <p class="font-battambang text-[#7A1F2B] font-bold text-sm">ភូមិរលួស ឃុំដើមឬស</p>
             <p class="en-sub text-xs text-[#9B4E59] mb-0.5">Phum Rolous, Doem Ruos Commune</p>
-            <p class="font-body text-[#7A1F2B] text-xs">ស្រុកកណ្តាលស្ទឹង ខេត្តកណ្តាល</p>
+            <p class="font-battambang text-[#7A1F2B] text-xs">ស្រុកកណ្តាលស្ទឹង ខេត្តកណ្តាល</p>
             <p class="en-sub text-[11px] text-[#9B4E59] mb-4">Kandal Stueng District, Kandal Province, Cambodia</p>
             
             <div class="frosted-card p-3 rounded-2xl shadow-lg overflow-hidden max-w-sm mx-auto">
@@ -850,7 +638,7 @@
              5. GALLERY
              ==================================================================== -->
         <section id="gallery" class="page px-4">
-            <h2 class="font-title text-xl text-[#7A1F2B] text-center leading-relaxed">អនុស្សាវរីយ៍</h2>
+            <h2 class="font-moulpali text-xl text-[#7A1F2B] text-center leading-relaxed">អនុស្សាវរីយ៍</h2>
             <p class="en-sub-title text-xs text-center mb-6">Our Moments</p>
             <div class="masonry-grid max-w-sm mx-auto">
                 <img loading="lazy" decoding="async" src="https://placehold.co/400x500/F6D5D5/7A1F2B?text=Photo+1" class="masonry-item w-full" alt="Gallery">
@@ -864,10 +652,10 @@
              6. APOLOGIES & GIFT (ចងដៃ)
              ==================================================================== -->
         <section id="thanks" class="page px-6 text-center">
-            <h2 class="font-title text-xl text-[#7A1F2B] leading-relaxed">សូមអរគុណ និងសូមអភ័យទោស</h2>
+            <h2 class="font-moulpali text-xl text-[#7A1F2B] leading-relaxed">សូមអរគុណ និងសូមអភ័យទោស</h2>
             <p class="en-sub-title text-xs mb-4">Thank You &amp; Our Apologies</p>
             <div class="frosted-card p-5 max-w-xs mx-auto text-[#7A1F2B]">
-                <p class="font-body text-xs leading-loose">
+                <p class="font-battambang text-xs leading-loose">
                     យើងខ្ញុំទាំងពីរ សូមថ្លែងអំណរគុណយ៉ាងជ្រាលជ្រៅ ចំពោះភ្ញៀវកិត្តិយសទាំងអស់ ដែលបានអញ្ជើញមករួមចែករំលែកក្តីសុខក្នុងថ្ងៃពិសេសនេះ ហើយសូមអភ័យទោស ដែលមិនអាចជូនលិខិតអញ្ជើញដោយផ្ទាល់បាន។
                 </p>
                 <p class="en-sub text-[11px] leading-relaxed text-[#9B4E59] mt-3 italic">
@@ -877,16 +665,16 @@
         </section>
 
         <section id="gift" class="page px-6 text-center">
-            <h2 class="font-title text-xl text-[#7A1F2B] mb-0.5 leading-relaxed">ចំណងដៃ</h2>
+            <h2 class="font-moulpali text-xl text-[#7A1F2B] mb-0.5 leading-relaxed">ចំណងដៃ</h2>
             <p class="en-sub-title text-xs mb-2">Wedding Gift</p>
-            <p class="font-body text-[#7A1F2B] text-xs max-w-xs mx-auto leading-relaxed">
+            <p class="font-battambang text-[#7A1F2B] text-xs max-w-xs mx-auto leading-relaxed">
                 វត្តមានរបស់លោកអ្នកគឺជាកិត្តិយសដ៏ធំបំផុត។ ប្រសិនបើលោកអ្នកចង់ផ្តល់ចំណងដៃ អាចផ្ញើតាមរយៈគណនីខាងក្រោម។
             </p>
             <p class="en-sub text-[10px] text-[#9B4E59] max-w-xs mx-auto mt-0.5 mb-5 italic">
                 Your presence is enough, but if you wish to bless us, you can use the digital registry below.
             </p>
             
-            <p class="font-title text-sm text-[#7A1F2B]">ចងដៃតាមរយៈ KHQR</p>
+            <p class="font-moulpali text-sm text-[#7A1F2B]">ចងដៃតាមរយៈ KHQR</p>
             <p class="en-sub text-[10px] text-[#9B4E59] mb-3">Gift via KHQR</p>
             <div id="cur-tabs" class="hidden mx-auto mb-4 p-1 rounded-full frosted-card" style="width:max-content">
                 <button id="cur-usd" type="button" class="cur-tab on text-xs px-3 py-1 font-bold text-[#7A1F2B]">USD</button>
@@ -897,7 +685,7 @@
             <div class="max-w-xs mx-auto bg-gradient-to-br from-[#7A1F2B] to-[#520B16] rounded-2xl p-6 shadow-xl text-left relative overflow-hidden border border-[#C9A96A]/40 text-white">
                 <div class="text-white/10 text-4xl font-black italic absolute -top-2 -right-4 pointer-events-none">ABA</div>
                 
-                <h3 class="font-body font-bold text-[#FFF3EC] mb-4 flex items-center justify-between">
+                <h3 class="font-battambang font-bold text-[#FFF3EC] mb-4 flex items-center justify-between">
                     <span id="bank-name">ABA BANK</span>
                 </h3>
                 
@@ -905,46 +693,46 @@
                     <img loading="lazy" decoding="async" id="bank-qr" src="https://placehold.co/150x150/FBEFEA/7A1F2B?text=QR+Code" alt="QR" class="w-32 h-32 object-cover">
                 </div>
                 
-                <p class="font-title text-base text-[#FFF3EC] mb-0.5 tracking-wide">គ្រី ស៊ីណាន &amp; ចយ ច័ន្ទរតនា</p>
+                <p class="font-moulpali text-base text-[#FFF3EC] mb-0.5 tracking-wide">គ្រី ស៊ីណាន &amp; ចយ ច័ន្ទរតនា</p>
                 <p class="en-sub text-xs text-[#F6D5D5] uppercase tracking-wider mb-2">KRY Synan &amp; CHOY Chanrathana</p>
                 <div class="flex items-center justify-between">
-                    <p class="font-body text-[#FFF3EC] font-mono tracking-widest text-sm" id="acc-number">000 123 456</p>
+                    <p class="font-battambang text-[#FFF3EC] font-mono tracking-widest text-sm" id="acc-number">000 123 456</p>
                     <button onclick="copyAcc()" class="text-white bg-white/20 hover:bg-white/30 rounded p-1.5 transition">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" /></svg>
                     </button>
                 </div>
             </div>
-            <p id="copy-msg" class="text-[#7A1F2B] text-xs mt-3 font-bold opacity-0 transition-opacity">បានចម្លងលេខគណនី! / Account Copied!</p>
+            <p id="copy-msg" class="font-battambang text-[#7A1F2B] text-xs mt-3 font-bold opacity-0 transition-opacity">បានចម្លងលេខគណនី! / Account Copied!</p>
         </section>
 
         <!-- ====================================================================
              7. RSVP & GUESTBOOK
              ==================================================================== -->
         <section id="rsvp" class="page px-6 text-center">
-            <h2 class="font-title text-xl text-[#7A1F2B] leading-relaxed">បញ្ជាក់ការចូលរួម</h2>
+            <h2 class="font-moulpali text-xl text-[#7A1F2B] leading-relaxed">បញ្ជាក់ការចូលរួម</h2>
             <p class="en-sub-title text-xs mb-1">RSVP &amp; Wishes</p>
-            <p class="font-body text-[#7A1F2B] text-xs">សូមមេត្តាបញ្ជាក់ការចូលរួមរបស់អ្នក</p>
+            <p class="font-battambang text-[#7A1F2B] text-xs">សូមមេត្តាបញ្ជាក់ការចូលរួមរបស់អ្នក</p>
             <p class="en-sub text-[11px] text-[#9B4E59] mb-5 italic">Please let us know if you can make it</p>
             
             <form id="rsvp-form" class="frosted-card p-6 text-left max-w-sm mx-auto shadow-lg">
                 <div class="mb-4">
-                    <label class="block font-body text-xs text-[#7A1F2B] font-bold mb-1 uppercase tracking-wider">
+                    <label class="block font-battambang text-xs text-[#7A1F2B] font-bold mb-1 uppercase tracking-wider">
                         ឈ្មោះរបស់អ្នក <span class="text-[10px] text-[#9B4E59] font-normal">/ Full Name</span>
                     </label>
-                    <input type="text" id="guest-name" required maxlength="80" class="w-full bg-white border border-[#E8C4C4] rounded-lg text-[#7A1F2B] px-3 py-2 text-sm focus:outline-none focus:border-[#7A1F2B] font-body shadow-inner">
+                    <input type="text" id="guest-name" required maxlength="80" class="w-full bg-white border border-[#E8C4C4] rounded-lg text-[#7A1F2B] px-3 py-2 text-sm focus:outline-none focus:border-[#7A1F2B] font-battambang shadow-inner">
                 </div>
                 
                 <div class="mb-4">
-                    <label class="block font-body text-xs text-[#7A1F2B] font-bold mb-2 uppercase tracking-wider">
+                    <label class="block font-battambang text-xs text-[#7A1F2B] font-bold mb-2 uppercase tracking-wider">
                         តើអ្នកនឹងចូលរួមទេ? <span class="text-[10px] text-[#9B4E59] font-normal">/ Will you attend?</span>
                     </label>
                     <div class="flex gap-3">
-                        <label class="flex-1 text-center py-2 px-1 rounded-xl border border-[#7A1F2B]/40 cursor-pointer has-[:checked]:bg-[#7A1F2B] has-[:checked]:!text-[#FFF3EC] transition font-body text-xs shadow-sm bg-white text-[#7A1F2B]">
+                        <label class="flex-1 text-center py-2 px-1 rounded-xl border border-[#7A1F2B]/40 cursor-pointer has-[:checked]:bg-[#7A1F2B] has-[:checked]:!text-[#FFF3EC] transition font-battambang text-xs shadow-sm bg-white text-[#7A1F2B]">
                             <input type="radio" name="attendance" value="Yes" required class="sr-only">
                             <span class="font-bold">ចូលរួមដោយក្តីរីករាយ</span>
                             <span class="block text-[9px] opacity-80 mt-0.5">Joyfully Accept</span>
                         </label>
-                        <label class="flex-1 text-center py-2 px-1 rounded-xl border border-[#9B4E59]/40 cursor-pointer has-[:checked]:bg-[#9B4E59] has-[:checked]:!text-white transition font-body text-xs shadow-sm bg-white text-[#9B4E59]">
+                        <label class="flex-1 text-center py-2 px-1 rounded-xl border border-[#9B4E59]/40 cursor-pointer has-[:checked]:bg-[#9B4E59] has-[:checked]:!text-white transition font-battambang text-xs shadow-sm bg-white text-[#9B4E59]">
                             <input type="radio" name="attendance" value="No" required class="sr-only">
                             <span class="font-bold">សុំអភ័យទោស</span>
                             <span class="block text-[9px] opacity-80 mt-0.5">Regretfully Decline</span>
@@ -953,22 +741,22 @@
                 </div>
 
                 <div class="mb-4">
-                    <label class="block font-body text-xs text-[#7A1F2B] font-bold mb-1 uppercase tracking-wider">
+                    <label class="block font-battambang text-xs text-[#7A1F2B] font-bold mb-1 uppercase tracking-wider">
                         ចំនួនភ្ញៀវ <span class="text-[10px] text-[#9B4E59] font-normal">/ Number of Guests</span>
                     </label>
-                    <select id="guest-count" class="w-full bg-white border border-[#E8C4C4] rounded-lg text-[#7A1F2B] px-3 py-2 text-sm focus:outline-none focus:border-[#7A1F2B] font-body shadow-inner">
+                    <select id="guest-count" class="w-full bg-white border border-[#E8C4C4] rounded-lg text-[#7A1F2B] px-3 py-2 text-sm focus:outline-none focus:border-[#7A1F2B] font-battambang shadow-inner">
                         <option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option>
                     </select>
                 </div>
 
                 <div class="mb-4">
-                    <label class="block font-body text-xs text-[#7A1F2B] font-bold mb-1 uppercase tracking-wider">
+                    <label class="block font-battambang text-xs text-[#7A1F2B] font-bold mb-1 uppercase tracking-wider">
                         សារជូនពរ (បើមាន) <span class="text-[10px] text-[#9B4E59] font-normal">/ Your Message (Optional)</span>
                     </label>
-                    <textarea id="guest-wish" rows="2" maxlength="300" class="w-full bg-white border border-[#E8C4C4] rounded-lg text-[#7A1F2B] px-3 py-2 text-sm focus:outline-none focus:border-[#7A1F2B] font-body resize-none shadow-inner" placeholder="សូមសរសេរសារជូនពរ... / Leave a wish for the couple..."></textarea>
+                    <textarea id="guest-wish" rows="2" maxlength="300" class="w-full bg-white border border-[#E8C4C4] rounded-lg text-[#7A1F2B] px-3 py-2 text-sm focus:outline-none focus:border-[#7A1F2B] font-battambang resize-none shadow-inner" placeholder="សូមសរសេរសារជូនពរ... / Leave a wish for the couple..."></textarea>
                 </div>
 
-                <button type="submit" id="submit-btn" class="w-full maroon-pill-btn font-body py-3 rounded-xl mt-3 shadow-md transition disabled:opacity-50">
+                <button type="submit" id="submit-btn" class="w-full maroon-pill-btn font-battambang py-3 rounded-xl mt-3 shadow-md transition disabled:opacity-50">
                     <span class="text-base font-bold">បញ្ជូនព័ត៌មាន</span>
                     <span class="block text-[9px] font-normal opacity-90 uppercase tracking-wider">Send Response</span>
                 </button>
@@ -976,15 +764,15 @@
 
             <!-- Wishes Display -->
             <div class="mt-10 max-w-sm mx-auto">
-                <h3 class="font-title text-lg text-[#7A1F2B] leading-relaxed">សៀវភៅភ្ញៀវ</h3>
+                <h3 class="font-moulpali text-lg text-[#7A1F2B] leading-relaxed">សៀវភៅភ្ញៀវ</h3>
                 <p class="en-sub-title text-xs text-[#9B4E59] mb-4">Guestbook</p>
                 <div id="wishes-list" class="space-y-3 max-h-80 overflow-y-auto custom-scroll pr-2">
-                    <p class="text-center text-gray-500 font-body text-xs italic" id="wishes-loading">កំពុងផ្ទុកសារ... / Loading messages...</p>
+                    <p class="text-center text-gray-500 font-battambang text-xs italic" id="wishes-loading">កំពុងផ្ទុកសារ... / Loading messages...</p>
                 </div>
             </div>
         </section>
 
-        <!-- Sticky Bottom Navigation Bar (Matching Screenshot with 6 icons) -->
+        <!-- Sticky Bottom Navigation Bar (Item 7: floating rounded bar) -->
         <nav id="dock" aria-label="Pages">
             <!-- 1. Home -->
             <a href="#home" class="dock-i" data-s="home" aria-label="home" title="Home">
@@ -1026,20 +814,23 @@
             var cover = document.getElementById('cover'), done = false;
             var sp = document.getElementById('cv-sparkles');
             if (sp && !(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches)) {
-                for (var k = 0; k < 14; k++) {
+                for (var k = 0; k < 12; k++) {
                     var d = document.createElement('span'); d.className = 'sp';
                     d.style.cssText = 'left:' + Math.random() * 96 + '%;top:' + (6 + Math.random() * 84) + '%;animation-delay:' + Math.random() * 3 + 's;animation-duration:' + (2 + Math.random() * 2) + 's';
                     sp.appendChild(d);
                 }
             }
 
+            // Item 5: Falling petals smaller (8-14px), 16 petals, soft blur
             function petals() {
                 if (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) return;
                 var box = document.getElementById('petals');
-                for (var i = 0; i < 14; i++) {
-                    var p = document.createElement('span'), k = 0.65 + Math.random() * 0.85;
+                for (var i = 0; i < 16; i++) {
+                    var p = document.createElement('span');
+                    var sz = 8 + Math.floor(Math.random() * 7); // 8px to 14px
+                    var h = Math.round(sz * 1.35);
                     p.className = 'petal';
-                    p.style.cssText = 'left:' + Math.random() * 100 + '%;width:' + (11 * k) + 'px;height:' + (15 * k) + 'px;animation-duration:' + (10 + Math.random() * 8) + 's;animation-delay:-' + Math.random() * 16 + 's;opacity:' + (0.55 + Math.random() * 0.35);
+                    p.style.cssText = 'left:' + Math.random() * 100 + '%;width:' + sz + 'px;height:' + h + 'px;animation-duration:' + (11 + Math.random() * 8) + 's;animation-delay:-' + Math.random() * 16 + 's;opacity:' + (0.5 + Math.random() * 0.3);
                     box.appendChild(p);
                 }
             }
@@ -1089,7 +880,6 @@
                 if (done) return; done = true;
                 cover.classList.add('open');
                 var mb = document.getElementById('music-toggle'); if (mb) mb.click();
-                document.querySelectorAll('#home .rise-in > *').forEach(function (el, i) { el.style.animationDelay = (0.6 + i * 0.1) + 's'; });
                 setTimeout(function () {
                     cover.style.display = 'none';
                     document.body.classList.remove('locked'); document.body.classList.add('opened');
@@ -1183,13 +973,13 @@
                 var io = new IntersectionObserver(function (es) {
                     es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
                 }, { threshold: 0.12 });
-                document.querySelectorAll('section:not(#home) h2.font-title, section:not(#home) > p:not(#copy-msg), #program .relative.pl-14, .masonry-item, #gift .max-w-xs, #calendar .max-w-xs, #calendar .flex, #map .frosted-card, #rsvp form')
+                document.querySelectorAll('section:not(#home) h2, section:not(#home) > p:not(#copy-msg), #program .relative.pl-14, .masonry-item, #gift .max-w-xs, #calendar .max-w-xs, #calendar .flex, #map .frosted-card, #rsvp form')
                     .forEach(function (el) { el.classList.add('reveal'); io.observe(el); });
             }
         })();
     </script>
 
-    <!-- Application Logic (Preserves all existing logic & content 100%) -->
+    <!-- Application Logic -->
     <script type="module">
         import * as EVNS from "./event.js";
         import { RSVP } from "./config.js";
@@ -1237,7 +1027,6 @@
             isPlaying = on;
             iconPlay.classList.toggle('hidden', on);
             iconPause.classList.toggle('hidden', !on);
-            musicBtn.classList.toggle('animate-pulse-maroon', on);
         };
 
         const startSong = () => {
@@ -1258,7 +1047,7 @@
                             else if (e.data === 2) setMusicUI(false);
                             else if (e.data === 0) { ytPlayer.seekTo(SONG_START, true); ytPlayer.playVideo(); }
                         },
-                        onError: () => { ytFailed = true; wantPlay = false; setMusicUI(false); console.warn('YouTube embed fallback to local audio.'); }
+                        onError: () => { ytFailed = true; wantPlay = false; setMusicUI(false); console.warn('YouTube fallback to local audio.'); }
                     }
                 });
             };
@@ -1408,10 +1197,19 @@
             $('d-time').innerHTML = `<span>${num(h12)}:${num(tm)} ${th < 12 ? 'ព្រឹក' : th < 15 ? 'រសៀល' : 'ល្ងាច'}</span><span class="block font-en-body text-[10px] tracking-wider uppercase font-semibold text-[#9B4E59]">${h12}:${tm} ${th < 12 ? 'AM' : 'PM'}</span>`;
             $('d-year').innerText = num(cy);
             const yEn = $('d-year-en'); if (yEn) yEn.innerText = String(cy);
+            
+            // Dynamic binding of exact date matching Item 9
             const longKm = `ថ្ងៃ${WDF.km[wd]} ទី${num(cd)} ខែ${MONTHS.km[cm - 1]} ឆ្នាំ${num(cy)}`;
             const longEn = `${WDF.en[wd]}, ${MONTHS.en[cm - 1]} ${cd}, ${cy}`;
             document.querySelectorAll('.js-datelong-km').forEach(e => e.innerText = longKm);
             document.querySelectorAll('.js-datelong-en').forEach(e => e.innerText = longEn);
+
+            const hdl = $('home-date-line');
+            if (hdl) hdl.innerText = longKm;
+            const hll = $('home-lunar-line');
+            if (hll && CONTENT.km && CONTENT.km.lunarLine) hll.innerText = CONTENT.km.lunarLine;
+            const hvl = $('home-venue-line');
+            if (hvl && CONTENT.km && CONTENT.km.venueLine) hvl.innerText = CONTENT.km.venueLine;
         };
 
         // Program timeline
@@ -1436,7 +1234,7 @@
             $('timeline').innerHTML = PROG.map(it => `
                 <div class="tl-i">
                     <span class="tl-ico">${ICONS[it.icon] || ICONS.heart}</span>
-                    <div class="font-body text-xs">
+                    <div class="font-battambang text-xs">
                         <span class="tl-t">${escapeHtml((it.time || {}).km || '')}</span> ៖ ${escapeHtml((it.text || {}).km || '')}
                     </div>
                     <div class="en-sub text-[#9B4E59] mt-0.5">
@@ -1462,18 +1260,18 @@
         // --- 5. RSVP + guestbook ---
         const card = (e) => `
             <div class="frosted-card p-3.5 text-left shadow-sm">
-                <p class="font-body text-[#7A1F2B] text-xs leading-relaxed mb-1.5">"${escapeHtml(e.wish)}"</p>
-                <p class="font-title text-[#8B1E3F] text-right text-xs font-bold">— ${escapeHtml(e.name)}</p>
+                <p class="font-battambang text-[#7A1F2B] text-xs leading-relaxed mb-1.5">"${escapeHtml(e.wish)}"</p>
+                <p class="font-moulpali text-[#8B1E3F] text-right text-xs">― ${escapeHtml(e.name)}</p>
             </div>`;
         const wishBox = $('wishes-list');
         const showWishes = (list) => {
             wishBox.innerHTML = list.length ? list.map(card).join('')
-                : '<p class="text-center text-gray-500 text-xs font-body italic">Be the first to leave a message!</p>';
+                : '<p class="text-center text-gray-500 text-xs font-battambang italic">Be the first to leave a message!</p>';
         };
         if (hasEndpoint) {
             fetch(RSVP.endpoint + '?action=wishes').then(r => r.json()).then(d => showWishes(d.wishes || [])).catch(() => { wishBox.innerHTML = ''; });
         } else if (!RSVP.whatsapp) {
-            wishBox.innerHTML = '<p class="text-center text-gray-500 text-xs font-body italic">Preview mode: RSVPs are not saved yet (see config.js)</p>';
+            wishBox.innerHTML = '<p class="text-center text-gray-500 text-xs font-battambang italic">Preview mode: RSVPs are not saved yet (see config.js)</p>';
         } else { wishBox.innerHTML = ''; }
 
         $('rsvp-form').addEventListener('submit', async (e) => {

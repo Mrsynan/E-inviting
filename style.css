@@ -1,0 +1,343 @@
+/* ==========================================================================
+   WEDDING E-INVITATION - ROMANTIC CREAM-PINK & BURGUNDY THEME
+   Refined to match Reference Screenshot specifications
+   ========================================================================== */
+
+/* 1. COLOR PALETTE VARIABLES */
+:root {
+    --bg-page-start: #FBEFEA;   /* Soft cream-pink top gradient */
+    --bg-page-end:   #FFF5F0;   /* Light ivory cream bottom gradient */
+    --color-maroon:  #7A1F2B;   /* Primary deep maroon */
+    --color-burgundy:#8B1E3F;   /* Heading & accent burgundy */
+    --color-crimson: #B5122E;   /* Crimson highlights */
+    --color-rose:    #C94A5A;   /* Soft rose for petal gradient */
+    --color-cream:   #FFF3EC;   /* Card backgrounds & button text */
+    --color-blush:   #F6D5D5;   /* Delicate floral tint */
+    --color-gold:    #C9A96A;   /* Soft vintage gold for monogram */
+    --border-inset:  rgba(122, 31, 43, 0.32); /* Thin maroon inset line */
+}
+
+/* 2. TYPOGRAPHY & FONT WEIGHTS */
+/* Moulpali for Title, Heading, and Date line with font-synthesis: none */
+.font-moulpali {
+    font-family: 'Moulpali', cursive;
+    font-weight: 400 !important;
+    font-synthesis: none !important;
+    -webkit-font-synthesis: none !important;
+}
+
+/* Battambang for Parents' Names, Body, Venue */
+.font-battambang {
+    font-family: 'Battambang', sans-serif;
+    font-weight: 400 !important;
+}
+
+/* Battambang Bold for Bride & Groom Names */
+.font-battambang-bold {
+    font-family: 'Battambang', sans-serif;
+    font-weight: 700 !important;
+}
+
+/* English Fonts */
+.font-en-title {
+    font-family: 'Cormorant Garamond', 'Playfair Display', serif;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+}
+.font-en-body {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 0.78rem;
+    line-height: 1.5;
+    color: #9B4E59;
+}
+.en-sub {
+    font-family: 'Cormorant Garamond', 'Montserrat', sans-serif;
+    font-size: 0.72rem;
+    line-height: 1.4;
+    letter-spacing: 0.03em;
+    color: #9B4E59;
+    display: block;
+}
+
+/* 3. BASE STYLES & LAYOUT */
+html {
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: y mandatory;
+    background-color: #F8EAE4;
+}
+
+body {
+    background: linear-gradient(180deg, var(--bg-page-start) 0%, var(--bg-page-end) 100%);
+    background-attachment: fixed;
+    color: var(--color-maroon);
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: 'Battambang', sans-serif;
+}
+
+.mobile-container {
+    max-width: 480px;
+    margin: 0 auto;
+    min-height: 100vh;
+    background: linear-gradient(180deg, var(--bg-page-start) 0%, var(--bg-page-end) 100%);
+    color: var(--color-maroon);
+    position: relative;
+    box-shadow: 0 0 50px rgba(122, 31, 43, 0.12);
+    overflow-x: clip;
+    padding-bottom: 110px; /* Item 7: Never covered by bottom nav */
+}
+
+/* Thin maroon inset border line around the page */
+.inset-border-line {
+    position: absolute;
+    inset: 14px;
+    border: 1px solid var(--border-inset);
+    border-radius: 4px;
+    pointer-events: none;
+    z-index: 3;
+}
+
+/* 4. FLORAL DECORATIVE CORNERS (Item 4: z-index below text, text area clear) */
+.corner-floral {
+    position: absolute;
+    pointer-events: none;
+    z-index: 1; /* Below text (which is z-index 10) */
+    user-select: none;
+}
+.corner-top-l {
+    top: 0;
+    left: 0;
+    width: 88px;
+    max-width: 24%;
+    height: auto;
+}
+.corner-top-r {
+    top: 0;
+    right: 0;
+    width: 88px;
+    max-width: 24%;
+    height: auto;
+}
+.corner-bot-l {
+    bottom: 0;
+    left: 0;
+    width: 145px;
+    max-width: 38%;
+    height: auto;
+}
+.corner-bot-r {
+    bottom: 0;
+    right: 0;
+    width: 145px;
+    max-width: 38%;
+    height: auto;
+}
+
+/* 5. SECTIONS & CONTENT SPACING */
+section.page {
+    position: relative;
+    z-index: 10; /* Above petals and florals */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    background: transparent;
+    color: var(--color-maroon);
+    padding-top: 40px;
+    padding-bottom: 110px; /* Item 7: ensure last line never covered by nav */
+    scroll-snap-align: start;
+}
+#home {
+    padding-top: 44px;
+    padding-bottom: 115px; /* Ensures English text and buttons never hit bottom dock */
+}
+
+/* Specific Font Sizes matching Item 2 */
+.hero-title-km {
+    font-size: 26px !important;
+    line-height: 1.5;
+    color: #7A1F2B;
+    margin-bottom: 24px; /* Vertical spacing */
+}
+
+.parents-names-km {
+    font-size: 15px !important;
+    line-height: 1.6;
+    color: #7A1F2B;
+}
+
+.invitation-heading-km {
+    font-size: 20px !important;
+    line-height: 1.6;
+    color: #7A1F2B;
+    margin-top: 24px;
+    margin-bottom: 12px;
+}
+
+/* Item 3: Center alignment and text-wrap: balance */
+.invitation-body-km {
+    font-size: 14px !important;
+    line-height: 1.9 !important;
+    color: #7A1F2B;
+    text-align: center !important;
+    text-wrap: balance !important;
+    max-width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.couple-name-km {
+    font-size: 22px !important;
+    line-height: 1.4;
+    color: #7A1F2B;
+}
+
+.ceremony-date-km {
+    font-size: 18px !important;
+    line-height: 1.5;
+    color: #7A1F2B;
+}
+
+/* 6. FALLING ROSE PETALS (Item 5: smaller 8-14px, blur 0.4px, z-index 2 below text) */
+#petals {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: min(100%, 480px);
+    transform: translateX(-50%);
+    z-index: 2; /* Below text (z-index 10) so it never covers letters */
+    pointer-events: none;
+    overflow: hidden;
+    contain: layout paint;
+}
+.petal {
+    will-change: transform;
+    position: absolute;
+    top: -24px;
+    background: radial-gradient(circle at 35% 35%, #C94A5A 0%, #B5122E 65%, #7A1F2B 100%);
+    border-radius: 150% 0 150% 0;
+    filter: blur(0.4px);
+    box-shadow: 0 1px 4px rgba(122, 31, 43, 0.2);
+    animation: fallPetal linear infinite;
+}
+@keyframes fallPetal {
+    0% { transform: translate3d(0, -4vh, 0) rotate(0deg); opacity: 0; }
+    15% { opacity: 0.75; }
+    50% { transform: translate3d(32px, 55vh, 0) rotate(190deg); opacity: 0.65; }
+    85% { opacity: 0.6; }
+    100% { transform: translate3d(-20px, 110vh, 0) rotate(370deg); opacity: 0; }
+}
+
+/* 7. MUSIC BUTTON (Item 6: 48px frosted-glass white circle, no grey ring) */
+.music-btn {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(122, 31, 43, 0.18);
+    box-shadow: 0 4px 16px rgba(122, 31, 43, 0.1);
+    color: #7A1F2B;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    outline: none;
+    transition: transform 0.2s, background 0.2s;
+    -webkit-tap-highlight-color: transparent;
+}
+.music-btn:hover {
+    background: rgba(255, 255, 255, 0.88);
+    transform: scale(1.05);
+}
+.music-btn svg {
+    width: 22px;
+    height: 22px;
+    stroke: #7A1F2B;
+    stroke-width: 2;
+}
+
+/* 8. FLOATING BOTTOM NAVIGATION DOCK (Item 7) */
+#dock {
+    position: fixed;
+    bottom: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: min(calc(100% - 32px), 430px);
+    background: rgba(255, 248, 244, 0.88);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(122, 31, 43, 0.2);
+    border-radius: 9999px;
+    padding: 6px 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    z-index: 40;
+    box-shadow: 0 8px 32px rgba(122, 31, 43, 0.15);
+}
+.dock-i {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #7A1F2B;
+    transition: all 0.25s ease;
+    text-decoration: none;
+}
+.dock-i svg {
+    width: 21px;
+    height: 21px;
+    stroke-width: 1.8;
+    stroke: currentColor;
+    fill: none;
+}
+.dock-i.act {
+    background: #7A1F2B !important;
+    color: #FFFFFF !important;
+    box-shadow: 0 4px 14px rgba(122, 31, 43, 0.38);
+}
+.dock-i.act svg {
+    stroke: #FFFFFF !important;
+}
+
+/* 9. MONOGRAM CONTAINER (Item 8: z-index 10 above petals) */
+.monogram-container {
+    position: relative;
+    z-index: 10;
+    flex-shrink: 0;
+}
+
+/* Frosted Cards & Pill Buttons */
+.frosted-card {
+    background: rgba(255, 255, 255, 0.88);
+    border: 1px solid rgba(122, 31, 43, 0.18);
+    border-radius: 1.25rem;
+    box-shadow: 0 8px 28px rgba(122, 31, 43, 0.08);
+    backdrop-filter: blur(8px);
+}
+
+.maroon-pill-btn {
+    background: linear-gradient(135deg, #7A1F2B 0%, #9E1630 100%);
+    color: #FFF3EC;
+    border: 1px solid rgba(201, 169, 106, 0.6);
+    border-radius: 9999px;
+    padding: 10px 28px;
+    font-weight: 700;
+    font-size: 0.92rem;
+    box-shadow: 0 6px 18px rgba(122, 31, 43, 0.28);
+    cursor: pointer;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
