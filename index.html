@@ -20,7 +20,7 @@
     <!-- Auto-apply latest version across all URLs without manual ?v= -->
     <script>
         (function() {
-            var v = '21';
+            var v = '22';
             try {
                 var url = new URL(window.location.href);
                 if (url.searchParams.get('v') !== v && url.hostname.indexOf('github.io') !== -1) {
@@ -40,7 +40,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Battambang:wght@400;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600&family=Moulpali&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
     
     <!-- External stylesheet -->
-    <link rel="stylesheet" href="style.css?v=21">
+    <link rel="stylesheet" href="style.css?v=22">
 
     <style>
         /* Inlined critical styles to guarantee zero FOUC */
@@ -286,17 +286,16 @@
 
         /* Cover setup */
         body.locked { overflow: hidden; height: 100vh; }
-        #cover { position: fixed; inset: 0; z-index: 45; background: #FBEFEA; }
+        #cover { position: fixed; inset: 0; z-index: 60; background: #FBEFEA; display: flex; justify-content: center; align-items: stretch; }
         .cv-stage {
-            position: absolute; top: 0; bottom: 0; left: 50%; width: min(100%, 480px);
-            transform: translateX(-50%); overflow: hidden;
+            width: 100%; max-width: 480px; height: 100%; position: relative; overflow: hidden;
             background: linear-gradient(180deg, var(--bg-page-start) 0%, var(--bg-page-end) 100%);
             box-shadow: 0 0 60px rgba(122, 31, 43, 0.15);
         }
         #cover-content {
-            height: 100%; padding: 40px 24px; display: flex; flex-direction: column;
-            align-items: center; justify-content: center; transition: opacity .6s, transform .8s;
-            position: relative; z-index: 10;
+            height: 100%; padding: 48px 16px 36px 16px; display: flex; flex-direction: column;
+            align-items: center; justify-content: space-between; transition: opacity .6s, transform .8s;
+            position: relative; z-index: 10; box-sizing: border-box;
         }
         #cover.open { opacity: 0; transition: opacity .9s ease .2s; pointer-events: none; }
         #cover.open #cover-content { opacity: 0; transform: scale(1.05); }
@@ -356,6 +355,24 @@
             opacity: 0; transition: opacity .35s, transform .35s; pointer-events: none;
         }
         #toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+
+        @keyframes gentleButterfly {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-4px) rotate(3deg); }
+        }
+        .butterfly-anim {
+            animation: gentleButterfly 3.5s ease-in-out infinite;
+        }
+        .btn-baroque {
+            background: transparent;
+            border: none;
+            padding: 0;
+            cursor: pointer;
+            outline: none;
+            transition: transform 0.2s cubic-bezier(0.2, 0.8, 0.2, 1);
+            -webkit-tap-highlight-color: transparent;
+            display: inline-block;
+        }
     </style>
 </head>
 <body class="antialiased lang-km locked">
@@ -376,32 +393,45 @@
             <img src="assets/floral-bottom-right.svg" alt="" class="corner-floral corner-bot-r">
 
             <div id="cover-content">
-                <!-- Title in Moulpali font-weight: 400 -->
-                <p class="font-moulpali hero-title-km leading-relaxed mb-1">សិរីមង្គលអាពាហ៍ពិពាហ៍</p>
-                <p class="en-sub-title text-[11px] tracking-widest text-[#8B1E3F] mb-4">Wedding Celebration</p>
-
-                <!-- Monogram Frame in Center (z-index 10 above petals) -->
-                <div class="monogram-container my-2">
-                    <img src="assets/floral-monogram-sc.svg" alt="Monogram" class="w-32 h-32 mx-auto drop-shadow-sm">
-                </div>
-
-                <!-- Greeting & Guest Name -->
-                <div class="my-2 w-full text-center">
-                    <p class="font-moulpali text-sm text-[#8B1E3F] tracking-wide mb-1">សូមគោរពអញ្ជើញ</p>
-                    <div id="cover-greeting-box" class="hidden min-h-[38px] flex flex-col items-center justify-center">
-                        <p id="cover-greeting" class="font-battambang-bold text-xl text-[#7A1F2B]"></p>
-                    </div>
-                    <div id="cover-default-greeting" class="min-h-[38px] flex flex-col items-center justify-center">
-                        <p class="font-battambang-bold text-xl text-[#7A1F2B]">លោក ទេពសក្យា</p>
+                <!-- 1. Title in Moulpali font-weight: 400 & Star Divider -->
+                <div class="text-center w-full px-2">
+                    <p class="font-moulpali text-[#7A1F2B] text-[23px] sm:text-[25px] leading-relaxed text-center m-0 whitespace-nowrap">សិរីមង្គលអាពាហ៍ពិពាហ៍</p>
+                    <div class="flex items-center justify-center gap-2 mt-1.5 mb-1 opacity-85">
+                        <div class="h-[1px] w-12 bg-gradient-to-r from-transparent to-[#C9A96A]"></div>
+                        <span class="text-[#C9A96A] text-xs">✦</span>
+                        <div class="h-[1px] w-12 bg-gradient-to-l from-transparent to-[#C9A96A]"></div>
                     </div>
                 </div>
 
-                <!-- Open Invitation Button -->
-                <button id="open-btn" type="button" class="maroon-pill-btn mt-3">
-                    <span>បើកធៀប</span>
-                </button>
-                <p class="font-battambang text-xs text-[#7A1F2B] mt-3 opacity-90">សូមមេត្តាចុចដើម្បីបើកធៀបអេឡិចត្រូនិច</p>
-                <p class="en-sub text-[10px] text-[#9B4E59]">Tap to open your e-invitation</p>
+                <!-- 2. Monogram Cartouche with Upper-Right Butterfly -->
+                <div class="relative w-full flex items-center justify-center my-1">
+                    <img src="assets/cover-monogram-exact.png" alt="Monogram" class="w-[185px] sm:w-[205px] h-auto mx-auto drop-shadow-sm select-none pointer-events-none">
+                    <!-- Upper-Right Fluttering Butterfly -->
+                    <img src="assets/butterfly-upper-right.png" alt="" class="butterfly-anim absolute right-3 sm:right-7 top-1 w-9 sm:w-10 h-auto pointer-events-none">
+                </div>
+
+                <!-- 3. Greeting & Guest Name -->
+                <div class="w-full text-center my-1">
+                    <p class="font-moulpali text-[18px] sm:text-[20px] text-[#7A1F2B] mb-1">សូមគោរពអញ្ជើញ</p>
+                    <div id="cover-greeting-box" class="hidden min-h-[34px] flex flex-col items-center justify-center">
+                        <p id="cover-greeting" class="font-battambang-bold text-[#7A1F2B] text-[21px] sm:text-[23px] tracking-wide"></p>
+                    </div>
+                    <div id="cover-default-greeting" class="min-h-[34px] flex flex-col items-center justify-center">
+                        <p class="font-battambang-bold text-[#7A1F2B] text-[21px] sm:text-[23px] tracking-wide">លោក ស្រី មករា</p>
+                    </div>
+                </div>
+
+                <!-- 4. Baroque Gold Scroll Divider with Butterfly -->
+                <div class="relative w-full flex items-center justify-center my-1">
+                    <img src="assets/gold-baroque-divider-exact.png" alt="" class="w-[265px] sm:w-[290px] h-auto opacity-95 pointer-events-none">
+                </div>
+
+                <!-- 5. Baroque Cartouche Open Button -->
+                <div class="w-full flex justify-center mt-1 mb-1">
+                    <button id="open-btn" type="button" class="btn-baroque group" aria-label="Open Invitation">
+                        <img src="assets/btn-baroque-exact.png" alt="បើកលិខិតអញ្ជើញ" class="w-[245px] sm:w-[265px] h-auto block drop-shadow-lg transition-transform duration-200 group-hover:scale-[1.03] group-active:scale-95">
+                    </button>
+                </div>
             </div>
         </div>
     </div>

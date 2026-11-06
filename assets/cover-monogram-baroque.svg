@@ -1,0 +1,155 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 330" fill="none">
+  <defs>
+    <!-- Multi-stop Antique Gold Gradient -->
+    <linearGradient id="antiqueGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF2D6"/>
+      <stop offset="20%" stop-color="#DEBC78"/>
+      <stop offset="45%" stop-color="#F5E4B5"/>
+      <stop offset="70%" stop-color="#B89045"/>
+      <stop offset="90%" stop-color="#DFBD74"/>
+      <stop offset="100%" stop-color="#8A6524"/>
+    </linearGradient>
+    
+    <linearGradient id="goldStroke" x1="20%" y1="0%" x2="80%" y2="100%">
+      <stop offset="0%" stop-color="#FFEBB8"/>
+      <stop offset="35%" stop-color="#C59E50"/>
+      <stop offset="65%" stop-color="#F3DC9E"/>
+      <stop offset="100%" stop-color="#8C6625"/>
+    </linearGradient>
+
+    <!-- Cameo Inner Radial Gradient -->
+    <radialGradient id="cameoSurface" cx="48%" cy="46%" r="54%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="60%" stop-color="#FFF8F4"/>
+      <stop offset="88%" stop-color="#FDF1EA"/>
+      <stop offset="100%" stop-color="#F6DFD5"/>
+    </radialGradient>
+
+    <filter id="cartoucheShadow" x="-15%" y="-15%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#7A1F2B" flood-opacity="0.14"/>
+    </filter>
+  </defs>
+
+  <!-- ==========================================
+       1. DELICATE PINK BOTANICAL FLORAL WREATH
+       ========================================== -->
+  <g stroke="#C9657A" stroke-linecap="round" stroke-linejoin="round" opacity="0.65" fill="none">
+    <!-- Left Floral Spray Branch -->
+    <path d="M72,75 C45,95 32,130 36,170 C40,205 58,240 85,265" stroke-width="1.1"/>
+    <!-- Left Branch Tendrils -->
+    <path d="M54,105 C35,102 24,115 32,126 C40,122 48,114 54,105 Z" fill="#FCE1E6" fill-opacity="0.5"/>
+    <path d="M40,145 C20,145 16,160 26,168 C34,162 38,154 40,145 Z" fill="#FCE1E6" fill-opacity="0.5"/>
+    <path d="M42,185 C22,192 24,208 36,212 C42,204 44,194 42,185 Z" fill="#FCE1E6" fill-opacity="0.5"/>
+    <path d="M58,225 C42,238 48,252 60,250 C64,242 62,232 58,225 Z" fill="#FCE1E6" fill-opacity="0.5"/>
+    <!-- Left Rose Blossoms -->
+    <g transform="translate(35, 132)">
+      <circle cx="0" cy="0" r="7" fill="#FFF5F7" fill-opacity="0.65" stroke-width="0.8"/>
+      <path d="M-4,-2 C-2,3 3,2 4,-1 C3,-4 -2,-4 -4,-2 Z" stroke-width="0.6"/>
+    </g>
+    <g transform="translate(42, 172)">
+      <circle cx="0" cy="0" r="8.5" fill="#FFF5F7" fill-opacity="0.65" stroke-width="0.8"/>
+      <path d="M-5,-2 C-3,4 4,3 5,-2 C4,-5 -3,-5 -5,-2 Z" stroke-width="0.6"/>
+    </g>
+    <g transform="translate(62, 215)">
+      <circle cx="0" cy="0" r="6" fill="#FFF5F7" fill-opacity="0.65" stroke-width="0.8"/>
+    </g>
+
+    <!-- Right Floral Spray Branch -->
+    <path d="M228,75 C255,95 268,130 264,170 C260,205 242,240 215,265" stroke-width="1.1"/>
+    <!-- Right Branch Tendrils -->
+    <path d="M246,105 C265,102 276,115 268,126 C260,122 252,114 246,105 Z" fill="#FCE1E6" fill-opacity="0.5"/>
+    <path d="M260,145 C280,145 284,160 274,168 C266,162 262,154 260,145 Z" fill="#FCE1E6" fill-opacity="0.5"/>
+    <path d="M258,185 C278,192 276,208 264,212 C258,204 256,194 258,185 Z" fill="#FCE1E6" fill-opacity="0.5"/>
+    <path d="M242,225 C258,238 252,252 240,250 C236,242 238,232 242,225 Z" fill="#FCE1E6" fill-opacity="0.5"/>
+    <!-- Right Rose Blossoms -->
+    <g transform="translate(265, 132)">
+      <circle cx="0" cy="0" r="7" fill="#FFF5F7" fill-opacity="0.65" stroke-width="0.8"/>
+      <path d="M-4,-2 C-2,3 3,2 4,-1 C3,-4 -2,-4 -4,-2 Z" stroke-width="0.6"/>
+    </g>
+    <g transform="translate(258, 172)">
+      <circle cx="0" cy="0" r="8.5" fill="#FFF5F7" fill-opacity="0.65" stroke-width="0.8"/>
+      <path d="M-5,-2 C-3,4 4,3 5,-2 C4,-5 -3,-5 -5,-2 Z" stroke-width="0.6"/>
+    </g>
+    <g transform="translate(238, 215)">
+      <circle cx="0" cy="0" r="6" fill="#FFF5F7" fill-opacity="0.65" stroke-width="0.8"/>
+    </g>
+  </g>
+
+  <!-- ==========================================
+       2. BAROQUE ROCOCO GOLD FILIGREE CARTOUCHE
+       ========================================== -->
+  <g filter="url(#cartoucheShadow)">
+    
+    <!-- Cameo Background Oval -->
+    <ellipse cx="150" cy="165" rx="74" ry="92" fill="url(#cameoSurface)" stroke="url(#goldStroke)" stroke-width="1.8"/>
+    <!-- Inner Delicate Beaded/Dotted Gold Ring -->
+    <ellipse cx="150" cy="165" rx="67" ry="85" fill="none" stroke="url(#antiqueGold)" stroke-width="1" stroke-dasharray="2,3.5"/>
+
+    <!-- Acanthus Crest at Top -->
+    <g fill="url(#antiqueGold)" stroke="url(#goldStroke)" stroke-linecap="round" stroke-linejoin="round">
+      <!-- Center Crown Palmette -->
+      <path d="M150,56 C155,64 163,68 171,73 C160,76 155,81 150,89 C145,81 140,76 129,73 C137,68 145,64 150,56 Z" stroke-width="1.3"/>
+      <circle cx="150" cy="51" r="3.2" stroke-width="1"/>
+      <circle cx="138" cy="60" r="2.2" stroke-width="0.8"/>
+      <circle cx="162" cy="60" r="2.2" stroke-width="0.8"/>
+
+      <!-- Top Rococo Volute Wings (Left) -->
+      <path d="M148,70 C130,65 106,75 92,96 C82,110 80,126 80,140" fill="none" stroke-width="2"/>
+      <path d="M140,76 C124,73 104,82 92,100" fill="none" stroke-width="1.2" opacity="0.85"/>
+      <path d="M84,104 C72,96 66,108 76,118 C82,114 84,109 84,104 Z" stroke-width="1"/>
+
+      <!-- Top Rococo Volute Wings (Right) -->
+      <path d="M152,70 C170,65 194,75 208,96 C218,110 220,126 220,140" fill="none" stroke-width="2"/>
+      <path d="M160,76 C176,73 196,82 208,100" fill="none" stroke-width="1.2" opacity="0.85"/>
+      <path d="M216,104 C228,96 234,108 224,118 C218,114 216,109 216,104 Z" stroke-width="1"/>
+
+      <!-- Mid-Section Rococo Leaf Brackets (Left) -->
+      <path d="M78,145 C64,143 62,160 76,164 C80,157 80,150 78,145 Z" stroke-width="1.1"/>
+      <path d="M82,185 C68,190 72,208 86,204 C87,196 85,190 82,185 Z" stroke-width="1.1"/>
+      <path d="M76,140 C75,165 77,190 85,212" fill="none" stroke-width="2"/>
+
+      <!-- Mid-Section Rococo Leaf Brackets (Right) -->
+      <path d="M222,145 C236,143 238,160 224,164 C220,157 220,150 222,145 Z" stroke-width="1.1"/>
+      <path d="M218,185 C232,190 228,208 214,204 C213,196 215,190 218,185 Z" stroke-width="1.1"/>
+      <path d="M224,140 C225,165 223,190 215,212" fill="none" stroke-width="2"/>
+
+      <!-- Bottom Rococo Apron & Base Swag (Left) -->
+      <path d="M85,212 C98,240 120,260 148,268" fill="none" stroke-width="2"/>
+      <path d="M96,218 C108,240 126,256 145,263" fill="none" stroke-width="1.2" opacity="0.85"/>
+      
+      <!-- Bottom Rococo Apron & Base Swag (Right) -->
+      <path d="M215,212 C202,240 180,260 152,268" fill="none" stroke-width="2"/>
+      <path d="M204,218 C192,240 174,256 155,263" fill="none" stroke-width="1.2" opacity="0.85"/>
+
+      <!-- Bottom Acanthus Finial & Scrolled Feet -->
+      <path d="M150,268 C144,275 135,280 130,288 C140,287 146,281 150,276 C154,281 160,287 170,288 C165,280 156,275 150,268 Z" stroke-width="1.2"/>
+      <circle cx="150" cy="281" r="2.8" stroke-width="0.8"/>
+      <!-- Scrolled Foot Curls -->
+      <path d="M136,272 C126,278 122,286 128,290 C134,288 135,282 136,272 Z" stroke-width="0.9"/>
+      <path d="M164,272 C174,278 178,286 172,290 C166,288 165,282 164,272 Z" stroke-width="0.9"/>
+    </g>
+
+    <!-- ==========================================
+         3. CALLIGRAPHIC MONOGRAM INITIALS (S & C)
+         ========================================== -->
+    <g transform="translate(150, 166)" fill="url(#antiqueGold)">
+      <!-- Initial 'S' with fluid calligraphic weight -->
+      <path d="M-34,-32 C-29,-43 -12,-47 0,-40 C10,-34 12,-23 7,-14 C2,-5 -11,3 -19,10 C-30,19 -33,33 -23,42 C-13,50 6,47 16,36 L13,32 C5,41 -9,43 -18,37 C-26,31 -24,20 -16,13 C-9,7 3,0 10,-8 C17,-18 14,-32 6,-38 C-4,-45 -23,-43 -33,-33 Z"/>
+      
+      <!-- Ampersand / Heart Link -->
+      <path d="M-6,-4 C-2,-10 7,-10 9,-4 C11,3 3,11 -4,17 C-7,18 -6,22 -3,21 C5,17 17,9 15,-1 C13,-11 1,-12 -6,-6 Z" fill-opacity="0.8"/>
+      
+      <!-- Initial 'C' with elegant swash crest -->
+      <path d="M38,-30 C30,-41 15,-43 1,-37 L4,-32 C14,-38 27,-36 34,-27 C42,-16 38,6 30,19 C22,33 8,38 -4,34 L-5,39 C10,44 27,37 35,23 C44,7 48,-16 38,-30 Z"/>
+
+      <!-- Little Golden Butterfly next to Monogram (matching reference) -->
+      <g transform="translate(22, -14) scale(0.32)">
+        <path d="M0,0 C-12,-24 -36,-18 -30,0 C-24,12 -6,6 0,0 Z" fill="url(#antiqueGold)"/>
+        <path d="M0,0 C12,-24 36,-18 30,0 C24,12 6,6 0,0 Z" fill="url(#antiqueGold)"/>
+        <path d="M0,0 C-10,6 -22,22 -14,26 C-6,30 0,14 0,0 Z" fill="url(#antiqueGold)" fill-opacity="0.85"/>
+        <path d="M0,0 C10,6 22,22 14,26 C6,30 0,14 0,0 Z" fill="url(#antiqueGold)" fill-opacity="0.85"/>
+        <ellipse cx="0" cy="6" rx="2.5" ry="8.5" fill="url(#antiqueGold)"/>
+      </g>
+    </g>
+  </g>
+</svg>

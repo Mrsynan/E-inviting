@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 54" fill="none">
+  <defs>
+    <linearGradient id="baroqueGoldSheen" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF2D6"/>
+      <stop offset="20%" stop-color="#DFC07D"/>
+      <stop offset="45%" stop-color="#F7E6B8"/>
+      <stop offset="70%" stop-color="#B89045"/>
+      <stop offset="90%" stop-color="#DEBE76"/>
+      <stop offset="100%" stop-color="#886322"/>
+    </linearGradient>
+
+    <filter id="goldRelief" x="-10%" y="-15%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="1.5" stdDeviation="2" flood-color="#7A1F2B" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <g filter="url(#goldRelief)" stroke="url(#baroqueGoldSheen)" stroke-linecap="round" stroke-linejoin="round">
+    
+    <!-- ==========================================
+         CENTER PALMETTE & ACANTHUS FINIAL
+         ========================================== -->
+    <!-- Top Central Crest -->
+    <path d="M160,6 C164,13 170,18 175,22 C168,24 164,28 160,34 C156,28 152,24 145,22 C150,18 156,13 160,6 Z" fill="url(#baroqueGoldSheen)" fill-opacity="0.45" stroke-width="1.4"/>
+    <circle cx="160" cy="4" r="2.2" fill="url(#baroqueGoldSheen)"/>
+    <circle cx="152" cy="12" r="1.4" fill="url(#baroqueGoldSheen)"/>
+    <circle cx="168" cy="12" r="1.4" fill="url(#baroqueGoldSheen)"/>
+
+    <!-- Bottom Central Drop Finial -->
+    <path d="M160,34 C163,39 167,44 170,48 C165,47 162,43 160,40 C158,43 155,47 150,48 C153,44 157,39 160,34 Z" fill="url(#baroqueGoldSheen)" fill-opacity="0.45" stroke-width="1.2"/>
+    <circle cx="160" cy="49" r="1.5" fill="url(#baroqueGoldSheen)"/>
+
+    <!-- Center Surrounding C-Scroll Brackets -->
+    <path d="M154,26 C148,22 144,28 148,34 C152,32 154,29 154,26 Z" fill="url(#baroqueGoldSheen)" fill-opacity="0.4"/>
+    <path d="M166,26 C172,22 176,28 172,34 C168,32 166,29 166,26 Z" fill="url(#baroqueGoldSheen)" fill-opacity="0.4"/>
+
+    <!-- ==========================================
+         LEFT HORIZONTAL S-SCROLLS & VOLUTES
+         ========================================== -->
+    <!-- Primary Upper Arch -->
+    <path d="M152,25 C138,20 122,14 108,24 C95,33 78,32 64,25 C50,18 32,22 14,26 L6,27" stroke-width="1.6" fill="none"/>
+    <!-- Secondary Under-ribbon -->
+    <path d="M150,29 C136,25 124,19 112,27 C100,35 84,34 72,27 C58,20 42,24 24,28" stroke-width="1" fill="none" opacity="0.8"/>
+
+    <!-- Leaf Curls Along Left Stem -->
+    <path d="M110,23 C115,16 126,14 130,19 C127,25 118,26 110,23 Z" fill="url(#baroqueGoldSheen)" fill-opacity="0.38" stroke-width="1.1"/>
+    <path d="M72,26 C77,19 86,19 88,24 C85,29 78,29 72,26 Z" fill="url(#baroqueGoldSheen)" fill-opacity="0.38" stroke-width="1.1"/>
+    <path d="M38,23 C42,18 49,18 51,22 C48,26 43,26 38,23 Z" fill="url(#baroqueGoldSheen)" fill-opacity="0.35" stroke-width="1"/>
+
+    <!-- Left Volute End-Curl -->
+    <path d="M12,26 C6,24 2,29 6,34 C11,36 14,31 10,28" stroke-width="1.2" fill="none"/>
+    <circle cx="6" cy="27" r="2.2" fill="url(#baroqueGoldSheen)"/>
+
+    <!-- ==========================================
+         RIGHT HORIZONTAL S-SCROLLS & VOLUTES
+         ========================================== -->
+    <!-- Primary Upper Arch -->
+    <path d="M168,25 C182,20 198,14 212,24 C225,33 242,32 256,25 C270,18 288,22 306,26 L314,27" stroke-width="1.6" fill="none"/>
+    <!-- Secondary Under-ribbon -->
+    <path d="M170,29 C184,25 196,19 208,27 C220,35 236,34 248,27 C262,20 278,24 296,28" stroke-width="1" fill="none" opacity="0.8"/>
+
+    <!-- Leaf Curls Along Right Stem -->
+    <path d="M210,23 C205,16 194,14 190,19 C193,25 202,26 210,23 Z" fill="url(#baroqueGoldSheen)" fill-opacity="0.38" stroke-width="1.1"/>
+    <path d="M248,26 C243,19 234,19 232,24 C235,29 242,29 248,26 Z" fill="url(#baroqueGoldSheen)" fill-opacity="0.38" stroke-width="1.1"/>
+    <path d="M282,23 C278,18 271,18 269,22 C272,26 277,26 282,23 Z" fill="url(#baroqueGoldSheen)" fill-opacity="0.35" stroke-width="1"/>
+
+    <!-- Right Volute End-Curl -->
+    <path d="M308,26 C314,24 318,29 314,34 C309,36 306,31 310,28" stroke-width="1.2" fill="none"/>
+    <circle cx="314" cy="27" r="2.2" fill="url(#baroqueGoldSheen)"/>
+
+  </g>
+</svg>

@@ -341,3 +341,28 @@ section.page {
     justify-content: center;
     transition: transform 0.2s, box-shadow 0.2s;
 }
+
+/* 10. BAROQUE COVER ELEMENTS */
+@keyframes gentleButterfly {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-4px) rotate(3deg); }
+}
+.butterfly-anim {
+    animation: gentleButterfly 3.5s ease-in-out infinite;
+}
+.btn-baroque {
+    background: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    outline: none;
+    transition: transform 0.2s cubic-bezier(0.2, 0.8, 0.2, 1);
+    -webkit-tap-highlight-color: transparent;
+    display: inline-block;
+}
+.btn-baroque:hover {
+    transform: scale(1.03);
+}
+.btn-baroque:active {
+    transform: scale(0.96);
+}

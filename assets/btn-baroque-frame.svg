@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 290 70" fill="none">
+  <defs>
+    <!-- Velvet Maroon Radial Gradient -->
+    <radialGradient id="btnMaroonVelvet" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#801426"/>
+      <stop offset="60%" stop-color="#640E1D"/>
+      <stop offset="100%" stop-color="#460712"/>
+    </radialGradient>
+
+    <!-- Metallic Gold Sheen Gradient -->
+    <linearGradient id="btnGoldBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF2D6"/>
+      <stop offset="25%" stop-color="#DFC07D"/>
+      <stop offset="50%" stop-color="#F7E6B8"/>
+      <stop offset="75%" stop-color="#B89045"/>
+      <stop offset="100%" stop-color="#886322"/>
+    </linearGradient>
+
+    <filter id="btnBaroqueShadow" x="-10%" y="-15%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="5" stdDeviation="6" flood-color="#460712" flood-opacity="0.45"/>
+    </filter>
+  </defs>
+
+  <g filter="url(#btnBaroqueShadow)">
+    
+    <!-- Base Maroon Cartouche Body -->
+    <rect x="18" y="10" width="254" height="50" rx="25" fill="url(#btnMaroonVelvet)"/>
+
+    <!-- Outer Molded Gold Border -->
+    <rect x="18" y="10" width="254" height="50" rx="25" stroke="url(#btnGoldBorder)" stroke-width="1.8"/>
+
+    <!-- Inner Thin Gold Filigree Inset Line -->
+    <rect x="22" y="14" width="246" height="42" rx="21" stroke="url(#btnGoldBorder)" stroke-width="0.9" opacity="0.85"/>
+
+    <!-- ==========================================
+         CORNER & END BAROQUE VOLUTES & SCROLLS
+         ========================================== -->
+    <!-- Left End Rococo Ear Scrolls -->
+    <g stroke="url(#btnGoldBorder)" stroke-linecap="round" stroke-linejoin="round" fill="none">
+      <path d="M18,22 C11,27 10,38 18,44" stroke-width="1.4"/>
+      <path d="M15,26 C9,30 9,37 15,40" stroke-width="0.9" opacity="0.75"/>
+      <!-- Top-left corner knot curl -->
+      <path d="M30,12 C23,8 14,14 17,22" stroke-width="1.2"/>
+      <circle cx="15" cy="18" r="1.5" fill="url(#btnGoldBorder)"/>
+      <!-- Bottom-left corner knot curl -->
+      <path d="M30,58 C23,62 14,56 17,48" stroke-width="1.2"/>
+      <circle cx="15" cy="52" r="1.5" fill="url(#btnGoldBorder)"/>
+
+      <!-- Right End Rococo Ear Scrolls -->
+      <path d="M272,22 C279,27 280,38 272,44" stroke-width="1.4"/>
+      <path d="M275,26 C281,30 281,37 275,40" stroke-width="0.9" opacity="0.75"/>
+      <!-- Top-right corner knot curl -->
+      <path d="M260,12 C267,8 276,14 273,22" stroke-width="1.2"/>
+      <circle cx="275" cy="18" r="1.5" fill="url(#btnGoldBorder)"/>
+      <!-- Bottom-right corner knot curl -->
+      <path d="M260,58 C267,62 276,56 273,48" stroke-width="1.2"/>
+      <circle cx="275" cy="52" r="1.5" fill="url(#btnGoldBorder)"/>
+    </g>
+
+    <!-- ==========================================
+         TOP & BOTTOM CENTER ACANTHUS CRESTS
+         ========================================== -->
+    <!-- Top Center Acanthus Finial -->
+    <g transform="translate(145, 10)" stroke="url(#btnGoldBorder)" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M0,0 C-4,-4 -8,-6 -14,-7 C-9,-8 -3,-7 0,-4 C3,-7 9,-8 14,-7 C8,-6 4,-4 0,0 Z" fill="url(#btnGoldBorder)" fill-opacity="0.6" stroke-width="1"/>
+      <circle cx="0" cy="-6" r="1.5" fill="url(#btnGoldBorder)"/>
+    </g>
+
+    <!-- Bottom Center Acanthus Finial -->
+    <g transform="translate(145, 60)" stroke="url(#btnGoldBorder)" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M0,0 C-4,4 -8,6 -14,7 C-9,8 -3,7 0,4 C3,7 9,8 14,7 C8,6 4,4 0,0 Z" fill="url(#btnGoldBorder)" fill-opacity="0.6" stroke-width="1"/>
+      <circle cx="0" cy="6" r="1.5" fill="url(#btnGoldBorder)"/>
+    </g>
+
+  </g>
+</svg>
