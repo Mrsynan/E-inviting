@@ -13,14 +13,14 @@
     <meta property="og:type" content="website">
     <meta property="og:title" content="Wedding Invitation - KRY Synan &amp; CHOY Chanrathana">
     <meta property="og:description" content="Tap to open your invitation.">
-    <meta property="og:image" content="https://mrsynan.github.io/E-inviting/assets/wedding-monogram-nr.png?v=30">
+    <meta property="og:image" content="https://mrsynan.github.io/E-inviting/assets/wedding-monogram-nr.png?v=31">
     <meta property="og:url" content="https://mrsynan.github.io/E-inviting/">
     <meta name="twitter:card" content="summary_large_image">
     
     <!-- Auto-apply latest version across all URLs without manual ?v= -->
     <script>
         (function() {
-            var v = '30';
+            var v = '31';
             try {
                 var url = new URL(window.location.href);
                 if (url.searchParams.get('v') !== v && location.protocol !== 'file:' && !location.hostname.startsWith('localhost') && location.hostname !== '127.0.0.1') {
@@ -40,7 +40,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Battambang:wght@400;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600&family=Moulpali&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
     
     <!-- External stylesheet -->
-    <link rel="stylesheet" href="style.css?v=30">
+    <link rel="stylesheet" href="style.css?v=31">
 
     <style>
         /* Inlined critical styles to guarantee zero FOUC */
@@ -610,7 +610,7 @@
 
                 <!-- 2. Monogram Cartouche with Upper-Right Butterfly -->
                 <div class="relative w-full flex items-center justify-center my-1">
-                    <img src="assets/cover-monogram-exact.png?v=30" alt="NR Monogram" class="w-[195px] sm:w-[215px] h-auto mx-auto drop-shadow-sm select-none pointer-events-none">
+                    <img src="assets/cover-monogram-exact.png?v=31" alt="NR Monogram" class="w-[195px] sm:w-[215px] h-auto mx-auto drop-shadow-sm select-none pointer-events-none">
                 </div>
 
                 <!-- 3. Greeting & Guest Name -->
@@ -706,12 +706,34 @@
                     </div>
                 </div>
 
-                <!-- 3. Thin Floral Divider Line with Butterfly Accent (Spacing ~20px) -->
+                <!-- 3. Partner Names (Directly below parents' names): Groom Name | Gold Monogram Frame | Bride Name -->
+                <div class="my-3 max-w-sm mx-auto flex items-center justify-between px-2">
+                    <!-- Left: Groom Name (under Groom parents) -->
+                    <div class="flex-1 text-center">
+                        <p class="font-battambang text-xs text-[#9B4E59] mb-0.5">កូនប្រុសនាម</p>
+                        <p class="font-battambang-bold couple-name-km">គ្រី ស៊ីណាន</p>
+                        <p class="en-sub text-[9px]">KRY Synan</p>
+                    </div>
+
+                    <!-- Center: Gold Oval Floral Monogram Frame (z-index 10 above petals) -->
+                    <div class="monogram-container px-2">
+                        <img src="assets/wedding-monogram-nr.png?v=31" alt="NR Monogram" class="w-20 h-20 drop-shadow-sm">
+                    </div>
+
+                    <!-- Right: Bride Name (under Bride parents) -->
+                    <div class="flex-1 text-center">
+                        <p class="font-battambang text-xs text-[#9B4E59] mb-0.5">កូនស្រីនាម</p>
+                        <p class="font-battambang-bold couple-name-km">ចយ ច័ន្ទរតនា</p>
+                        <p class="en-sub text-[9px]">CHOY Chanrathana</p>
+                    </div>
+                </div>
+
+                <!-- 4. Thin Floral Divider Line with Butterfly Accent (Spacing ~20px) -->
                 <div class="my-3 flex justify-center">
                     <img src="assets/floral-divider.svg" alt="" class="w-44 h-auto opacity-75">
                 </div>
 
-                <!-- 4. Section Heading: Moulpali ~20px, weight 400 -->
+                <!-- 5. Section Heading: Moulpali ~20px, weight 400 -->
                 <p class="font-moulpali invitation-heading-km">មានកិត្តិយសសូមគោរពអញ្ជើញ</p>
 
                 <!-- Khmer Paragraph: Battambang ~14px, line-height: 1.9, CENTERED, text-wrap: balance -->
@@ -723,28 +745,6 @@
                     <p class="font-en-body text-center mt-2 italic px-2">
                         We cordially invite Their Excellencies, distinguished guests, and honored attendees to join us in celebrating our beloved son and daughter’s wedding and to bless them with happiness and prosperity.
                     </p>
-                </div>
-
-                <!-- 5. Center Row: Groom Name (under Groom parents) | Gold Monogram Frame | Bride Name (under Bride parents) -->
-                <div class="my-3 max-w-sm mx-auto flex items-center justify-between px-2">
-                    <!-- Left: Groom Name (Battambang Bold 700 ~22px) -->
-                    <div class="flex-1 text-center">
-                        <p class="font-battambang text-xs text-[#9B4E59] mb-0.5">កូនប្រុសនាម</p>
-                        <p class="font-battambang-bold couple-name-km">គ្រី ស៊ីណាន</p>
-                        <p class="en-sub text-[9px]">KRY Synan</p>
-                    </div>
-
-                    <!-- Center: Gold Oval Floral Monogram Frame (z-index 10 above petals) -->
-                    <div class="monogram-container px-2">
-                        <img src="assets/wedding-monogram-nr.png?v=30" alt="NR Monogram" class="w-20 h-20 drop-shadow-sm">
-                    </div>
-
-                    <!-- Right: Bride Name (Battambang Bold 700 ~22px) -->
-                    <div class="flex-1 text-center">
-                        <p class="font-battambang text-xs text-[#9B4E59] mb-0.5">កូនស្រីនាម</p>
-                        <p class="font-battambang-bold couple-name-km">ចយ ច័ន្ទរតនា</p>
-                        <p class="en-sub text-[9px]">CHOY Chanrathana</p>
-                    </div>
                 </div>
 
                 <!-- 6. Date Line (~18px Moulpali) & Venue Address (Battambang 400) - Item 9 Original Dates -->
@@ -1226,11 +1226,11 @@
 
     <!-- Application Logic -->
     <script type="module">
-        import * as EVNS from "./event.js?v=30";
-        import { RSVP } from "./config.js?v=30";
-        import { EVENT } from "./event.js?v=30";
-        import { CONTENT, BANK, GALLERY } from "./content.js?v=30";
-        import * as CNS from "./content.js?v=30";
+        import * as EVNS from "./event.js?v=31";
+        import { RSVP } from "./config.js?v=31";
+        import { EVENT } from "./event.js?v=31";
+        import { CONTENT, BANK, GALLERY } from "./content.js?v=31";
+        import * as CNS from "./content.js?v=31";
 
         const GALLERY_USED = GALLERY;
 
